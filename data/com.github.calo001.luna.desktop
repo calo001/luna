@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Luna
+Comment=An amazing calendar widget 
+Icon=com.github.calo001.luna
+Exec=com.github.calo001.luna
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GNOME;GTK;
+Keywords=app;vala;

@@ -1,0 +1,15 @@
+Source: com.github.calo001.luna
+Section: x11
+Priority: extra
+Maintainer: Carlos Lopez <calo_lrc@hotmail.com>
+Build-Depends: meson,
+               valac,
+               debhelper,
+               libgranite-dev,
+               libgtk-3-dev
+
+Standards-Version: 3.9.3
+Package: com.github.calo001.luna
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: An amazing calendar widget 
