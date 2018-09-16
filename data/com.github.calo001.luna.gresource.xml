@@ -2,7 +2,8 @@
 <gresources>
 
     <gresource prefix="/com/github/calo001/luna/css">
-        <file alias="style.css" compressed="true">css/style.css</file>
+        <file alias="style_white.css" compressed="true">css/style_white.css</file>
+        <file alias="style_dark.css" compressed="true">css/style_dark.css</file>
     </gresource>
 
     <gresource prefix="/com/github/calo001/luna/images">

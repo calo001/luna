@@ -42,7 +42,6 @@ namespace App {
             Object (
                 application: app,
                 icon_name: Constants.APP_ICON,
-                title: "Luna",
                 resizable: false
             );
 
@@ -59,7 +58,7 @@ namespace App {
             }
 
             var css_provider = new Gtk.CssProvider ();
-            css_provider.load_from_resource (Constants.URL_CSS);
+            css_provider.load_from_resource (Constants.URL_CSS_WHITE);
             
             Gtk.StyleContext.add_provider_for_screen (
                 Gdk.Screen.get_default (),

@@ -16,28 +16,17 @@
 * 
 */
 
-using App.Configs;
-using App.Views;
+/* @define-color colorPrimary {{ headerbar-color }}; */
+/* @define-color textColorPrimary {{ headerbar-text-color }}; */
+/* @define-color textColorPrimaryShadow {{ headerbar-text-shadow-color }}; */
+/* @define-color colorAccent {{ accent-color }}; */
 
-namespace App.Views {
+@define-color bg_highlight_color shade (@colorPrimary, 1.4);
 
-    /**
-     * The {@code AppView} class.
-     *
-     * @since 1.0.0
-     */
-    public class AppView : Gtk.Stack {
-
-        /**
-         * Constructs a new {@code AppView} object.
-         */
-        public AppView () {
-            
-            // Containers
-            var calendar = new CalendarView ();
-
-            this.add_named (calendar, "calendar");
-
-        }
-    }
+.titlebar, .background {
+    background-color: #000; 
+    color: #FFF;
+    icon-shadow: 0 1px 1px shade (@textColorPrimaryShadow, 0.82)
+    text-shadow: 0 1px 1px shade (@textColorPrimaryShadow, 0.82);
 }
+

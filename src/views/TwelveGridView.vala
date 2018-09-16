@@ -16,15 +16,15 @@
 * 
 */
 
-/* @define-color colorPrimary {{ headerbar-color }}; */
-/* @define-color textColorPrimary {{ headerbar-text-color }}; */
-/* @define-color textColorPrimaryShadow {{ headerbar-text-shadow-color }}; */
-/* @define-color colorAccent {{ accent-color }}; */
-@define-color bg_highlight_color shade (@colorPrimary, 1.4);
+namespace App.Views {
+    /**
+     * The {@code CalendarView} class. Show a grid 12x12 for months and years
+     *
+     * @since 1.0.0
+     */
+    public class TwelveGridView : Gtk.Grid {
+        public TwelveGridView () {
 
-.titlebar, .background {
-    background-color: @colorPrimary; color: @textColorPrimary;
-    icon-shadow: 0 1px 1px shade (@textColorPrimaryShadow, 0.82)
-    text-shadow: 0 1px 1px shade (@textColorPrimaryShadow, 0.82);
+        }
+    }
 }
-

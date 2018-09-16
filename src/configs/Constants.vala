@@ -39,7 +39,8 @@ namespace App.Configs {
         public abstract const string TRANSLATE_URL = "https://github.com/calo001/luna";
         public abstract const string TEXT_FOR_ABOUT_DIALOG_WEBSITE = "Website";
         public abstract const string TEXT_FOR_ABOUT_DIALOG_WEBSITE_URL = "{{ website-url }}";
-        public abstract const string URL_CSS = "/com/github/calo001/luna/css/style.css";
+        public abstract const string URL_CSS_WHITE = "/com/github/calo001/luna/css/style_white.css";
+        public abstract const string URL_CSS_DARK = "/com/github/calo001/luna/css/style_dark.css";
         public abstract const string [] ABOUT_AUTHORS = { "Carlos Lopez <calo_lrc@hotmail.com>" };
         public abstract const Gtk.License ABOUT_LICENSE_TYPE = Gtk.License.CUSTOM;
     }

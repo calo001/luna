@@ -16,28 +16,27 @@
 * 
 */
 
-using App.Configs;
-using App.Views;
+namespace App.Enums {
+    public enum Day {
+        MONDAY,
+        TUESDAY,
+        WEDNESDAY,
+        THURSDAY,
+        FRIDAY,
+        SATURDAY,
+        SUNDAY;
 
-namespace App.Views {
-
-    /**
-     * The {@code AppView} class.
-     *
-     * @since 1.0.0
-     */
-    public class AppView : Gtk.Stack {
-
-        /**
-         * Constructs a new {@code AppView} object.
-         */
-        public AppView () {
-            
-            // Containers
-            var calendar = new CalendarView ();
-
-            this.add_named (calendar, "calendar");
-
+        public string to_string () {
+            switch (this) {
+                case MONDAY:    return _("MON");
+                case TUESDAY:   return _("TUES");
+                case WEDNESDAY: return _("WED");
+                case THURSDAY:  return _("THU");
+                case FRIDAY:    return _("FRI");
+                case SATURDAY:  return _("SAT");
+                case SUNDAY:    return _("SUN");
+                default:        assert_not_reached ();
+            }
         }
     }
 }

@@ -17,6 +17,7 @@
 */
 
 using App.Views;
+using App.Widgets;
 
 namespace App.Controllers {
 
@@ -39,17 +40,33 @@ namespace App.Controllers {
             this.window = new Window (this.application);
             this.app_view = new AppView ();
 
+            var header = new HeaderBar ();
+            this.window.set_titlebar (header);
+            
             var content = this.window.get_content_area () as Gtk.Box;
             content.add (this.app_view);
 
             var actions = this.window.get_action_area () as Gtk.Box;
             actions.visible = false;
 
-            this.window.set_default_size (500, 272);
-            this.window.set_size_request (500, 272);
+            this.window.set_default_size (440, 470);
+            this.window.set_size_request (440, 470);
             this.application.add_window (window);
 
-            
+            testing_dates ();
+        }
+
+        private void testing_dates () {
+            var dt = new DateTime.now_local ();
+            int year;
+            int month;
+            int day;
+            dt.get_ymd (out year, out month, out day);
+            var dw = dt.get_day_of_week ();
+            print (@"Y $year M $month D $day DW $dw");
+
+            var days_m = Date.get_days_in_month (DateMonth.FEBRUARY, (GLib.DateYear) 2016);
+            print("\n Days in month x: " + days_m.to_string() + "\n");
         }
 
         public void activate () {

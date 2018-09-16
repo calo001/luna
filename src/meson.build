@@ -5,6 +5,13 @@ sources += files(
     'controllers/AppController.vala',
     
     'views/AppView.vala',
+    'views/CalendarView.vala',
+    'views/TwelveGridView.vala',
+
+    'enums/Day.vala',
+    'enums/Month.vala',
+
+    'widgets/HeaderBar.vala',
 
     'Application.vala',
     'Main.vala',

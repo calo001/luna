@@ -1,0 +1,69 @@
+/*
+* Copyright (C) 2018  Carlos Lopez <calo_lrc@hotmail.com>
+* 
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU Affero General Public License as published
+* by the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+* 
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU Affero General Public License for more details.
+* 
+* You should have received a copy of the GNU Affero General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+* 
+*/
+
+@define-color colorPrimary #FAFAFA;
+/*@define-color colorPrimaryShadow rgba(198, 38, 46, 0.1);*/
+@define-color textColorPrimary #000000;
+ /* @define-color textColorPrimaryShadow {{ headerbar-text-shadow-color }}; */
+@define-color colorAccent #000000;
+@define-color colorAccentTransparent rgba(0,0,0,0.1);
+
+@define-color bg_highlight_color shade (@colorPrimary, 1.4);
+
+.titlebar, .background {
+    background-color: @colorPrimary; 
+    color: @textColorPrimary;
+    icon-shadow: 0 1px 1px shade (@textColorPrimaryShadow, 0.82);
+    text-shadow: 0 1px 1px shade (@textColorPrimaryShadow, 0.82);
+    box-shadow: none;
+}
+
+.label-day {
+    border: none;
+    padding: 12px;
+}
+
+.label-today {
+    background: @colorAccent;
+    color: @colorPrimary; 
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.day-header {
+    font-weight: bold;
+}
+
+.btn-header {
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+
+.btn-header:hover {
+    background: @colorAccentTransparent;
+}
+/*
+.csd {
+    box-shadow: 0px 0px 8px 8px @colorPrimaryShadow;
+}
+*/
+.transition {
+    transition: 200ms;
+    transition-timing-function: ease;
+}
