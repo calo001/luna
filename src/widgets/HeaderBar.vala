@@ -31,6 +31,9 @@ namespace App.Widgets {
 
         public signal void menu_clicked ();
         public signal void today_clicked ();
+        public signal void prev();
+        public signal void next();
+        public signal void main_btn();
 
         public MenuButton menu_button { get; private set; }
         public Button today_button { get; private set; }
@@ -48,8 +51,8 @@ namespace App.Widgets {
          */
         public HeaderBar () {
             //get_style_context ().add_class ("transition");
-            get_style_context ().add_class (STYLE_CLASS_FLAT);
-            get_style_context ().add_class ("default-decoration");
+            //get_style_context ().add_class (STYLE_CLASS_FLAT);
+            //get_style_context ().add_class ("default-decoration");
 
             /*
             * Menu colors
@@ -76,9 +79,8 @@ namespace App.Widgets {
                     css_provider,
                     Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
                 );
-                
-                print("today");
-                //today_clicked ();
+
+                today_clicked ();
             });
             
             /*
@@ -88,9 +90,22 @@ namespace App.Widgets {
             btn_next = new Button.from_icon_name ("pan-end-symbolic", IconSize.MENU);
             btn_main = new Button.with_label ("September 2018");
 
+            btn_prev.clicked.connect ( () => {
+                prev();
+            });
+
+            btn_next.clicked.connect ( () => {
+                next();
+            });
+
+            btn_main.clicked.connect ( () => {
+                main_btn();
+            });
+
             btn_prev.get_style_context ().remove_class ("image-button");
             btn_next.get_style_context ().remove_class ("image-button");
             btn_main.get_style_context ().add_class ("btn-header");
+            btn_main.get_style_context ().add_class ("h2");
             btn_prev.get_style_context ().add_class ("btn-header");
             btn_next.get_style_context ().add_class ("btn-header");
 

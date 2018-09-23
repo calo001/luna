@@ -16,6 +16,8 @@
 * 
 */
 
+using App.Enums;
+
 namespace App.Configs {
 
     /**
@@ -24,6 +26,7 @@ namespace App.Configs {
      *
      * @since 1.0.0
      */
+
     public class Constants {
     
         public abstract const string ID = "com.github.calo001.luna";
@@ -43,5 +46,9 @@ namespace App.Configs {
         public abstract const string URL_CSS_DARK = "/com/github/calo001/luna/css/style_dark.css";
         public abstract const string [] ABOUT_AUTHORS = { "Carlos Lopez <calo_lrc@hotmail.com>" };
         public abstract const Gtk.License ABOUT_LICENSE_TYPE = Gtk.License.CUSTOM;
+
+        public abstract const string STACK_CALENDAR = "calendar";
+        public abstract const string STACK_YEARS = "years";
+        public abstract const string STACK_MONTHS = "months";
     }
 }

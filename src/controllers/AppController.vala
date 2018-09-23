@@ -30,19 +30,19 @@ namespace App.Controllers {
 
         private Gtk.Application            application;
         private AppView                    app_view;
-        private Window                     window { get; private set; default = null; }
+        private Window                     window { get; private set; default = null; } 
 
         /**
          * Constructs a new {@code AppController} object.
          */
         public AppController (Gtk.Application application) {
+            var header = new HeaderBar ();
+            
             this.application = application;
             this.window = new Window (this.application);
-            this.app_view = new AppView ();
-
-            var header = new HeaderBar ();
+            this.app_view = new AppView (header);
             this.window.set_titlebar (header);
-            
+
             var content = this.window.get_content_area () as Gtk.Box;
             content.add (this.app_view);
 
@@ -52,21 +52,6 @@ namespace App.Controllers {
             this.window.set_default_size (440, 470);
             this.window.set_size_request (440, 470);
             this.application.add_window (window);
-
-            testing_dates ();
-        }
-
-        private void testing_dates () {
-            var dt = new DateTime.now_local ();
-            int year;
-            int month;
-            int day;
-            dt.get_ymd (out year, out month, out day);
-            var dw = dt.get_day_of_week ();
-            print (@"Y $year M $month D $day DW $dw");
-
-            var days_m = Date.get_days_in_month (DateMonth.FEBRUARY, (GLib.DateYear) 2016);
-            print("\n Days in month x: " + days_m.to_string() + "\n");
         }
 
         public void activate () {

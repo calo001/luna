@@ -33,9 +33,21 @@
     box-shadow: none;
 }
 
+.circle {
+    border-radius: 50%;
+    padding: 40px 20px;
+}
+
 .label-day {
     border: none;
     padding: 12px;
+    background: none;
+}
+
+.label-day:hover {
+    border: none;
+    padding: 12px;
+    background: @colorAccentTransparent;
 }
 
 .label-today {
@@ -50,6 +62,7 @@
 }
 
 .btn-header {
+    font-size: 16px;
     border: none;
     background: none;
     box-shadow: none;

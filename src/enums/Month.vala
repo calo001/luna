@@ -17,7 +17,7 @@
 */
 
 namespace App.Enums {
-    public enum Month {
+    enum Month {
         JANUARY,
         FEBRUARY,
         MARCH,
@@ -31,7 +31,7 @@ namespace App.Enums {
         NOVEMBER,
         DECEMBER;
 
-        public string to_string () {
+        public string to_string() {
             switch (this) {
                 case JANUARY:   return _("JAN");
                 case FEBRUARY:  return _("FEB");
@@ -46,6 +46,42 @@ namespace App.Enums {
                 case NOVEMBER:  return _("NOV");
                 case DECEMBER:  return _("DEC");
                 default:        assert_not_reached ();
+            }
+        }
+
+        public static List<string> all () {
+            List<string> MONTHS = new List<string>();
+            MONTHS.append(JANUARY.to_string());
+            MONTHS.append(FEBRUARY.to_string());
+            MONTHS.append(MARCH.to_string());
+            MONTHS.append(APRIL.to_string());
+            MONTHS.append(MAY.to_string());
+            MONTHS.append(JUNE.to_string());
+            MONTHS.append(JULY.to_string());
+            MONTHS.append(AUGUST.to_string());
+            MONTHS.append(SEPTEMBER.to_string());
+            MONTHS.append(OCTOBER.to_string());
+            MONTHS.append(NOVEMBER.to_string());
+            MONTHS.append(DECEMBER.to_string());
+
+            return MONTHS;
+        }
+
+        public string from_number(int num) {
+            switch (num) {
+                case 0:  return _("JAN");
+                case 1:  return _("FEB");
+                case 2:  return _("MAR");
+                case 3:  return _("APR");
+                case 4:  return _("MAY");
+                case 5:  return _("JUN");
+                case 6:  return _("JUL");
+                case 7:  return _("AUG");
+                case 8:  return _("SEP");
+                case 9:  return _("OCT");
+                case 10: return _("NOV");
+                case 11: return _("DEC");
+                default: assert_not_reached ();
             }
         }
     }
