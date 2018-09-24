@@ -7,6 +7,7 @@ sources += files(
     'views/AppView.vala',
     'views/CalendarView.vala',
     'views/TwelveGridView.vala',
+    'views/DaysRow.vala',
 
     'enums/Day.vala',
     'enums/Month.vala',

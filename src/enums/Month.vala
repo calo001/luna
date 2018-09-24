@@ -67,20 +67,20 @@ namespace App.Enums {
             return MONTHS;
         }
 
-        public string from_number(int num) {
+        public static string from_number(int num) {
             switch (num) {
-                case 0:  return _("JAN");
-                case 1:  return _("FEB");
-                case 2:  return _("MAR");
-                case 3:  return _("APR");
-                case 4:  return _("MAY");
-                case 5:  return _("JUN");
-                case 6:  return _("JUL");
-                case 7:  return _("AUG");
-                case 8:  return _("SEP");
-                case 9:  return _("OCT");
-                case 10: return _("NOV");
-                case 11: return _("DEC");
+                case 1:  return _("January");
+                case 2:  return _("February");
+                case 3:  return _("March");
+                case 4:  return _("April");
+                case 5:  return _("May");
+                case 6:  return _("June");
+                case 7:  return _("July");
+                case 8:  return _("August");
+                case 9:  return _("September");
+                case 10: return _("October");
+                case 11: return _("November");
+                case 12: return _("December");
                 default: assert_not_reached ();
             }
         }

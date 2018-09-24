@@ -31,10 +31,30 @@ namespace App.Views {
     public class AppView : Gtk.Stack {
 
         private App.Widgets.HeaderBar header;
+
+        CalendarView calendar;
+        TwelveGridView months;
+        TwelveGridView years;
+
+        /*
+         * Data of current date
+         */
+        private DateTime current_date;
         private int start_day_today;
         private int max_months_day_today;
         private int current_day;
+        private int current_month;
         private int current_year;
+
+        /*
+         * Data of date on navigate
+         */
+        private DateTime nav_date;
+        private int start_day_nav;
+        private int max_months_day_nav;
+        private int nav_day;
+        private int nav_month;
+        private int nav_year;
 
         private string current_stack = Constants.STACK_CALENDAR;
 
@@ -43,46 +63,105 @@ namespace App.Views {
          */
         public AppView (App.Widgets.HeaderBar header) {
             this.header = header;
+            this.interpolate_size = true;
+            this.transition_duration = 200;
             this.transition_type = StackTransitionType.SLIDE_RIGHT;
+
+            current_date = new DateTime.now_local ();
+            nav_date     = new DateTime.now_local ();
+
             // Containers
-            get_current_date (out start_day_today, 
-                              out max_months_day_today,
-                              out current_day,
-                              out current_year);
+            get_info_date (current_date,
+                           out start_day_today, 
+                           out max_months_day_today,
+                           out current_day,
+                           out current_month,
+                           out current_year);
 
             print(@"\nstart_day_today $start_day_today
                     \nmax_months_day_today $max_months_day_today
-                    \ncurrent_day $current_day");
+                    \ncurrent_day $current_day
+                    \ncurrent_month $current_month
+                    \ncurrent_year $current_year");
 
-            var calendar = new CalendarView (start_day_today, max_months_day_today, current_day);
-            var months = new TwelveGridView (Month.all());
-            var years = new TwelveGridView (list_of_years(2018));
+            calendar = new CalendarView ();
+            months   = new TwelveGridView (Month.all());
+            years    = new TwelveGridView (list_of_years(current_year));
 
             calendar.fill_grid_days(start_day_today, max_months_day_today, current_day);
-            // Detect signals
+            modify_date_by_month (0);
+            
+            /*
+             * Detect all signals from HeaderBar
+            */
+
+            header.today_clicked.connect (() => {
+
+                nav_date = new DateTime.now_local ();
+
+                get_info_date (nav_date,
+                           out start_day_nav, 
+                           out max_months_day_nav,
+                           out nav_day,
+                           out nav_month,
+                           out nav_year);
+
+                header.change_main_text ( generare_mm_yyyy (nav_month, nav_year) );
+                calendar.fill_grid_days(start_day_nav, max_months_day_nav, nav_day);
+                this.set_visible_child_name (Constants.STACK_CALENDAR);
+                current_stack = Constants.STACK_CALENDAR;
+            });
+
             header.prev.connect ( () => {
-                calendar.fill_grid_days(6, 31, -1);
+                switch (current_stack) {
+                    case Constants.STACK_CALENDAR:
+                        modify_date_by_month (-1);
+                        break;
+                    case Constants.STACK_MONTHS:
+                        modify_date_by_years (-1);
+                        break;
+                    case Constants.STACK_YEARS:
+                        break;
+                    default:
+                        break;
+                }
             });
 
             header.next.connect ( () => {
-                calendar.fill_grid_days(2, 29, -1);
+                switch (current_stack) {
+                    case Constants.STACK_CALENDAR:
+                        modify_date_by_month (1);
+                        break;
+                    case Constants.STACK_MONTHS:
+                        modify_date_by_years (1);
+                        break;
+                    case Constants.STACK_YEARS:
+                        break;
+                    default:
+                        break;
+                }
             });
 
             header.main_btn.connect ( () => {
                 switch (current_stack) {
                     case Constants.STACK_CALENDAR:
+                        header.change_main_text ( nav_year.to_string () );
                         this.set_visible_child_name (Constants.STACK_MONTHS);
                         current_stack = Constants.STACK_MONTHS;
                         break;
                     case Constants.STACK_MONTHS:
+                        header.change_main_text ( generare_yyyy_yyyy (nav_year) );
+                        years.fill_grid ( generare_year_list (nav_year) );
                         this.set_visible_child_name (Constants.STACK_YEARS);
                         current_stack = Constants.STACK_YEARS;
                         break;
                     case Constants.STACK_YEARS:
+                        header.change_main_text ( generare_mm_yyyy (nav_month, nav_year) );
                         this.set_visible_child_name (Constants.STACK_CALENDAR);
                         current_stack = Constants.STACK_CALENDAR;
                         break;
                     default:
+                        header.change_main_text ( nav_year.to_string () );
                         this.set_visible_child_name (Constants.STACK_CALENDAR);
                         current_stack = Constants.STACK_CALENDAR;
                         break;
@@ -94,25 +173,91 @@ namespace App.Views {
             this.add_named (months, Constants.STACK_MONTHS);
         }
 
-        private void get_current_date (out int start_day_today, 
-                                       out int max_months_day_today,
-                                       out int current_day,
-                                       out int current_year) {
+        private void modify_date_by_month (int num) {
+            
+            nav_date = nav_date.add_months(num);
+
+            get_info_date (nav_date,
+                           out start_day_nav, 
+                           out max_months_day_nav,
+                           out nav_day,
+                           out nav_month,
+                           out nav_year);
+
+            if ( compare_actual_date () ) {
+                calendar.fill_grid_days(start_day_nav, max_months_day_nav, nav_day);
+            } else {
+                calendar.fill_grid_days(start_day_nav, max_months_day_nav, -1);
+            }
+
+            header.change_main_text (generare_mm_yyyy (nav_month, nav_year) );
+        }
+
+        private void modify_date_by_years (int num) {
+            nav_date = nav_date.add_years(num);
+
+            get_info_date (nav_date,
+                           out start_day_nav, 
+                           out max_months_day_nav,
+                           out nav_day,
+                           out nav_month,
+                           out nav_year);
+
+            if ( compare_actual_date () ) {
+                calendar.fill_grid_days(start_day_nav, max_months_day_nav, nav_day);
+            } else {
+                calendar.fill_grid_days(start_day_nav, max_months_day_nav, -1);
+            }
+            
+            header.change_main_text ( nav_year.to_string() );
+        }
+
+        private bool compare_actual_date () {
+            bool equal = true;
+            equal = nav_day == current_day &&
+                    nav_month == current_month &&
+                    nav_year == current_year;
+            return equal;
+        }
+
+        private string generare_mm_yyyy (int month, int year) {
+            string m = Month.from_number (month);
+            return @"$m  $(year.to_string())";
+        }
+
+        private string generare_yyyy_yyyy (int year) {
+            string year_min = (year-1).to_string ();
+            string year_max = (year+10).to_string ();
+            return @"$year_min - $year_max";
+        }
+
+        private List<string> generare_year_list (int year) {
+            List<string> list = new List<string>();
+            int y_start = year - 1;
+            int y_end = year + 11;
+            for (int i = y_start ; i < y_end; i++) {
+                list.append(i.to_string());
+            }
+            return list;
+        }
+
+        private void get_info_date (DateTime date_time,
+                                    out int start_day, 
+                                    out int max_months_day,
+                                    out int day,
+                                    out int month,
+                                    out int year) {
             // Today date DD/MM/YYY
-            var current_date = new DateTime.now_local ();
-            int current_month;
-            int current_d;
-            current_date.get_ymd (out current_year, out current_month, out current_d);
-            current_day = current_d - 1; 
+            date_time.get_ymd (out year, out month, out day); 
 
             // Get first week of month and start day
             // (1 is Monday, 2 is Tuesday... 7 is Sunday).
             // -1 to ensure that grid shows it in correct position
-            var firts_week = new DateTime.local (current_year, current_month, 1, 0, 0, 0);
-            start_day_today = firts_week.get_day_of_week () - 1;
+            var firts_week = new DateTime.local (year, month, 1, 0, 0, 0);
+            start_day = firts_week.get_day_of_week () - 1;
 
             // Get max of days in current month
-            max_months_day_today = Date.get_days_in_month (int_to_DateMont(current_month), (GLib.DateYear) current_year);
+            max_months_day = Date.get_days_in_month (int_to_DateMont(month), (GLib.DateYear) year);
         }
 
         private DateMonth int_to_DateMont (int month) {

@@ -24,38 +24,16 @@
 using Gtk;
 using App.Enums;
 namespace App.Views {
-    public class CalendarView : Grid {
+    public class CalendarView : Box {
 
+        public signal void setup_current_date ();
         private static List<Label> labels;
         private Grid day_grid;
 
-        public CalendarView (int start_day, int max_day, int current_day) {
-
+        public CalendarView () {
+            this.orientation = Gtk.Orientation.VERTICAL;
             int max_labels = 42;
-
-            var label_monday = new Label(Day.MONDAY.to_string());
-            var label_tuesday = new Label(Day.TUESDAY.to_string());
-            var label_wednesday = new Label(Day.WEDNESDAY.to_string());
-            var label_thursday = new Label(Day.THURSDAY.to_string());
-            var label_friday = new Label(Day.FRIDAY.to_string());
-            var label_saturday = new Label(Day.SATURDAY.to_string());
-            var label_sunday = new Label(Day.SUNDAY.to_string());
-
-            label_monday.hexpand = true;
-            label_tuesday.hexpand = true;
-            label_wednesday.hexpand = true;
-            label_thursday.hexpand = true;
-            label_friday.hexpand = true;
-            label_saturday.hexpand = true;
-            label_sunday.hexpand = true;
-
-            label_monday.get_style_context ().add_class ("day-header");
-            label_tuesday.get_style_context ().add_class ("day-header");
-            label_wednesday.get_style_context ().add_class ("day-header");
-            label_thursday.get_style_context ().add_class ("day-header");
-            label_friday.get_style_context ().add_class ("day-header");
-            label_saturday.get_style_context ().add_class ("day-header");
-            label_sunday.get_style_context ().add_class ("day-header");
+            var days_header = new DaysRow();
             
             /*
              * Grid that contains any number of days
@@ -68,11 +46,11 @@ namespace App.Views {
             var row = 0;
 
             for (int i = 0; i < max_labels; i++) {
-                var label_day = new Label("x");
+                var label_day = new Label("");
                 label_day.get_style_context ().add_class ("label-day");
                 label_day.expand = true;
                 label_day.halign = Align.CENTER;
-                label_day.valign = Align.CENTER;
+                label_day.valign = Align.START;
 
                 day_grid.attach (label_day, col, row, 1, 1);
                 col++;
@@ -82,20 +60,9 @@ namespace App.Views {
                 }
                 labels.append(label_day);
             }
-            
-            //fill_grid_days(start_day, max_day, current_day);
-            //fill_grid_days(start_day, max_day, current_day);
-            //fill_grid_days(2,30,-1);
-            //fill_grid_days(4,31,-1);
 
-            this.attach (label_monday, 0, 1, 1, 1);
-            this.attach (label_tuesday, 1, 1, 1, 1);
-            this.attach (label_wednesday, 2, 1, 1, 1);
-            this.attach (label_thursday, 3, 1, 1, 1);
-            this.attach (label_friday, 4, 1, 1, 1);
-            this.attach (label_saturday, 5, 1, 1, 1);
-            this.attach (label_sunday, 6, 1, 1, 1);
-            this.attach (day_grid, 0, 2, 7, 1);
+            this.pack_start (days_header);
+            this.pack_end (day_grid);
         }
 
         public void fill_grid_days (int start_day, int max_day, int current_day) {
@@ -106,6 +73,8 @@ namespace App.Views {
 
             for (int i = 0; i < 42; i++) {
                 Label label = labels.nth_data (i);
+                label.visible = true;
+                //label.get_style_context ().add_class ("spinner");
                 label.get_style_context ().remove_class ("label-today");
                 
                 /*
@@ -120,7 +89,7 @@ namespace App.Views {
                      * current_day + start_day, it is necessary to 
                      * find the correct label in list
                      */
-                    if (i == current_day + start_day && current_day != -1) {
+                    if ( current_day != -1 && (i+1) == current_day + start_day ) {
                         label.get_style_context ().add_class ("label-today");
                     }
                     label.set_label (day_number.to_string());

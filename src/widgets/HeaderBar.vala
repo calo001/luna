@@ -58,7 +58,7 @@ namespace App.Widgets {
             * Menu colors
             */
             menu_button = new Gtk.MenuButton ();
-            menu_button.set_image (new Gtk.Image .from_icon_name ("open-menu-symbolic", Gtk.IconSize.SMALL_TOOLBAR));
+            menu_button.set_image (new Gtk.Image .from_icon_name ("view-more-symbolic", Gtk.IconSize.SMALL_TOOLBAR));
             menu_button.tooltip_text = _("Settings");
             
             menu_button.clicked.connect (() => {
@@ -68,18 +68,17 @@ namespace App.Widgets {
             /*
             * Menu colors
             */
-            today_button = new Button.from_icon_name ("go-jump-rtl-symbolic", IconSize.SMALL_TOOLBAR);
+            today_button = new Button.from_icon_name ("office-calendar-symbolic", IconSize.SMALL_TOOLBAR);
             
             today_button.clicked.connect (() => {
-                var css_provider = new Gtk.CssProvider ();
-                css_provider.load_from_resource (Constants.URL_CSS_DARK);
+                //var css_provider = new Gtk.CssProvider ();
+                //css_provider.load_from_resource (Constants.URL_CSS_DARK);
             
-                Gtk.StyleContext.add_provider_for_screen (
-                    Gdk.Screen.get_default (),
-                    css_provider,
-                    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-                );
-
+                //Gtk.StyleContext.add_provider_for_screen (
+                //    Gdk.Screen.get_default (),
+                //    css_provider,
+                //    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+                //);
                 today_clicked ();
             });
             
@@ -88,7 +87,7 @@ namespace App.Widgets {
             */
             btn_prev = new Button.from_icon_name ("pan-start-symbolic", IconSize.MENU);
             btn_next = new Button.from_icon_name ("pan-end-symbolic", IconSize.MENU);
-            btn_main = new Button.with_label ("September 2018");
+            btn_main = new Button.with_label ("");
 
             btn_prev.clicked.connect ( () => {
                 prev();
@@ -104,6 +103,7 @@ namespace App.Widgets {
 
             btn_prev.get_style_context ().remove_class ("image-button");
             btn_next.get_style_context ().remove_class ("image-button");
+            btn_main.width_request = 200;
             btn_main.get_style_context ().add_class ("btn-header");
             btn_main.get_style_context ().add_class ("h2");
             btn_prev.get_style_context ().add_class ("btn-header");
@@ -126,6 +126,10 @@ namespace App.Widgets {
             this.pack_start (today_button);
             this.pack_end (menu_button);
             this.set_custom_title (box_buttons);
+        }
+
+        public void change_main_text (string txt_header) {
+            btn_main.label = txt_header;
         }
     }
 }
