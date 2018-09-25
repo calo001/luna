@@ -18,6 +18,8 @@
 
 using Gtk;
 using App.Configs;
+using App.Views;
+using App.Enums;
 
 namespace App.Widgets {
 
@@ -29,13 +31,12 @@ namespace App.Widgets {
      */
     public class HeaderBar : Gtk.HeaderBar {
 
-        public signal void menu_clicked ();
         public signal void today_clicked ();
         public signal void prev();
         public signal void next();
         public signal void main_btn();
 
-        public MenuButton menu_button { get; private set; }
+        public Button menu_button { get; private set; }
         public Button today_button { get; private set; }
         public Button btn_prev { get; private set; }
         public Button btn_next { get; private set; }
@@ -50,35 +51,39 @@ namespace App.Widgets {
          * @see icon_settings
          */
         public HeaderBar () {
-            //get_style_context ().add_class ("transition");
-            //get_style_context ().add_class (STYLE_CLASS_FLAT);
-            //get_style_context ().add_class ("default-decoration");
 
             /*
             * Menu colors
             */
-            menu_button = new Gtk.MenuButton ();
-            menu_button.set_image (new Gtk.Image .from_icon_name ("view-more-symbolic", Gtk.IconSize.SMALL_TOOLBAR));
-            menu_button.tooltip_text = _("Settings");
+            menu_button = new Button.from_icon_name ("view-more-symbolic", IconSize.SMALL_TOOLBAR);
+            menu_button.tooltip_text = _("Colors");
+
+            var popup = new Popover(menu_button);
+            popup.position = Gtk.PositionType.BOTTOM;
+            popup.modal = false;
+
+            var colors = new ColorSelector ();
+            colors.show_all ();
+            popup.add (colors);
+
+            colors.color_selected.connect ( (color) => {
+                change_color (color);
+                toggle_popup (popup);
+            });
             
             menu_button.clicked.connect (() => {
-                menu_clicked ();
+                toggle_popup (popup);
             });
 
-            /*
-            * Menu colors
-            */
+            menu_button.focus_out_event.connect (() => {
+                popup.set_visible (false);
+                return true;
+            });
+
             today_button = new Button.from_icon_name ("office-calendar-symbolic", IconSize.SMALL_TOOLBAR);
-            
+            today_button.tooltip_text = _("Go today");
+
             today_button.clicked.connect (() => {
-                //var css_provider = new Gtk.CssProvider ();
-                //css_provider.load_from_resource (Constants.URL_CSS_DARK);
-            
-                //Gtk.StyleContext.add_provider_for_screen (
-                //    Gdk.Screen.get_default (),
-                //    css_provider,
-                //    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-                //);
                 today_clicked ();
             });
             
@@ -126,6 +131,65 @@ namespace App.Widgets {
             this.pack_start (today_button);
             this.pack_end (menu_button);
             this.set_custom_title (box_buttons);
+        }
+
+        private void change_color (string color) {
+            var settings = App.Configs.Settings.get_instance ();
+            var css_provider = new Gtk.CssProvider ();
+            var url_css = Constants.URL_CSS_WHITE;
+
+            if (color == Color.WHITE.to_string ()) {
+                url_css =  Constants.URL_CSS_WHITE;
+            } else if (color == Color.BLACK.to_string ()) {
+                url_css =  Constants.URL_CSS_DARK;
+            } else if (color == Color.PINK.to_string ()) {
+                url_css =  Constants.URL_CSS_PINK;
+            } else if (color == Color.RED.to_string ()) {
+                url_css =  Constants.URL_CSS_RED;
+            } else if (color == Color.ORANGE.to_string ()) {
+                url_css =  Constants.URL_CSS_ORANGE;
+            } else if (color == Color.YELLOW.to_string ()) {
+                url_css =  Constants.URL_CSS_YELLOW;
+            } else if (color == Color.GREEN.to_string ()) {
+                url_css =  Constants.URL_CSS_GREEN;
+            } else if (color == Color.BLUE.to_string ()) {
+                url_css =  Constants.URL_CSS_BLUE;
+            } else if (color == Color.PURPLE.to_string ()) {
+                url_css =  Constants.URL_CSS_PURPLE;
+            } else if (color == Color.COCO.to_string ()) {
+                url_css =  Constants.URL_CSS_COCO;
+            } else if (color == Color.GRADIENT_BLUE_GREEN.to_string ()) {
+                url_css =  Constants.URL_CSS_GRADIENT_BLUE_GREEN;
+            } else if (color == Color.GRADIENT_PURPLE_RED.to_string ()) {
+                url_css =  Constants.URL_CSS_GRADIENT_PURPLE_RED;
+            } else if (color == Color.GRADIENT_PRIDE.to_string ()) {
+                url_css =  Constants.URL_CSS_PRIDE;
+            } else if (color == Color.TRANS_WHITE.to_string ()) {
+                url_css =  Constants.URL_CSS_LIGHT_TRANS;
+            } else if (color == Color.TRANS_BLACK.to_string ()) {
+                url_css =  Constants.URL_CSS_DARK_TRANS;
+            } else {
+                settings.color = Color.WHITE.to_string ();
+                url_css =  Constants.URL_CSS_WHITE;
+            }
+
+            settings.color = color;
+
+            css_provider.load_from_resource (url_css);
+            
+            Gtk.StyleContext.add_provider_for_screen (
+                Gdk.Screen.get_default (),
+                css_provider,
+                Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+            );
+        }
+
+        private void toggle_popup (Popover popover) {
+            if (popover.is_visible()) {
+                popover.set_visible (false);
+            } else {
+                popover.set_visible (true);
+            }
         }
 
         public void change_main_text (string txt_header) {

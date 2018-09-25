@@ -13,6 +13,12 @@
             <summary>Most recent y position of Luna</summary>
             <description>Most recent y position of Luna</description>
         </key>
+
+        <key name="color" type="s">
+            <default>"white"</default>
+            <summary>Most recent color theme of Luna</summary>
+            <description>Most recent color theme of Luna</description>
+        </key>
     </schema>
 
 </schemalist>

@@ -67,8 +67,8 @@ namespace App.Enums {
             return MONTHS;
         }
 
-        public static string from_number(int num) {
-            switch (num) {
+        public static string from_number(int month) {
+            switch (month) {
                 case 1:  return _("January");
                 case 2:  return _("February");
                 case 3:  return _("March");
@@ -82,6 +82,24 @@ namespace App.Enums {
                 case 11: return _("November");
                 case 12: return _("December");
                 default: assert_not_reached ();
+            }
+        }
+
+        public static DateMonth int_to_DateMont (int month) {
+            switch (month) {
+                case 1: return DateMonth.JANUARY;
+                case 2: return DateMonth.FEBRUARY;
+                case 3: return DateMonth.MARCH;
+                case 4: return DateMonth.APRIL;
+                case 5: return DateMonth.MAY;
+                case 6: return DateMonth.JUNE;
+                case 7: return DateMonth.JULY;
+                case 8: return DateMonth.AUGUST;
+                case 9: return DateMonth.SEPTEMBER;
+                case 10: return DateMonth.OCTOBER;
+                case 11: return DateMonth.NOVEMBER;
+                case 12: return DateMonth.DECEMBER;
+                default: return DateMonth.BAD_MONTH;
             }
         }
     }

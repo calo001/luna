@@ -26,7 +26,6 @@ using App.Enums;
 namespace App.Views {
     public class CalendarView : Box {
 
-        public signal void setup_current_date ();
         private static List<Label> labels;
         private Grid day_grid;
 
@@ -73,8 +72,6 @@ namespace App.Views {
 
             for (int i = 0; i < 42; i++) {
                 Label label = labels.nth_data (i);
-                label.visible = true;
-                //label.get_style_context ().add_class ("spinner");
                 label.get_style_context ().remove_class ("label-today");
                 
                 /*
@@ -82,7 +79,9 @@ namespace App.Views {
                  * find the correct label in list
                  */
                 if (i < start_day || i >= max_day + start_day) {
+                    print ("\nMe pongo invisible");
                     label.visible = false;
+                    label.set_visible (false);
                 } else {
                 
                     /*

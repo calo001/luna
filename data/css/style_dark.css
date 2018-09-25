@@ -16,17 +16,20 @@
 * 
 */
 
-/* @define-color colorPrimary {{ headerbar-color }}; */
-/* @define-color textColorPrimary {{ headerbar-text-color }}; */
-/* @define-color textColorPrimaryShadow {{ headerbar-text-shadow-color }}; */
-/* @define-color colorAccent {{ accent-color }}; */
+@import url("/com/github/calo001/luna/css/main.css");
+@import url("/com/github/calo001/luna/css/colors.css");
+@import url("/com/github/calo001/luna/css/color_buttons.css");
 
-@define-color bg_highlight_color shade (@colorPrimary, 1.4);
+@define-color myColorPrimary @luna_black;
+@define-color textColorPrimary @white_clear;
+@define-color colorAccent @white_clear;
+@define-color colorAccentTransparent rgba(0,0,0,0.1);
 
-.titlebar, .background {
-    background-color: #000; 
-    color: #FFF;
-    icon-shadow: 0 1px 1px shade (@textColorPrimaryShadow, 0.82)
-    text-shadow: 0 1px 1px shade (@textColorPrimaryShadow, 0.82);
+
+.csd {
+    box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
+.titlebar, .widget_background {
+    background: @myColorPrimary;
+}

@@ -43,6 +43,12 @@ namespace App.Configs {
          * Variable of type {@code int} as declared.
          */
         public int window_y { get; set; }
+
+        /**
+         * This property will represent the color of window
+         * Variable of type {@code string} as declared.
+         */
+        public string color { get; set; }
        
         /**
          * Constructs a new {@code Settings} object 

@@ -42,13 +42,29 @@ namespace App.Configs {
         public abstract const string TRANSLATE_URL = "https://github.com/calo001/luna";
         public abstract const string TEXT_FOR_ABOUT_DIALOG_WEBSITE = "Website";
         public abstract const string TEXT_FOR_ABOUT_DIALOG_WEBSITE_URL = "{{ website-url }}";
-        public abstract const string URL_CSS_WHITE = "/com/github/calo001/luna/css/style_white.css";
-        public abstract const string URL_CSS_DARK = "/com/github/calo001/luna/css/style_dark.css";
         public abstract const string [] ABOUT_AUTHORS = { "Carlos Lopez <calo_lrc@hotmail.com>" };
         public abstract const Gtk.License ABOUT_LICENSE_TYPE = Gtk.License.CUSTOM;
 
         public abstract const string STACK_CALENDAR = "calendar";
         public abstract const string STACK_YEARS = "years";
         public abstract const string STACK_MONTHS = "months";
+
+        public abstract const string URL_CSS_WHITE = "/com/github/calo001/luna/css/style_white.css";
+        public abstract const string URL_CSS_DARK = "/com/github/calo001/luna/css/style_dark.css";
+        public abstract const string URL_CSS_PINK = "/com/github/calo001/luna/css/style_pink.css";
+        public abstract const string URL_CSS_RED = "/com/github/calo001/luna/css/style_red.css";
+        public abstract const string URL_CSS_ORANGE = "/com/github/calo001/luna/css/style_orange.css";
+        public abstract const string URL_CSS_YELLOW = "/com/github/calo001/luna/css/style_yellow.css";
+        public abstract const string URL_CSS_GREEN = "/com/github/calo001/luna/css/style_green.css";
+        public abstract const string URL_CSS_BLUE = "/com/github/calo001/luna/css/style_blue.css";
+        public abstract const string URL_CSS_PURPLE = "/com/github/calo001/luna/css/style_purple.css";
+        public abstract const string URL_CSS_COCO = "/com/github/calo001/luna/css/style_coco.css";
+
+        public abstract const string URL_CSS_GRADIENT_BLUE_GREEN = "/com/github/calo001/luna/css/style_gradient_blue_green.css";
+        public abstract const string URL_CSS_GRADIENT_PURPLE_RED = "/com/github/calo001/luna/css/style_gradient_purple_red.css";
+        public abstract const string URL_CSS_PRIDE = "/com/github/calo001/luna/css/style_gradient_pride.css";
+        public abstract const string URL_CSS_LIGHT_TRANS = "/com/github/calo001/luna/css/style_light_transparent.css";
+        public abstract const string URL_CSS_DARK_TRANS = "/com/github/calo001/luna/css/style_dark_transparent.css";
+        
     }
 }

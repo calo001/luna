@@ -16,20 +16,21 @@
 * 
 */
 
-@import url("/com/github/calo001/luna/css/main.css");
-@import url("/com/github/calo001/luna/css/colors.css");
-@import url("/com/github/calo001/luna/css/color_buttons.css");
+@define-color luna_white #FAFAFA;
+@define-color luna_black #1A1A1A;
+@define-color luna_red #C6262E;
+@define-color luna_pink #db36a4;
+@define-color luna_orange #F37329;
+@define-color luna_yellow #F9C440;
+@define-color luna_green #68B723;
+@define-color luna_blue #3689E6;
+@define-color luna_purple #7239b3;
+@define-color luna_coco #715344;
 
-@define-color myColorPrimary @luna_white;
-@define-color textColorPrimary @black_dark;
-@define-color colorAccent @black_dark;
-@define-color colorAccentTransparent rgba(0,0,0,0.1);
+@define-color white_clear #FFFFFF;
+@define-color black_dark #000000;
 
-
-.csd {
-    box-shadow: 0px 2px 5px 5px rgba(255, 255, 255, 0.1);
-}
-
-.titlebar, .widget_background {
-    background: @myColorPrimary;
-}
+/* @define-color luna_gradient_blue_green linear-gradient(to right, #00F160, #0575E4);
+@define-color luna_gradient_purple_red linear-gradient(to right, #7B4396, #DB2430);
+@define-color luna_gradient_pride linear-gradient(to right, #c6262e, #f37329, #f9c440, #68b723, #3689e6);
+ */

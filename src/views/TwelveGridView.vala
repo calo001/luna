@@ -25,25 +25,33 @@ namespace App.Views {
      */
     public class TwelveGridView : Gtk.Grid {
         private List<Button> labels;
-        public signal void option_click (string value);
+        public signal void option_click (string name, string value);
 
         public TwelveGridView (List<string> items) {
             this.margin = 5;
             this.column_spacing = 4;
             this.row_spacing = 20;
 
+            int name = 1;
             int row = 0;
             int column = 0;
             foreach ( var item in items ) {
                 var label_item = new Button.with_label(item);
+                label_item.name = name.to_string();
                 label_item.expand = true;
                 label_item.halign = Align.FILL;
                 label_item.valign = Align.FILL;
                 label_item.get_style_context ().add_class ("label-day");
                 label_item.get_style_context ().add_class ("circle");
 
+                // Adding listener
+                label_item.clicked.connect ( ()=>{
+                    option_click (label_item.name, label_item.label);
+                });
+
                 labels.append(label_item);
                 this.attach(label_item, column, row);
+                name++;
                 column++;
                 if (column % 4 == 0) {
                     column = 0;

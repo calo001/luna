@@ -2,8 +2,24 @@
 <gresources>
 
     <gresource prefix="/com/github/calo001/luna/css">
+        <file alias="main.css" compressed="true">css/main.css</file>
+        <file alias="colors.css" compressed="true">css/colors.css</file>
+        <file alias="color_buttons.css" compressed="true">css/color_buttons.css</file>
         <file alias="style_white.css" compressed="true">css/style_white.css</file>
         <file alias="style_dark.css" compressed="true">css/style_dark.css</file>
+        <file alias="style_pink.css" compressed="true">css/style_pink.css</file>
+        <file alias="style_red.css" compressed="true">css/style_red.css</file>
+        <file alias="style_orange.css" compressed="true">css/style_orange.css</file>
+        <file alias="style_yellow.css" compressed="true">css/style_yellow.css</file>
+        <file alias="style_green.css" compressed="true">css/style_green.css</file>
+        <file alias="style_blue.css" compressed="true">css/style_blue.css</file>
+        <file alias="style_purple.css" compressed="true">css/style_purple.css</file>
+        <file alias="style_coco.css" compressed="true">css/style_coco.css</file>
+        <file alias="style_gradient_blue_green.css" compressed="true">css/style_gradient_blue_green.css</file>
+        <file alias="style_gradient_purple_red.css" compressed="true">css/style_gradient_purple_red.css</file>
+        <file alias="style_gradient_pride.css" compressed="true">css/style_gradient_pride.css</file>
+        <file alias="style_dark_transparent.css" compressed="true">css/style_dark_transparent.css</file>
+        <file alias="style_light_transparent.css" compressed="true">css/style_light_transparent.css</file>
     </gresource>
 
     <gresource prefix="/com/github/calo001/luna/images">

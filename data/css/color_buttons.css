@@ -16,20 +16,56 @@
 * 
 */
 
-@import url("/com/github/calo001/luna/css/main.css");
 @import url("/com/github/calo001/luna/css/colors.css");
-@import url("/com/github/calo001/luna/css/color_buttons.css");
 
-@define-color myColorPrimary @luna_white;
-@define-color textColorPrimary @black_dark;
-@define-color colorAccent @black_dark;
-@define-color colorAccentTransparent rgba(0,0,0,0.1);
-
-
-.csd {
-    box-shadow: 0px 2px 5px 5px rgba(255, 255, 255, 0.1);
+.btn_white {
+    background: @luna_white;
 }
 
-.titlebar, .widget_background {
-    background: @myColorPrimary;
+.btn_black {
+    background: @luna_black;
+}
+
+.btn_pink {
+    background: @luna_pink;
+}
+
+.btn_red {
+    background: @luna_red;
+}
+
+.btn_orange {
+    background: @luna_orange;
+}
+
+.btn_yellow {
+    background: @luna_yellow;
+}
+
+.btn_green {
+    background: @luna_green;
+}
+
+.btn_blue {
+    background: @luna_blue;
+}
+
+.btn_purple {
+    background: @luna_purple;
+}
+
+.btn_coco {
+    background: @luna_coco;
+}
+
+.btn_gradient_blue_green {
+    background: linear-gradient(to right, #00F160, #0575E4);
+}
+
+.btn_gradient_purple_red {
+    background: linear-gradient(to right, #7B4396, #DB2430);
+}
+
+.btn_gradient_pride {
+    background: linear-gradient(to right, #c6262e, #f37329, #f9c440, #68b723, #3689e6);
 }

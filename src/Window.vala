@@ -19,6 +19,7 @@
 using App.Configs;
 using App.Controllers;
 using App.Views;
+using App.Enums;
 
 namespace App {
 
@@ -46,19 +47,23 @@ namespace App {
             );
 
             get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+            get_style_context ().add_class ("widget_background");
+            
             set_keep_below (true);
             stick ();
 
             var settings = App.Configs.Settings.get_instance ();
             int x = settings.window_x;
             int y = settings.window_y;
+            string css = settings.color;
 
             if (x != -1 && y != -1) {
                 move (x, y);
             }
 
             var css_provider = new Gtk.CssProvider ();
-            css_provider.load_from_resource (Constants.URL_CSS_WHITE);
+            var css_path = Color.string_to_css_path (css);
+            css_provider.load_from_resource (css_path);
             
             Gtk.StyleContext.add_provider_for_screen (
                 Gdk.Screen.get_default (),

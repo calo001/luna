@@ -20,14 +20,14 @@
 @import url("/com/github/calo001/luna/css/colors.css");
 @import url("/com/github/calo001/luna/css/color_buttons.css");
 
-@define-color myColorPrimary @luna_white;
-@define-color textColorPrimary @black_dark;
-@define-color colorAccent @black_dark;
+@define-color myColorPrimary @luna_pink;
+@define-color textColorPrimary @white_clear;
+@define-color colorAccent @white_clear;
 @define-color colorAccentTransparent rgba(0,0,0,0.1);
 
 
 .csd {
-    box-shadow: 0px 2px 5px 5px rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 2px 5px 5px rgba(255, 0, 170, 0.1);
 }
 
 .titlebar, .widget_background {

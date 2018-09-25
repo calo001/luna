@@ -1,0 +1,88 @@
+/*
+* Copyright (C) 2018  Carlos Lopez <calo_lrc@hotmail.com>
+* 
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU Affero General Public License as published
+* by the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+* 
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU Affero General Public License for more details.
+* 
+* You should have received a copy of the GNU Affero General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+* 
+*/
+
+.titlebar, .widget_background {
+    background-color: @myColorPrimary; 
+    color: @textColorPrimary;
+    icon-shadow: 0 1px 1px shade (@textColorPrimaryShadow, 0.82);
+    text-shadow: 0 1px 1px shade (@textColorPrimaryShadow, 0.82);
+    box-shadow: none;
+}
+
+.circle {
+    box-shadow: none;
+    border-radius: 50%;
+    padding: 40px 20px;
+}
+
+.label-day {
+    color: @textColorPrimary;
+    text-shadow: none;
+    font-size: 11px;
+    border: none;
+    padding: 12px;
+    background: none;
+}
+
+.label-day:hover {
+    color: @myColorPrimary;
+    border: none;
+    padding: 12px;
+    background: @colorAccent;
+}
+
+.label-today {
+    background: @colorAccent;
+    color: @myColorPrimary;
+    text-shadow: none;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.day-header {
+    font-weight: bold;
+    text-shadow: none;
+}
+
+.btn-header {
+    color: @textColorPrimary;
+    font-size: 16px;
+    text-shadow: none;
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+
+.btn-header:hover {
+    background: @colorAccentTransparent;
+}
+
+.transition {
+    transition: 200ms;
+    transition-timing-function: ease;
+}
+
+.button_colors {
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0px 0px 2px 2px @colorAccentTransparent;
+}
+
+.button_colors:hover {
+    opacity: 0.8;
+}

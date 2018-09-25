@@ -8,9 +8,11 @@ sources += files(
     'views/CalendarView.vala',
     'views/TwelveGridView.vala',
     'views/DaysRow.vala',
+    'views/ColorSelector.vala',
 
     'enums/Day.vala',
     'enums/Month.vala',
+    'enums/Color.vala',
 
     'widgets/HeaderBar.vala',
 
