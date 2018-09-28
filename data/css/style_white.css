@@ -25,8 +25,11 @@
 @define-color colorAccent @black_dark;
 @define-color colorAccentTransparent rgba(0,0,0,0.1);
 
+/*
+ * dialog decoration selector only works on juno version
+ */
 
-.csd {
+ dialog decoration {
     box-shadow: 0px 2px 5px 5px rgba(255, 255, 255, 0.1);
 }
 

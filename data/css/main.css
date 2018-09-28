@@ -19,9 +19,21 @@
 .titlebar, .widget_background {
     background-color: @myColorPrimary; 
     color: @textColorPrimary;
-    icon-shadow: 0 1px 1px shade (@textColorPrimaryShadow, 0.82);
+    -gtk-icon-shadow: 0 1px 1px shade (@textColorPrimaryShadow, 0.82);
     text-shadow: 0 1px 1px shade (@textColorPrimaryShadow, 0.82);
     box-shadow: none;
+}
+
+.image-button widget box image,
+.btn-header widget box image,
+.btn-header label {
+    color: @textColorPrimary;
+    text-shadow: none;
+    -gtk-icon-shadow: none;
+}
+
+dialog decoration {
+	box-shadow: none;
 }
 
 .circle {

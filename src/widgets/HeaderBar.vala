@@ -106,8 +106,10 @@ namespace App.Widgets {
                 main_btn();
             });
 
-            btn_prev.get_style_context ().remove_class ("image-button");
-            btn_next.get_style_context ().remove_class ("image-button");
+            //btn_prev.get_style_context ().remove_class ("image-button");
+            //btn_next.get_style_context ().remove_class ("image-button");
+            btn_prev.width_request = 35;
+            btn_next.width_request = 35;
             btn_main.width_request = 200;
             btn_main.get_style_context ().add_class ("btn-header");
             btn_main.get_style_context ().add_class ("h2");
