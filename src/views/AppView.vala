@@ -101,20 +101,7 @@ namespace App.Views {
             */
 
             header.today_clicked.connect (() => {
-
-                nav_date = new DateTime.now_local ();
-
-                get_info_date (nav_date,
-                           out start_day_nav, 
-                           out max_months_day_nav,
-                           out nav_day,
-                           out nav_month,
-                           out nav_year);
-
-                header.change_main_text ( generare_mm_yyyy (nav_month, nav_year) );
-                calendar.fill_grid_days(start_day_nav, max_months_day_nav, nav_day);
-                this.set_visible_child_name (Constants.STACK_CALENDAR);
-                current_stack = Constants.STACK_CALENDAR;
+                goto_today ();
             });
 
             header.prev.connect ( () => {
@@ -217,9 +204,31 @@ namespace App.Views {
                 current_stack = Constants.STACK_MONTHS;
             });
 
+            set_timer ();
+
             this.add_named (calendar, Constants.STACK_CALENDAR);
             this.add_named (years, Constants.STACK_YEARS);
             this.add_named (months, Constants.STACK_MONTHS);
+        }
+
+        /*
+         * This mothod is used for navigate to the current date
+         */
+
+        private void goto_today () {
+            nav_date = new DateTime.now_local ();
+
+            get_info_date (nav_date,
+                           out start_day_nav, 
+                           out max_months_day_nav,
+                           out nav_day,
+                           out nav_month,
+                           out nav_year);
+
+            header.change_main_text ( generare_mm_yyyy (nav_month, nav_year) );
+            calendar.fill_grid_days(start_day_nav, max_months_day_nav, nav_day);
+            this.set_visible_child_name (Constants.STACK_CALENDAR);
+            current_stack = Constants.STACK_CALENDAR;
         }
 
         /*
@@ -394,5 +403,38 @@ namespace App.Views {
             }
             return years;
         }
-    }
-}
+
+        /*
+         * This class set an interval of time to detect when the
+         * current day change
+         */
+        private void set_timer () {
+            MainLoop loop = new MainLoop ();
+            TimeoutSource time = new TimeoutSource (2000);
+            time.set_callback (() => {
+                print ("Time!\n");
+                update_today ();
+                set_timer ();
+                return false;
+            });
+            time.attach (loop.get_context ());
+        }
+
+        private void update_today () {
+            var interval_day = new DateTime.now_local ();
+            var day_interval = interval_day.get_day_of_month ();
+            if (day_interval != current_day) {
+                current_date = new DateTime.now_local ();
+
+                // Get the basic data from current date
+                get_info_date (current_date,
+                           out start_day_today, 
+                           out max_months_day_today,
+                           out current_day,
+                           out current_month,
+                           out current_year);
+
+                goto_today ();
+            }
+        }
+}}
