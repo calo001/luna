@@ -42,7 +42,7 @@
     background: @colorAccentTransparent;
 }
 
-.label-today GtkLabel{
+.label-today .label-day{
     background: @colorAccentTransparent;
     color: @colorAccent;
 }
