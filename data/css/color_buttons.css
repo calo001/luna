@@ -69,3 +69,19 @@
 .btn_gradient_pride {
     background: linear-gradient(to right, #c6262e, #f37329, #f9c440, #68b723, #3689e6);
 }
+
+.btn_trans_dark {
+    background: linear-gradient(45deg, rgba(0,0,0,1) 0, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 26%, rgba(0,0,0,0) 74%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 100%), linear-gradient(45deg, rgba(0,0,0,1) 0, rgba(0,0,0,1) 3px, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 25%, rgba(0,0,0,0.05) 74%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 100%), rgb(255, 255, 255);
+    background-position: 0 0, 5px 5px;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-size: 10px 10px;
+}
+
+.btn_trans_white {
+    background: linear-gradient(45deg, rgba(0,0,0,0.0980392) 25%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 75%, rgba(0,0,0,0.0980392) 75%, rgba(0,0,0,0.0980392) 0), linear-gradient(45deg, rgba(0,0,0,0.0980392) 25%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 75%, rgba(0,0,0,0.0980392) 75%, rgba(0,0,0,0.0980392) 0), rgb(255, 255, 255);
+    background-position: 0 0, 5px 5px;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-size: 10px 10px;
+}

@@ -133,6 +133,9 @@ namespace App.Views {
             btn_blue_green.get_style_context ().add_class ("btn_gradient_blue_green");
             btn_purple_red.get_style_context ().add_class ("btn_gradient_purple_red");
             btn_pride.get_style_context ().add_class ("btn_gradient_pride");
+            btn_trans_black.get_style_context ().add_class ("btn_trans_dark");
+            btn_trans_white.get_style_context ().add_class ("btn_trans_white");
+            
 
             // Adding individual tooltip text
             btn_white.set_tooltip_text (_("White"));
