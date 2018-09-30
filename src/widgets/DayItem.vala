@@ -38,8 +38,8 @@ namespace App.Widgets {
         public DayItem (string number_day) {
             //this.expand = true;
             this.halign = Align.CENTER;
-            this.valign = Align.START;
-            this.homogeneous = false;
+            this.valign = Align.CENTER;
+            this.homogeneous = true;
             this.hhomogeneous = true;
             this.interpolate_size = true;
             this.transition_type = StackTransitionType.CROSSFADE;
@@ -61,12 +61,14 @@ namespace App.Widgets {
             
             label_day_small = new Label("");
             label_day_small.label = number_day;
+            label_day_small.expand = true;
             label_day_small.get_style_context ().add_class ("label-day-small");
             image = new Image.from_resource (Constants.ICON_SUMMER);
 
-            box_image = new Box (Orientation.VERTICAL, 0);
-            box_image.pack_start (label_day_small);
+            box_image = new Box (Orientation.HORIZONTAL, 1);
+            box_image.name = "box-season";
             box_image.pack_start (image);
+            box_image.pack_start (label_day_small);
 
             this.add_named (box_label, "day");
             this.add_named (box_image, "day-image");
