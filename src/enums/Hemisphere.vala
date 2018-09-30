@@ -16,33 +16,10 @@
 * 
 */
 
-@import url("/com/github/calo001/luna/css/main.css");
-@import url("/com/github/calo001/luna/css/colors.css");
-@import url("/com/github/calo001/luna/css/color_buttons.css");
-
-@define-color myColorPrimary rgba (0,0,0,0);
-@define-color textColorPrimary @black_dark;
-@define-color colorAccent @black_dark;
-@define-color colorAccentTransparent rgba(0,0,0,0.1);
-
-/*
- * dialog decoration selector only works on juno version
- */
-
- dialog decoration {
-    box-shadow: none;
-}
-
-.titlebar, .widget_background {
-    background: @myColorPrimary;
-}
-
-.label-day:hover {
-    color: @textColorPrimary;
-    background: @colorAccentTransparent;
-}
-
-.label-today GtkLabel {
-    background: @colorAccentTransparent;
-    color: @colorAccent;
+namespace App.Enums {
+    enum Hemisphere {
+        NORTHERN,
+        SOUTHERN,
+        NONE
+    }
 }

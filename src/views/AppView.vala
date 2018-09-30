@@ -32,7 +32,7 @@ namespace App.Views {
 
         private App.Widgets.HeaderBar header;
 
-        CalendarView calendar;
+        CalendarView   calendar;
         TwelveGridView months;
         TwelveGridView years;
 
@@ -225,8 +225,15 @@ namespace App.Views {
                            out nav_month,
                            out nav_year);
 
+            if ( compare_actual_month_year () ) {
+                print(@"Current day $nav_day");
+                nav_day = current_day;
+                calendar.fill_grid_days(start_day_nav, max_months_day_nav, nav_day);
+            } else {
+                calendar.fill_grid_days(start_day_nav, max_months_day_nav, -1);
+            }
+
             header.change_main_text ( generare_mm_yyyy (nav_month, nav_year) );
-            calendar.fill_grid_days(start_day_nav, max_months_day_nav, nav_day);
             this.set_visible_child_name (Constants.STACK_CALENDAR);
             current_stack = Constants.STACK_CALENDAR;
         }

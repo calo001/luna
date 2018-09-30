@@ -49,6 +49,11 @@ namespace App.Configs {
         public abstract const string STACK_YEARS = "years";
         public abstract const string STACK_MONTHS = "months";
 
+        public abstract const string ICON_SUMMER = "/com/github/calo001/luna/images/summer.svg";
+        public abstract const string ICON_SPRING = "/com/github/calo001/luna/images/spring.svg";
+        public abstract const string ICON_AUTOMN = "/com/github/calo001/luna/images/autumn.svg";
+        public abstract const string ICON_WINTER = "/com/github/calo001/luna/images/winter.svg";
+        
         public abstract const string URL_CSS_WHITE = "/com/github/calo001/luna/css/style_white.css";
         public abstract const string URL_CSS_DARK = "/com/github/calo001/luna/css/style_dark.css";
         public abstract const string URL_CSS_PINK = "/com/github/calo001/luna/css/style_pink.css";

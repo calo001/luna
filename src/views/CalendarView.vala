@@ -23,16 +23,23 @@
 
 using Gtk;
 using App.Enums;
+using App.Configs;
+using App.Widgets;
+
 namespace App.Views {
     public class CalendarView : Box {
 
-        private static List<Label> labels;
+        private static List<DayItem> labels;
         private Grid day_grid;
+        private Hemisphere hemisphere;
 
         public CalendarView () {
             this.orientation = Gtk.Orientation.VERTICAL;
+            this.hemisphere = Hemisphere.NONE;
             int max_labels = 42;
             var days_header = new DaysRow();
+
+            get_location.begin ();
             
             /*
              * Grid that contains any number of days
@@ -45,11 +52,11 @@ namespace App.Views {
             var row = 0;
 
             for (int i = 0; i < max_labels; i++) {
-                var label_day = new Label("");
-                label_day.get_style_context ().add_class ("label-day");
-                label_day.expand = true;
-                label_day.halign = Align.CENTER;
-                label_day.valign = Align.START;
+                var label_day = new DayItem("");
+                //label_day.get_style_context ().add_class ("label-day");
+                //label_day.expand = true;
+                //label_day.halign = Align.CENTER;
+                //label_day.valign = Align.START;
 
                 day_grid.attach (label_day, col, row, 1, 1);
                 col++;
@@ -64,6 +71,27 @@ namespace App.Views {
             this.pack_end (day_grid);
         }
 
+        public async void get_location () {
+            try {
+                var simple = yield new GClue.Simple (Constants.ID, GClue.AccuracyLevel.CITY, null);
+
+                simple.notify["location"].connect (() => {
+                    on_location_updated (simple.location.latitude, simple.location.longitude);
+                });
+    
+                on_location_updated (simple.location.latitude, simple.location.longitude);
+                
+            } catch (Error e) {
+                warning ("Failed to connect to GeoClue2 service: %s", e.message);
+                return;
+            }
+        }
+
+        public void on_location_updated (double latitude, double longitude) {
+            var lat = latitude;
+            print (@"\nLatitude: $lat\n");
+        }
+
         public void fill_grid_days (int start_day, int max_day, int current_day) {
             /*
              * All days in interation to add a new Label
@@ -71,9 +99,10 @@ namespace App.Views {
             var day_number = 1;
 
             for (int i = 0; i < 42; i++) {
-                Label label = labels.nth_data (i);
-                label.get_style_context ().remove_class ("label-today");
-                
+                DayItem label = labels.nth_data (i);
+                //label.get_style_context ().remove_class ("label-today");
+                label.toogle_label_today (false);
+                label.visible = true;
                 /*
                  * max_day + start_day, it is necessary to 
                  * find the correct label in list
@@ -81,7 +110,6 @@ namespace App.Views {
                 if (i < start_day || i >= max_day + start_day) {
                     print ("\nMe pongo invisible");
                     label.visible = false;
-                    label.set_visible (false);
                 } else {
                 
                     /*
@@ -89,9 +117,11 @@ namespace App.Views {
                      * find the correct label in list
                      */
                     if ( current_day != -1 && (i+1) == current_day + start_day ) {
-                        label.get_style_context ().add_class ("label-today");
+                        //label.get_style_context ().add_class ("label-today");
+                        label.toogle_label_today (true);
                     }
-                    label.set_label (day_number.to_string());
+                    //label.set_label (day_number.to_string());
+                    label.change_day (day_number.to_string());
                     day_number++;
                 }
             }
