@@ -13,11 +13,14 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/calo001/luna/blob/master/LICENSE">
-    <img src="https://img.shields.io/badge/License-AGPL-3.0-blue.svg">
+  <a href="https://github.com/calo001/luna">
+    <img src="https://img.shields.io/badge/Version-1.0.0-orange.svg">
   </a>
-  <a href="https://github.com/calo001/luna/releases">
-    <img src="https://img.shields.io/badge/Release-v%201.0.0-orange.svg">
+  <a href="https://github.com/calo001/luna/blob/master/LICENSE.md">
+    <img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg">
+  </a>
+  <a href="https://travis-ci.org/calo001/luna">
+    <img src="https://travis-ci.org/calo001/luna.svg?branch=master">
   </a>
 </p>
 
