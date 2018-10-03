@@ -14,6 +14,7 @@ sources += files(
     'enums/Month.vala',
     'enums/Color.vala',
     'enums/Hemisphere.vala',
+    'enums/Season.vala',
 
     'widgets/HeaderBar.vala',
     'widgets/DayItem.vala',

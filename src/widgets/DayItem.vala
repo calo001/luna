@@ -63,12 +63,13 @@ namespace App.Widgets {
             label_day_small.label = number_day;
             label_day_small.expand = true;
             label_day_small.get_style_context ().add_class ("label-day-small");
-            image = new Image.from_resource (Constants.ICON_SUMMER);
+            image = new Image.from_resource (Constants.ICON_SPRING);
 
             box_image = new Box (Orientation.HORIZONTAL, 1);
             box_image.name = "box-season";
             box_image.pack_start (image);
             box_image.pack_start (label_day_small);
+            box_image.set_tooltip_text ("Primavera");
 
             this.add_named (box_label, "day");
             this.add_named (box_image, "day-image");
@@ -79,6 +80,10 @@ namespace App.Widgets {
         public void change_day (string day) {
             label_day.label = day;
             label_day_small.label = day;
+        }
+
+        public void change_season (string season) {
+            image.set_from_resource (season);
         }
 
         public void toogle_label_today (bool today) {

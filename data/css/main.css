@@ -57,6 +57,7 @@ dialog decoration {
 
 .label-day-small {
     font-size: 8px;
+    text-shadow: none;
 }
 
 .label-day:hover {
