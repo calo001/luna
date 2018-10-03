@@ -9,11 +9,6 @@ add_project_arguments([
     language: 'c',
 )
 
-add_project_arguments([
-        '--vapidir', join_paths(meson.current_source_dir(), 'vapi')
-    ], 
-    language: 'vala')
-
 gnome = import('gnome')
 i18n = import('i18n')
 
@@ -37,14 +32,12 @@ sources = files()
 subdir('data')
 subdir('po')
 subdir('src')
-subdir('tests')
 
 dependencies = [
 	dependency('gobject-2.0'),
     dependency('glib-2.0'),
     dependency('granite'),
     dependency('gtk+-3.0'),
-    dependency('libgeoclue-2.0')
 ]
 
 e = executable('com.github.calo001.luna',

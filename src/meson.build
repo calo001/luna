@@ -13,12 +13,9 @@ sources += files(
     'enums/Day.vala',
     'enums/Month.vala',
     'enums/Color.vala',
-    'enums/Hemisphere.vala',
-    'enums/Season.vala',
 
     'widgets/HeaderBar.vala',
-    'widgets/DayItem.vala',
-
+    
     'Application.vala',
     'Main.vala',
     'Window.vala'

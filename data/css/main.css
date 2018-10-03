@@ -67,8 +67,7 @@ dialog decoration {
     background: @colorAccent;
 }
 
-.label-today .label-day,
-.label-today #box-season {
+.label-today {
     background: @colorAccent;
     color: @myColorPrimary;
     text-shadow: none;

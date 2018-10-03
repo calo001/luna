@@ -23,24 +23,6 @@ function initialize {
     fi
 }
 
-function test {
-    initialize
-
-    export DISPLAY=:0
-    ./com.github.calo001.luna --run-tests
-    result=$?
-
-    export DISPLAY=":0.0"
-
-    echo ""
-    if [ $result -gt 0 ]; then
-        echo "Failed testing"
-        exit 100
-    fi
-
-    echo "Tests passed!"
-}
-
 case $1 in
 "clean")
     sudo rm -rf ./build
@@ -74,13 +56,6 @@ case $1 in
     initialize
     ./com.github.calo001.luna "${@:2}"
     ;;
-"test")
-    test
-    ;;
-"test-run")
-    test
-    ./com.github.calo001.luna "${@:2}"
-    ;;
 "uninstall")
     initialize
     sudo ninja uninstall
@@ -95,8 +70,6 @@ case $1 in
     echo "  install           Builds and installs application to the system (requires sudo)"
     echo "  install-deps      Installs missing build dependencies"
     echo "  run               Builds and runs the application"
-    echo "  test              Builds and runs testing for the application"
-    echo "  test-run          Builds application, runs testing and if successful application is started"
     echo "  uninstall         Removes the application from the system (requires sudo)"
     ;;
 esac

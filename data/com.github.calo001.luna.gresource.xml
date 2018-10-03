@@ -30,9 +30,5 @@
         <file alias="48-com.github.calo001.luna.svg" compressed="true" preprocess="xml-stripblanks">images/icons/48/com.github.calo001.luna.svg</file>
         <file alias="64-com.github.calo001.luna.svg" compressed="true" preprocess="xml-stripblanks">images/icons/64/com.github.calo001.luna.svg</file>
         <file alias="128-com.github.calo001.luna.svg" compressed="true" preprocess="xml-stripblanks">images/icons/128/com.github.calo001.luna.svg</file>
-        <file alias="summer.svg" compressed="true" preprocess="xml-stripblanks">images/summer.svg</file>
-        <file alias="autumn.svg" compressed="true" preprocess="xml-stripblanks">images/autumn.svg</file>
-        <file alias="spring.svg" compressed="true" preprocess="xml-stripblanks">images/spring.svg</file>
-        <file alias="winter.svg" compressed="true" preprocess="xml-stripblanks">images/winter.svg</file>
     </gresource>
 </gresources>
