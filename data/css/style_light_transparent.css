@@ -29,7 +29,7 @@
  * dialog decoration selector only works on juno version
  */
 
- dialog decoration {
+ .csd {
     box-shadow: none;
 }
 

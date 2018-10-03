@@ -19,7 +19,7 @@
 .titlebar, .widget_background {
     background-color: @myColorPrimary; 
     color: @textColorPrimary;
-    -gtk-icon-shadow: 0 1px 1px shade (@textColorPrimaryShadow, 0.82);
+    icon-shadow: 0 1px 1px shade (@textColorPrimaryShadow, 0.82);
     text-shadow: 0 1px 1px shade (@textColorPrimaryShadow, 0.82);
     box-shadow: none;
 }
@@ -29,11 +29,11 @@
 .btn-header label {
     color: @textColorPrimary;
     text-shadow: none;
-    -gtk-icon-shadow: none;
+    icon-shadow: none;
 }
 
 GtkButton GtkAlignment GtkBox GtkImage {
-	-gtk-icon-shadow: none;
+	icon-shadow: none;
 }
 
 dialog decoration {
