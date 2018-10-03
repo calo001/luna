@@ -49,15 +49,10 @@ dialog decoration {
 .label-day {
     color: @textColorPrimary;
     text-shadow: none;
-    font-size: 11px;
+    font-size: 1.2em;
     border: none;
     padding: 12px;
     background: none;
-}
-
-.label-day-small {
-    font-size: 8px;
-    text-shadow: none;
 }
 
 .label-day:hover {
@@ -82,9 +77,13 @@ dialog decoration {
     text-shadow: none;
 }
 
+.day-empty {
+    padding: 0px;
+}
+
 .btn-header {
     color: @textColorPrimary;
-    font-size: 16px;
+    font-size: 2em;
     text-shadow: none;
     border: none;
     background: none;

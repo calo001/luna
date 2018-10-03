@@ -44,6 +44,7 @@ namespace App.Views {
              */
             day_grid = new Grid ();
             day_grid.column_homogeneous = true;
+            day_grid.row_homogeneous = false;
             
             var col = 0;
             var row = 0;
@@ -76,7 +77,8 @@ namespace App.Views {
 
             for (int i = 0; i < 42; i++) {
                 Label label = labels.nth_data (i);
-                label.get_style_context ().remove_class ("label-today");
+                label.get_style_context ().remove_class ("day-empty");
+                label.get_style_context ().remove_class ("");
                 label.visible = true;
                 /*
                  * max_day + start_day, it is necessary to 
@@ -84,9 +86,9 @@ namespace App.Views {
                  */
                 if (i < start_day || i >= max_day + start_day) {
                     print ("\nMe pongo invisible");
+                    label.get_style_context ().add_class ("day-empty");
                     label.visible = false;
                 } else {
-                
                     /*
                      * current_day + start_day, it is necessary to 
                      * find the correct label in list

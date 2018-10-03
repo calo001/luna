@@ -42,7 +42,7 @@
     background: @colorAccentTransparent;
 }
 
-.label-today .label-day {
+.label-today {
     background: @colorAccentTransparent;
     color: @colorAccent;
 }

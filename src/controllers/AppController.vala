@@ -49,8 +49,8 @@ namespace App.Controllers {
             var actions = this.window.get_action_area () as Gtk.Box;
             actions.visible = false;
 
-            this.window.set_default_size (350, 370);
-            this.window.set_size_request (350, 370);
+            this.window.set_default_size (350, 350);
+            this.window.set_size_request (350, 350);
             this.application.add_window (window);
         }
 

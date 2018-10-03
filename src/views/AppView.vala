@@ -417,7 +417,7 @@ namespace App.Views {
          */
         private void set_timer () {
             MainLoop loop = new MainLoop ();
-            TimeoutSource time = new TimeoutSource (2000);
+            TimeoutSource time = new TimeoutSource (5000);
             time.set_callback (() => {
                 print ("Time!\n");
                 update_today ();
