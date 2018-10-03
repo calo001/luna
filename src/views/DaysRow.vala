@@ -29,6 +29,7 @@
             public DaysRow () {
                 this.margin_top = 5;
                 this.margin_bottom = 5;
+                this.column_homogeneous = true;
                 var label_monday = new Label(Day.MONDAY.to_string());
                 var label_tuesday = new Label(Day.TUESDAY.to_string());
                 var label_wednesday = new Label(Day.WEDNESDAY.to_string());

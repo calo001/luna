@@ -43,6 +43,7 @@ namespace App.Views {
              * end_day is the final number day
              */
             day_grid = new Grid ();
+            day_grid.column_homogeneous = true;
             
             var col = 0;
             var row = 0;
@@ -50,9 +51,9 @@ namespace App.Views {
             for (int i = 0; i < max_labels; i++) {
                 var label_day = new Label("");
                 label_day.get_style_context ().add_class ("label-day");
-                label_day.expand = true;
+                //label_day.expand = false;
                 label_day.halign = Align.CENTER;
-                label_day.valign = Align.START;
+                label_day.valign = Align.CENTER;
 
                 day_grid.attach (label_day, col, row, 1, 1);
                 col++;
