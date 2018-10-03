@@ -240,4 +240,4 @@ msgstr "com.github.calo001.luna"
 
 #: data/com.github.calo001.luna.desktop.in:11
 msgid "calendar;day;month;year;"
-msgstr "calendario;dia,mes,año"
+msgstr "calendario;dia,mes,anio"
