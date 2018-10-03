@@ -21,6 +21,7 @@
 @import url("/com/github/calo001/luna/css/color_buttons.css");
 
 @define-color myColorPrimary #68b723;
+/*@define-color textColorPrimary @black_dark;*/
 @define-color textColorPrimary @white_clear;
 @define-color colorAccent @white_clear;
 @define-color colorAccentTransparent rgba(0,0,0,0.1);
@@ -30,9 +31,27 @@
  */
 
  dialog decoration {
-    box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 5px 5px rgba(255, 255, 255, 0.1);
+}
+
+.label-today {
+    color: @black_dark;
 }
 
 .titlebar, .widget_background {
-    background: linear-gradient(to right, #c6262e, #f37329, #f9c440, #68b723, #3689e6);
+    background: linear-gradient(90deg,
+    #db002a,
+    #db002a 14.28%, 
+    #ff43aa 14.28%, 
+    #ff43aa 28.56%, 
+    #f47600 28.56%, 
+    #f47600 42.84%, 
+    #f4ca00 42.84%, 
+    #f4ca00 57.12%, 
+    #00b74b 57.12%,
+    #00b74b 72.4%, 
+    #435db6 72.4%, 
+    #435db6 86.68%, 
+    #68008b 86.68%, 
+    #68008b);
 }

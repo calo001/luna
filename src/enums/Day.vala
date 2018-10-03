@@ -29,7 +29,7 @@ namespace App.Enums {
         public string to_string () {
             switch (this) {
                 case MONDAY:    return _("MON");
-                case TUESDAY:   return _("TUES");
+                case TUESDAY:   return _("TUE");
                 case WEDNESDAY: return _("WED");
                 case THURSDAY:  return _("THU");
                 case FRIDAY:    return _("FRI");

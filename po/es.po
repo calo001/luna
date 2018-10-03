@@ -1,243 +1,243 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Spanish translations for com.github.calo001.luna package.
+# Copyright (C) 2018 THE com.github.calo001.luna'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.calo001.luna package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Automatically generated, 2018.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.calo001.luna\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-03 13:52-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2018-10-03 13:07-0500\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: src/views/ColorSelector.vala:58
 msgid "Select a theme color"
-msgstr ""
+msgstr "Selecciona un color de tema"
 
 #: src/views/ColorSelector.vala:141
 msgid "White"
-msgstr ""
+msgstr "Blanco"
 
 #: src/views/ColorSelector.vala:142
 msgid "Black"
-msgstr ""
+msgstr "Negro"
 
 #: src/views/ColorSelector.vala:143
 msgid "Pink"
-msgstr ""
+msgstr "Rosa"
 
 #: src/views/ColorSelector.vala:144
 msgid "Red"
-msgstr ""
+msgstr "Rojo"
 
 #: src/views/ColorSelector.vala:145
 msgid "Orange"
-msgstr ""
+msgstr "Naranja"
 
 #: src/views/ColorSelector.vala:146
 msgid "Green"
-msgstr ""
+msgstr "Verde"
 
 #: src/views/ColorSelector.vala:147
 msgid "Yellow"
-msgstr ""
+msgstr "Amarillo"
 
 #: src/views/ColorSelector.vala:148
 msgid "Blue"
-msgstr ""
+msgstr "Azul"
 
 #: src/views/ColorSelector.vala:149
 msgid "Purple"
-msgstr ""
+msgstr "Morado"
 
 #: src/views/ColorSelector.vala:150
 msgid "Coco"
-msgstr ""
+msgstr "Café"
 
 #: src/views/ColorSelector.vala:151
 msgid "Blue to Green"
-msgstr ""
+msgstr "Azul a Verde"
 
 #: src/views/ColorSelector.vala:152
 msgid "Purple to Red"
-msgstr ""
+msgstr "Morado a Rojo"
 
 #: src/views/ColorSelector.vala:153
 msgid "Pride"
-msgstr ""
+msgstr "Pride"
 
 #: src/views/ColorSelector.vala:154
 msgid "Transparent black"
-msgstr ""
+msgstr "Negro transparente"
 
 #: src/views/ColorSelector.vala:155
 msgid "Transparent white"
-msgstr ""
+msgstr "Blanco transparente"
 
 #: src/widgets/HeaderBar.vala:59
 msgid "Colors"
-msgstr ""
+msgstr "Colores"
 
 #: src/widgets/HeaderBar.vala:84
 msgid "Go today"
-msgstr ""
+msgstr "Ir a hoy"
 
 #: src/enums/Day.vala:31
 msgid "MON"
-msgstr ""
+msgstr "LUN"
 
 #: src/enums/Day.vala:32
 msgid "TUE"
-msgstr ""
+msgstr "MAR"
 
 #: src/enums/Day.vala:33
 msgid "WED"
-msgstr ""
+msgstr "MIÉ"
 
 #: src/enums/Day.vala:34
 msgid "THU"
-msgstr ""
+msgstr "JUE"
 
 #: src/enums/Day.vala:35
 msgid "FRI"
-msgstr ""
+msgstr "VIE"
 
 #: src/enums/Day.vala:36
 msgid "SAT"
-msgstr ""
+msgstr "SÁB"
 
 #: src/enums/Day.vala:37
 msgid "SUN"
-msgstr ""
+msgstr "DOM"
 
 #: src/enums/Month.vala:36
 msgid "JAN"
-msgstr ""
+msgstr "ENE"
 
 #: src/enums/Month.vala:37
 msgid "FEB"
-msgstr ""
+msgstr "FEB"
 
 #: src/enums/Month.vala:38
 msgid "MAR"
-msgstr ""
+msgstr "MAR"
 
 #: src/enums/Month.vala:39
 msgid "APR"
-msgstr ""
+msgstr "ABR"
 
 #: src/enums/Month.vala:40
 msgid "MAY"
-msgstr ""
+msgstr "MAY"
 
 #: src/enums/Month.vala:41
 msgid "JUN"
-msgstr ""
+msgstr "JUN"
 
 #: src/enums/Month.vala:42
 msgid "JUL"
-msgstr ""
+msgstr "JUL"
 
 #: src/enums/Month.vala:43
 msgid "AUG"
-msgstr ""
+msgstr "AGO"
 
 #: src/enums/Month.vala:44
 msgid "SEP"
-msgstr ""
+msgstr "SEP"
 
 #: src/enums/Month.vala:45
 msgid "OCT"
-msgstr ""
+msgstr "OCT"
 
 #: src/enums/Month.vala:46
 msgid "NOV"
-msgstr ""
+msgstr "NOV"
 
 #: src/enums/Month.vala:47
 msgid "DEC"
-msgstr ""
+msgstr "DIC"
 
 #: src/enums/Month.vala:72
 msgid "January"
-msgstr ""
+msgstr "Enero"
 
 #: src/enums/Month.vala:73
 msgid "February"
-msgstr ""
+msgstr "Febrero"
 
 #: src/enums/Month.vala:74
 msgid "March"
-msgstr ""
+msgstr "Marzo"
 
 #: src/enums/Month.vala:75
 msgid "April"
-msgstr ""
+msgstr "Abril"
 
 #: src/enums/Month.vala:76
 msgid "May"
-msgstr ""
+msgstr "Mayo"
 
 #: src/enums/Month.vala:77
 msgid "June"
-msgstr ""
+msgstr "Junio"
 
 #: src/enums/Month.vala:78
 msgid "July"
-msgstr ""
+msgstr "Julio"
 
 #: src/enums/Month.vala:79
 msgid "August"
-msgstr ""
+msgstr "Agosto"
 
 #: src/enums/Month.vala:80
 msgid "September"
-msgstr ""
+msgstr "Septiembre"
 
 #: src/enums/Month.vala:81
 msgid "October"
-msgstr ""
+msgstr "Octubre"
 
 #: src/enums/Month.vala:82
 msgid "November"
-msgstr ""
+msgstr "Noviembre"
 
 #: src/enums/Month.vala:83
 msgid "December"
-msgstr ""
+msgstr "Diciembre"
 
 #: data/com.github.calo001.luna.appdata.xml.in:7
 #: data/com.github.calo001.luna.desktop.in:3
 msgid "Luna"
-msgstr ""
+msgstr "Luna"
 
 #: data/com.github.calo001.luna.appdata.xml.in:8
 msgid "An amazing calendar widget"
-msgstr ""
+msgstr "Un asombroso widget calendario"
 
 #: data/com.github.calo001.luna.appdata.xml.in:9
 msgid "Carlos Lopez"
-msgstr ""
+msgstr "Carlos Lopez"
 
 #: data/com.github.calo001.luna.appdata.xml.in:31
 msgid "Select a theme color for the calendar and browse through the months and years with an intuitive interface."
-msgstr ""
+msgstr "Selecciona un color de tema para el calendario y navega a través de los meses y años con una interfaz intuitiva"
 
 #: data/com.github.calo001.luna.desktop.in:4
 msgid "An amazing calendar widget "
-msgstr ""
+msgstr "Un asombroso widget calendario"
 
 #: data/com.github.calo001.luna.desktop.in:5
 msgid "com.github.calo001.luna"
-msgstr ""
+msgstr "com.github.calo001.luna"
 
 #: data/com.github.calo001.luna.desktop.in:11
 msgid "calendar;day;month;year;"
-msgstr ""
+msgstr "calendario;dia,mes,año"

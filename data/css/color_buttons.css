@@ -67,7 +67,21 @@
 }
 
 .btn_gradient_pride {
-    background: linear-gradient(to right, #c6262e, #f37329, #f9c440, #68b723, #3689e6);
+    background: linear-gradient(90deg,
+    #db002a,
+    #db002a 14.28%, 
+    #ff43aa 14.28%, 
+    #ff43aa 28.56%, 
+    #f47600 28.56%, 
+    #f47600 42.84%, 
+    #f4ca00 42.84%, 
+    #f4ca00 57.12%, 
+    #00b74b 57.12%,
+    #00b74b 72.4%, 
+    #435db6 72.4%, 
+    #435db6 86.68%, 
+    #68008b 86.68%, 
+    #68008b);
 }
 
 .btn_trans_dark {

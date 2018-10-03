@@ -62,6 +62,7 @@ namespace App.Views {
                     row++;
                     col = 0;
                 }
+                label_day.no_show_all = true;
                 labels.append(label_day);
             }
 

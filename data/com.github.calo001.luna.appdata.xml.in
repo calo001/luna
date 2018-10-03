@@ -5,18 +5,30 @@
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>AGPL-3.0</project_license>
     <name>Luna</name>
-    <summary>An amazing calendar widget </summary>
+    <summary>An amazing calendar widget</summary>
     <developer_name>Carlos Lopez</developer_name>
     <provides>
         <binary>com.github.calo001.luna</binary>
     </provides>
     <screenshots>
         <screenshot type="default">
-            <image>{{ screenshot-url }}</image>
+            <image>https://github.com/calo001/luna/blob/master/data/images/screenshot_1.png</image>
+        </screenshot>
+        <screenshot>
+            <image>https://github.com/calo001/luna/blob/master/data/images/screenshot_2.png</image>
+        </screenshot>
+        <screenshot>
+            <image>https://github.com/calo001/luna/blob/master/data/images/screenshot_3.png</image>
+        </screenshot>
+        <screenshot>
+            <image>https://github.com/calo001/luna/blob/master/data/images/screenshot_4.png</image>
+        </screenshot>
+        <screenshot>
+            <image>https://github.com/calo001/luna/blob/master/data/images/screenshot_5.png</image>
         </screenshot>
     </screenshots>
     <description>
-        <p>Awesome calendar for your desktop</p>
+        <p>Select a theme color for the calendar and browse through the months and years with an intuitive interface.</p>
     </description>  
     <releases>
       <release version="1.0.0" date="2018-06-04">
@@ -54,13 +66,13 @@
       <content_attribute id="money-purchasing">none</content_attribute>
       <content_attribute id="money-gambling">none</content_attribute>
     </content_rating> 
-    <url type="homepage">{{ website-url }}</url>
+    <url type="homepage">https://github.com/calo001/luna</url>
     <url type="bugtracker">https://github.com/calo001/luna/issues</url>
     <url type="help">https://github.com/calo001/luna/issues</url>
     <update_contact>calo_lrc@hotmail.com</update_contact>
     <custom>
-        <value key="x-appcenter-color-primary">#FFFFFF</value>
-        <value key="x-appcenter-color-primary-text">#000000</value>
+        <value key="x-appcenter-color-primary">#fff394</value>
+        <value key="x-appcenter-color-primary-text">#452981</value>
         <value key="x-appcenter-suggested-price">0</value>
     </custom>
 </component>
