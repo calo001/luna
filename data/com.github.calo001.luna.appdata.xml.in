@@ -31,9 +31,18 @@
         <p>Select a theme color for the calendar and browse through the months and years with an intuitive interface.</p>
     </description>  
     <releases>
-      <release version="1.0.0" date="2018-06-04">
+      <release version="1.0.0" date="2018-10-03">
         <description>
           <p>Initial 1.0.0 release!</p>
+        </description>
+      </release>
+      <release version="1.0.1" date="2018-10-04">
+        <description>
+          <p>Fixes</p>
+          <ul>
+            <li>Delete "label-today" class when you are not in the current date</li>
+            <li>Shadows in transparent modes does not change the size of the calendar</li>
+          </ul>
         </description>
       </release>
     </releases>
