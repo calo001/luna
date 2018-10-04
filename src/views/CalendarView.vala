@@ -79,7 +79,7 @@ namespace App.Views {
             for (int i = 0; i < 42; i++) {
                 Label label = labels.nth_data (i);
                 label.get_style_context ().remove_class ("day-empty");
-                label.get_style_context ().remove_class ("");
+                label.get_style_context ().remove_class ("label-today");
                 label.visible = true;
                 /*
                  * max_day + start_day, it is necessary to 

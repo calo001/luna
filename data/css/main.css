@@ -65,11 +65,10 @@ dialog decoration {
 .label-today {
     background: @colorAccent;
     color: @myColorPrimary;
-    font-size: 1.5em;
+    font-size: 1.4em;
     padding: 6px 12px;
     text-shadow: none;
     border-radius: 50%;
-    font-weight: bold;
 }
 
 .day-header {
