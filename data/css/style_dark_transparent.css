@@ -30,7 +30,7 @@
  */
 
  dialog decoration {
-    box-shadow: none;
+    box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0);
 }
 
 .titlebar, .widget_background {
