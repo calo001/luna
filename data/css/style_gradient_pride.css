@@ -26,13 +26,7 @@
 @define-color colorAccent @white_clear;
 @define-color colorAccentTransparent rgba(0,0,0,0.1);
 
-/*
- * dialog decoration selector only works on juno version
- */
-
- .csd {
-    box-shadow: 0px 2px 5px 5px rgba(255, 255, 255, 0.1);
-}
+@define-color bg_highlight_color shade (@white_clear, 0.6);
 
 .label-today {
     color: @black_dark;

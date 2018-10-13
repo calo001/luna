@@ -46,7 +46,7 @@ namespace App {
                 resizable: false
             );
 
-            get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+            //get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
             get_style_context ().add_class ("widget_background");
             
             set_keep_below (true);
@@ -56,6 +56,8 @@ namespace App {
             int x = settings.window_x;
             int y = settings.window_y;
             string css = settings.color;
+
+            check_if_shadow_show (css);
 
             if (x != -1 && y != -1) {
                 move (x, y);
@@ -89,6 +91,14 @@ namespace App {
                 settings.window_y = root_y;
                 return false;
             });
+        }
+
+        private void check_if_shadow_show (string css) {
+            var color = Color.string_to_css_path (css);
+            if (color == Constants.URL_CSS_DARK_TRANS ||
+                color == Constants.URL_CSS_LIGHT_TRANS) {
+                    get_style_context ().add_class ("csd-transparent");
+            }
         }
     }
 }

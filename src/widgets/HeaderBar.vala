@@ -32,9 +32,10 @@ namespace App.Widgets {
     public class HeaderBar : Gtk.HeaderBar {
 
         public signal void today_clicked ();
-        public signal void prev();
-        public signal void next();
-        public signal void main_btn();
+        public signal void prev ();
+        public signal void next ();
+        public signal void main_btn ();
+        public signal void show_shadow (bool shadow);
 
         public Button menu_button { get; private set; }
         public Button today_button { get; private set; }
@@ -142,34 +143,49 @@ namespace App.Widgets {
 
             if (color == Color.WHITE.to_string ()) {
                 url_css =  Constants.URL_CSS_WHITE;
+                show_shadow (true);
             } else if (color == Color.BLACK.to_string ()) {
                 url_css =  Constants.URL_CSS_DARK;
+                show_shadow (true);
             } else if (color == Color.PINK.to_string ()) {
                 url_css =  Constants.URL_CSS_PINK;
+                show_shadow (true);
             } else if (color == Color.RED.to_string ()) {
                 url_css =  Constants.URL_CSS_RED;
+                show_shadow (true);
             } else if (color == Color.ORANGE.to_string ()) {
                 url_css =  Constants.URL_CSS_ORANGE;
+                show_shadow (true);
             } else if (color == Color.YELLOW.to_string ()) {
                 url_css =  Constants.URL_CSS_YELLOW;
+                show_shadow (true);
             } else if (color == Color.GREEN.to_string ()) {
                 url_css =  Constants.URL_CSS_GREEN;
+                show_shadow (true);
             } else if (color == Color.BLUE.to_string ()) {
                 url_css =  Constants.URL_CSS_BLUE;
+                show_shadow (true);
             } else if (color == Color.PURPLE.to_string ()) {
                 url_css =  Constants.URL_CSS_PURPLE;
+                show_shadow (true);
             } else if (color == Color.COCO.to_string ()) {
                 url_css =  Constants.URL_CSS_COCO;
+                show_shadow (true);
             } else if (color == Color.GRADIENT_BLUE_GREEN.to_string ()) {
                 url_css =  Constants.URL_CSS_GRADIENT_BLUE_GREEN;
+                show_shadow (true);
             } else if (color == Color.GRADIENT_PURPLE_RED.to_string ()) {
                 url_css =  Constants.URL_CSS_GRADIENT_PURPLE_RED;
+                show_shadow (true);
             } else if (color == Color.GRADIENT_PRIDE.to_string ()) {
                 url_css =  Constants.URL_CSS_PRIDE;
+                show_shadow (true);
             } else if (color == Color.TRANS_WHITE.to_string ()) {
                 url_css =  Constants.URL_CSS_LIGHT_TRANS;
+                show_shadow (false);
             } else if (color == Color.TRANS_BLACK.to_string ()) {
                 url_css =  Constants.URL_CSS_DARK_TRANS;
+                show_shadow (false);
             } else {
                 settings.color = Color.WHITE.to_string ();
                 url_css =  Constants.URL_CSS_WHITE;

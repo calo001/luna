@@ -20,19 +20,12 @@
 @import url("/com/github/calo001/luna/css/colors.css");
 @import url("/com/github/calo001/luna/css/color_buttons.css");
 
-@define-color myColorPrimary #0575e6;
+@define-color myColorPrimary #03B1A6;
 @define-color textColorPrimary @white_clear;
 @define-color colorAccent @white_clear;
 @define-color colorAccentTransparent rgba(0,0,0,0.1);
 
-/*
- * dialog decoration selector only works on juno version
- */
-
- .csd {
-	box-shadow: 0px 2px 5px 5px rgba(3, 179, 164, 0.1);
-}
-
+@define-color bg_highlight_color shade (@myColorPrimary, 1.4);
 
 .titlebar, .widget_background {
     background: linear-gradient(to right, #00f260, #0575e6);

@@ -25,13 +25,7 @@
 @define-color colorAccent @white_clear;
 @define-color colorAccentTransparent rgba(0,0,0,0.1);
 
-/*
- * dialog decoration selector only works on juno version
- */
-
- .csd {
-    box-shadow: 0px 2px 5px 5px rgba(162, 0, 255, 0.1);
-}
+@define-color bg_highlight_color shade (@myColorPrimary, 1.4);
 
 .titlebar, .widget_background {
     background: @myColorPrimary;
