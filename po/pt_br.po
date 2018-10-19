@@ -1,15 +1,15 @@
 # Brazilian Portuguese translations for com.github.calo001.luna package.
 # Copyright (C) 2018 THE com.github.calo001.luna'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.calo001.luna package.
-# Automatically generated, 2018.
+# Rafael Campos Nunes <rafaelnunes@engineer.com>, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.calo001.luna\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-19 8:04-0300\n"
-"PO-Revision-Date: 2018-10-19 8:04-0300\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2018-10-19 8:54-0300\n"
+"Last-Translator: Rafael Campos Nunes <rafaelnunes@engineer.com>\n"
 "Language-Team: none\n"
 "Language: pt_br\n"
 "MIME-Version: 1.0\n"
