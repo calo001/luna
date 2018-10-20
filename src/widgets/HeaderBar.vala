@@ -122,8 +122,8 @@ namespace App.Widgets {
             * Box for Linked buttons
             */
             box_buttons = new Box(Orientation.HORIZONTAL, 0);
-            box_buttons.margin = 7;
-            box_buttons.margin_top = 7;
+            box_buttons.margin_bottom = 3;
+            box_buttons.margin_top = 3;
             box_buttons.get_style_context ().add_class (STYLE_CLASS_LINKED);
             
             box_buttons.pack_start (btn_prev);
