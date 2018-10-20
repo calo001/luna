@@ -40,3 +40,7 @@
     background: @colorAccentTransparent;
     color: @colorAccent;
 }
+
+window decoration {
+    box-shadow: none;
+}

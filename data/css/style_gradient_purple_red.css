@@ -30,3 +30,11 @@
 .titlebar, .widget_background {
     background: linear-gradient(to right, #7b4397, #dc2430);
 }
+
+window decoration {
+	box-shadow: 0 0 0 1px rgba(0,0,0,0.3), 0 14px 28px rgba(0,0,0,0.35), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+window decoration:backdrop {
+	box-shadow: 0 0 0 1px rgba(0,0,0,0.2), 0 3px 6px rgba (0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23), 0 14px 28px rgba(0,0,0,0);
+}
