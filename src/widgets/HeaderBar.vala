@@ -188,6 +188,12 @@ namespace App.Widgets {
             } else if (color == Color.TRANS_BLACK.to_string ()) {
                 url_css =  Constants.URL_CSS_DARK_TRANS;
                 show_shadow (false);
+            } else if (color == Color.SEMITRANS_WHITE.to_string ()) {
+                url_css =  Constants.URL_CSS_LIGHT_SEMITRANS;
+                show_shadow (true);
+            } else if (color == Color.SEMITRANS_BLACK.to_string ()) {
+                url_css =  Constants.URL_CSS_DARK_SEMITRANS;
+                show_shadow (true);
             } else {
                 settings.color = Color.WHITE.to_string ();
                 url_css =  Constants.URL_CSS_WHITE;

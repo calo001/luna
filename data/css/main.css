@@ -34,7 +34,8 @@
 }
 
 GtkButton GtkAlignment GtkBox GtkImage {
-	icon-shadow: none;
+    icon-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 dialog decoration {

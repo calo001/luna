@@ -100,7 +100,8 @@ namespace App {
         private void check_if_shadow_show (string css) {
             var color = Color.string_to_css_path (css);
             if (color == Constants.URL_CSS_DARK_TRANS ||
-                color == Constants.URL_CSS_LIGHT_TRANS) {
+                color == Constants.URL_CSS_LIGHT_TRANS
+                ) {
                     get_style_context ().add_class ("csd-transparent");
             }
         }

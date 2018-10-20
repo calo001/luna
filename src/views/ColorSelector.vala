@@ -46,13 +46,16 @@ namespace App.Views {
         private Button btn_trans_white;
         private Button btn_trans_black;
 
-        private const int BTN_SIZE = 30;
+        private Button btn_semitrans_white;
+        private Button btn_semitrans_black;
+
+        private const int BTN_SIZE = 25;
         public signal void color_selected (string color);
 
         public ColorSelector () {
-            this.margin = 10;
-            this.row_spacing = 10;
-            this.column_spacing = 10;
+            this.margin = 8;
+            this.row_spacing = 8;
+            this.column_spacing = 8;
 
             var img = new Image.from_icon_name ("preferences-color" , IconSize.DIALOG);
             var label = new Label (_("Select a theme color"));
@@ -92,6 +95,11 @@ namespace App.Views {
             btn_trans_black  = new Button();
             btn_trans_black.name = Color.TRANS_BLACK.to_string ();
 
+            btn_semitrans_white  = new Button();
+            btn_semitrans_white.name = Color.SEMITRANS_WHITE.to_string ();
+            btn_semitrans_black  = new Button();
+            btn_semitrans_black.name = Color.SEMITRANS_BLACK.to_string ();
+
             List<Button> buttons = new List<Button> ();
             buttons.append(btn_white);
             buttons.append(btn_black);
@@ -108,6 +116,8 @@ namespace App.Views {
             buttons.append(btn_pride);
             buttons.append(btn_trans_white);
             buttons.append(btn_trans_black);
+            buttons.append(btn_semitrans_white);
+            buttons.append(btn_semitrans_black);
 
             foreach (var btn in buttons) {
                 btn.get_style_context ().add_class ("button_colors");
@@ -135,6 +145,8 @@ namespace App.Views {
             btn_pride.get_style_context ().add_class ("btn_gradient_pride");
             btn_trans_black.get_style_context ().add_class ("btn_trans_dark");
             btn_trans_white.get_style_context ().add_class ("btn_trans_white");
+            btn_semitrans_black.get_style_context ().add_class ("btn_semitrans_dark");
+            btn_semitrans_white.get_style_context ().add_class ("btn_semitrans_white");
             
 
             // Adding individual tooltip text
@@ -153,28 +165,33 @@ namespace App.Views {
             btn_pride.set_tooltip_text (_("Pride"));
             btn_trans_black.set_tooltip_text (_("Transparent black"));
             btn_trans_white.set_tooltip_text (_("Transparent white"));
+            btn_semitrans_black.set_tooltip_text (_("Semi Transparent black"));
+            btn_semitrans_white.set_tooltip_text (_("Semi Transparent white"));
 
-            this.attach (img,            0, 0, 5, 1);
-            this.attach (label,          0, 1, 5, 1);
-            this.attach (separator,      0, 2, 5, 1);
+            this.attach (img,            0, 0, 6, 1);
+            this.attach (label,          0, 1, 6, 1);
+            this.attach (separator,      0, 2, 6, 1);
 
             this.attach (btn_white,      0, 3, 1, 1);
             this.attach (btn_black,      1, 3, 1, 1);
             this.attach (btn_pink,       2, 3, 1, 1);
             this.attach (btn_red,        3, 3, 1, 1);
             this.attach (btn_orange,     4, 3, 1, 1);
-            this.attach (btn_yellow,     0, 4, 1, 1);
-            this.attach (btn_green,      1, 4, 1, 1);
-            this.attach (btn_blue,       2, 4, 1, 1);
-            this.attach (btn_purple,     3, 4, 1, 1);
-            this.attach (btn_coco,       4, 4, 1, 1);
+            this.attach (btn_yellow,     5, 3, 1, 1);
+            this.attach (btn_green,      0, 4, 1, 1);
+            this.attach (btn_blue,       1, 4, 1, 1);
+            this.attach (btn_purple,     2, 4, 1, 1);
+            this.attach (btn_coco,       3, 4, 1, 1);
 
-            this.attach (btn_blue_green, 0, 5, 1, 1);
-            this.attach (btn_purple_red, 1, 5, 1, 1);
-            this.attach (btn_pride,      2, 5, 1, 1);
+            this.attach (btn_blue_green, 4, 4, 1, 1);
+            this.attach (btn_purple_red, 5, 4, 1, 1);
+            this.attach (btn_pride,      0, 5, 1, 1);
 
-            this.attach (btn_trans_white,3, 5, 1, 1);
-            this.attach (btn_trans_black,4, 5, 1, 1);
+            this.attach (btn_trans_white,1, 5, 1, 1);
+            this.attach (btn_trans_black,2, 5, 1, 1);
+
+            this.attach (btn_semitrans_white, 3, 5, 1, 1);
+            this.attach (btn_semitrans_black, 4, 5, 1, 1);
         }
     }
 }

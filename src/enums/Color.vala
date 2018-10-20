@@ -34,7 +34,9 @@ namespace App.Enums {
         GRADIENT_PURPLE_RED,
         GRADIENT_PRIDE,
         TRANS_WHITE,
-        TRANS_BLACK;
+        TRANS_BLACK,
+        SEMITRANS_WHITE,
+        SEMITRANS_BLACK;
 
         public string to_string () {
             switch (this) {
@@ -53,6 +55,8 @@ namespace App.Enums {
                 case GRADIENT_PRIDE:        return "gradient_pride";
                 case TRANS_WHITE:           return "transparent_white";
                 case TRANS_BLACK:           return "transparent_black";
+                case SEMITRANS_WHITE:       return "semitransparent_white";
+                case SEMITRANS_BLACK:       return "semitransparent_black";
                 default:                    assert_not_reached ();
             }
         }
@@ -74,6 +78,8 @@ namespace App.Enums {
                 case "gradient_pride":        return Constants.URL_CSS_PRIDE;
                 case "transparent_white":     return Constants.URL_CSS_LIGHT_TRANS;
                 case "transparent_black":     return Constants.URL_CSS_DARK_TRANS;
+                case "semitransparent_white": return Constants.URL_CSS_LIGHT_SEMITRANS;
+                case "semitransparent_black": return Constants.URL_CSS_DARK_SEMITRANS;
                 default:                      return Constants.URL_CSS_WHITE;
             }
         }
