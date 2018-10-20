@@ -85,21 +85,21 @@
 }
 
 .btn_trans_dark {
-    background: linear-gradient(135deg, #000000 0%,#000000 50%,#ffffff 51%,#ffffff 100%);
-    background-position: 0 0, 5px 5px;
-    background-origin: padding-box;
+    background-image: linear-gradient(90deg, #000000 33.33%, #e6e6e6 33.33%, #e6e6e6 50%, #000000 50%, #000000 83.33%, #e6e6e6 83.33%, #e6e6e6 100%);
     background-clip: border-box;
+    background-size: 10px 10px;
 }
 
 .btn_trans_white {
-    background: linear-gradient(135deg, #ffffff 0%,#ffffff 49%,#000000 50%,#000000 100%);
+    background-image: linear-gradient(90deg, #ffffff 33.33%, #e6e6e6 33.33%, #e6e6e6 50%, #ffffff 50%, #ffffff 83.33%, #e6e6e6 83.33%, #e6e6e6 100%);
     background-position: 0 0, 5px 5px;
     background-origin: padding-box;
     background-clip: border-box;
+    background-size: 10px 10px;
 }
 
 .btn_semitrans_dark {
-    background: linear-gradient(45deg, rgba(0,0,0,0.0980392) 25%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 75%, rgba(0,0,0,0.0980392) 75%, rgba(0,0,0,0.0980392) 0), linear-gradient(45deg, rgba(0,0,0,0.0980392) 25%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 75%, rgba(0,0,0,0.0980392) 75%, rgba(0,0,0,0.0980392) 0), rgb(255, 255, 255);
+    background: linear-gradient(45deg, rgba(0,0,0,1) 0, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 26%, rgba(0,0,0,0) 74%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 100%), linear-gradient(45deg, rgba(0,0,0,1) 0, rgba(0,0,0,1) 3px, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 25%, rgba(0,0,0,0.05) 74%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 100%), rgb(255, 255, 255);
     background-position: 0 0, 5px 5px;
     background-origin: padding-box;
     background-clip: border-box;
@@ -107,7 +107,8 @@
 }
 
 .btn_semitrans_white {
-    background: linear-gradient(45deg, rgba(0,0,0,1) 0, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 26%, rgba(0,0,0,0) 74%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 100%), linear-gradient(45deg, rgba(0,0,0,1) 0, rgba(0,0,0,1) 3px, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 25%, rgba(0,0,0,0.05) 74%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 100%), rgb(255, 255, 255);
+    
+    background: linear-gradient(45deg, rgba(0,0,0,0.0980392) 25%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 75%, rgba(0,0,0,0.0980392) 75%, rgba(0,0,0,0.0980392) 0), linear-gradient(45deg, rgba(0,0,0,0.0980392) 25%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 75%, rgba(0,0,0,0.0980392) 75%, rgba(0,0,0,0.0980392) 0), rgb(255, 255, 255);
     background-position: 0 0, 5px 5px;
     background-origin: padding-box;
     background-clip: border-box;
