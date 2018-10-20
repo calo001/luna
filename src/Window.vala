@@ -58,8 +58,6 @@ namespace App {
             int y = settings.window_y;
             string css = settings.color;
 
-            check_if_shadow_show (css);
-
             if (x != -1 && y != -1) {
                 move (x, y);
             }
@@ -77,11 +75,7 @@ namespace App {
             // Handle dragging the entire widget
             button_press_event.connect ((e) => {
                 if (e.button == Gdk.BUTTON_PRIMARY) {
-                    int root_x = (int) e.x_root;
-                    int root_y = (int) e.y_root;
-
-                    begin_move_drag ((int) e.button, root_x, root_y, e.time);
-                    //save_position ();
+                    begin_move_drag ((int) e.button, (int) e.x_root, (int) e.y_root, e.time);
                     return true;
                 }
                 return false;
@@ -95,15 +89,6 @@ namespace App {
             settings.window_y = root_y;
     
             return base.configure_event (event);
-        }
-
-        private void check_if_shadow_show (string css) {
-            var color = Color.string_to_css_path (css);
-            if (color == Constants.URL_CSS_DARK_TRANS ||
-                color == Constants.URL_CSS_LIGHT_TRANS
-                ) {
-                    get_style_context ().add_class ("csd-transparent");
-            }
         }
     }
 }

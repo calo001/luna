@@ -50,10 +50,6 @@ namespace App.Controllers {
             //var actions = this.window.get_action_area () as Gtk.Box;
             //actions.visible = false;
 
-            header.show_shadow.connect ( (shadow) => {
-                toogle_shadow (shadow);
-            });
-
             this.window.set_default_size (350, 350);
             this.window.set_size_request (350, 350);
             this.application.add_window (window);
