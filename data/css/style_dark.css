@@ -25,7 +25,7 @@
 @define-color colorAccent @white_clear;
 @define-color colorAccentTransparent rgba(0,0,0,0.1);
 
-@define-color bg_highlight_color shade (@white_clear, 0.6);
+@define-color bg_highlight_color shade (@white_clear, 0.2);
 
 .titlebar, .widget_background {
     background: @myColorPrimary;

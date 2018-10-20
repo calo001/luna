@@ -53,6 +53,7 @@ namespace App.Widgets {
          */
         public HeaderBar () {
 
+            get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
             /*
             * Menu colors
             */

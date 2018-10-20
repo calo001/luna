@@ -43,11 +43,12 @@ namespace App.Controllers {
             this.app_view = new AppView (header);
             this.window.set_titlebar (header);
 
-            var content = this.window.get_content_area () as Gtk.Box;
-            content.add (this.app_view);
+            //var content = this.window.get_content_area () as Gtk.Box;
+            //content.add (this.app_view);
+            this.window.add (this.app_view);
 
-            var actions = this.window.get_action_area () as Gtk.Box;
-            actions.visible = false;
+            //var actions = this.window.get_action_area () as Gtk.Box;
+            //actions.visible = false;
 
             header.show_shadow.connect ( (shadow) => {
                 toogle_shadow (shadow);

@@ -37,6 +37,10 @@ GtkButton GtkAlignment GtkBox GtkImage {
 	icon-shadow: none;
 }
 
+dialog decoration {
+	box-shadow: none;
+}
+
 .circle {
     box-shadow: none;
     border-radius: 50%;
