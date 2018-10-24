@@ -2,22 +2,12 @@ com.github.calo001.luna (1.0.1) xenial; urgency=low
 
 [FIX]
   * Delete "label-today" class when you are not in the current date
-<<<<<<< HEAD
-  * Shadows in transparent modes does not change the size of the calendar
-
- -- Carlos Lopez <calo_lrc@hotmail.com>  Wed, 3 Oct 2018 22:10:00 -0500
-=======
   * A new more elementary native look
 
  -- Carlos Lopez <calo_lrc@hotmail.com>  Sat, 20 Oct 2018 22:10:00 -0500
->>>>>>> 57d60af63004a0aab83ed78e9dd715aa22b0dfc5
 
 com.github.calo001.luna (1.0.0) xenial; urgency=low
 
   * Initial Release
 
-<<<<<<< HEAD
- -- Carlos Lopez <calo_lrc@hotmail.com>  Wed, 3 Oct 2018 22:10:00 -0500
-=======
 -- Carlos Lopez <calo_lrc@hotmail.com> Wed, 3 Oct 2018 22:10:00 -0500
->>>>>>> 57d60af63004a0aab83ed78e9dd715aa22b0dfc5
