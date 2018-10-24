@@ -32,9 +32,9 @@ namespace App.Widgets {
     public class HeaderBar : Gtk.HeaderBar {
 
         public signal void today_clicked ();
-        public signal void prev();
-        public signal void next();
-        public signal void main_btn();
+        public signal void prev ();
+        public signal void next ();
+        public signal void main_btn ();
 
         public Button menu_button { get; private set; }
         public Button today_button { get; private set; }
@@ -52,6 +52,7 @@ namespace App.Widgets {
          */
         public HeaderBar () {
 
+            get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
             /*
             * Menu colors
             */
@@ -120,7 +121,8 @@ namespace App.Widgets {
             * Box for Linked buttons
             */
             box_buttons = new Box(Orientation.HORIZONTAL, 0);
-            box_buttons.margin = 10;
+            box_buttons.margin_bottom = 3;
+            box_buttons.margin_top = 3;
             box_buttons.get_style_context ().add_class (STYLE_CLASS_LINKED);
             
             box_buttons.pack_start (btn_prev);
@@ -170,6 +172,10 @@ namespace App.Widgets {
                 url_css =  Constants.URL_CSS_LIGHT_TRANS;
             } else if (color == Color.TRANS_BLACK.to_string ()) {
                 url_css =  Constants.URL_CSS_DARK_TRANS;
+            } else if (color == Color.SEMITRANS_WHITE.to_string ()) {
+                url_css =  Constants.URL_CSS_LIGHT_SEMITRANS;
+            } else if (color == Color.SEMITRANS_BLACK.to_string ()) {
+                url_css =  Constants.URL_CSS_DARK_SEMITRANS;
             } else {
                 settings.color = Color.WHITE.to_string ();
                 url_css =  Constants.URL_CSS_WHITE;

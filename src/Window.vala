@@ -30,7 +30,7 @@ namespace App {
      * @see Gtk.ApplicationWindow
      * @since 1.0.0
      */
-    public class Window : Gtk.Dialog {
+    public class Window : Gtk.Window {
          
         /**
          * Constructs a new {@code Window} object.
@@ -39,20 +39,21 @@ namespace App {
          * @see style_provider
          * @see build
          */
+
+        private App.Configs.Settings settings;
+        
         public Window (Gtk.Application app) {
             Object (
                 application: app,
                 icon_name: Constants.APP_ICON,
                 resizable: false
             );
-
-            get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
             get_style_context ().add_class ("widget_background");
             
             set_keep_below (true);
             stick ();
 
-            var settings = App.Configs.Settings.get_instance ();
+            settings = App.Configs.Settings.get_instance ();
             int x = settings.window_x;
             int y = settings.window_y;
             string css = settings.color;
@@ -79,16 +80,15 @@ namespace App {
                 }
                 return false;
             });
+        }
 
-            // Save the window's position on close
-            delete_event.connect (() => {
-                int root_x, root_y;
-                get_position (out root_x, out root_y);
-
-                settings.window_x = root_x;
-                settings.window_y = root_y;
-                return false;
-            });
+        public override bool configure_event (Gdk.EventConfigure event) {
+            int root_x, root_y;
+            get_position (out root_x, out root_y);
+            settings.window_x = root_x;
+            settings.window_y = root_y;
+    
+            return base.configure_event (event);
         }
     }
 }

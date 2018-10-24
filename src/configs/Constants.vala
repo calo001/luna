@@ -70,6 +70,9 @@ namespace App.Configs {
         public abstract const string URL_CSS_PRIDE = "/com/github/calo001/luna/css/style_gradient_pride.css";
         public abstract const string URL_CSS_LIGHT_TRANS = "/com/github/calo001/luna/css/style_light_transparent.css";
         public abstract const string URL_CSS_DARK_TRANS = "/com/github/calo001/luna/css/style_dark_transparent.css";
+
+        public abstract const string URL_CSS_LIGHT_SEMITRANS = "/com/github/calo001/luna/css/style_light_semitrans.css";
+        public abstract const string URL_CSS_DARK_SEMITRANS = "/com/github/calo001/luna/css/style_dark_semitrans.css";
         
     }
 }

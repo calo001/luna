@@ -12,19 +12,19 @@
     </provides>
     <screenshots>
         <screenshot type="default">
-            <image>https://github.com/calo001/luna/blob/master/data/images/screenshot_1.png</image>
+            <image>https://raw.githubusercontent.com/calo001/luna/master/data/images/screenshot_1.png</image>
         </screenshot>
         <screenshot>
-            <image>https://github.com/calo001/luna/blob/master/data/images/screenshot_2.png</image>
+            <image>https://raw.githubusercontent.com/calo001/luna/master/data/images/screenshot_2.png</image>
         </screenshot>
         <screenshot>
-            <image>https://github.com/calo001/luna/blob/master/data/images/screenshot_3.png</image>
+            <image>https://raw.githubusercontent.com/calo001/luna/master/data/images/screenshot_3.png</image>
         </screenshot>
         <screenshot>
-            <image>https://github.com/calo001/luna/blob/master/data/images/screenshot_4.png</image>
+            <image>https://raw.githubusercontent.com/calo001/luna/master/data/images/screenshot_4.png</image>
         </screenshot>
         <screenshot>
-            <image>https://github.com/calo001/luna/blob/master/data/images/screenshot_5.png</image>
+            <image>https://raw.githubusercontent.com/calo001/luna/master/data/images/screenshot_5.png</image>
         </screenshot>
     </screenshots>
     <description>
@@ -36,12 +36,20 @@
           <p>Initial 1.0.0 release!</p>
         </description>
       </release>
+<<<<<<< HEAD
       <release version="1.0.1" date="2018-10-04">
+=======
+      <release version="1.0.1" date="2018-10-20">
+>>>>>>> 57d60af63004a0aab83ed78e9dd715aa22b0dfc5
         <description>
           <p>Fixes</p>
           <ul>
             <li>Delete "label-today" class when you are not in the current date</li>
+<<<<<<< HEAD
             <li>Shadows in transparent modes does not change the size of the calendar</li>
+=======
+            <li>A new more elemtary native look</li>
+>>>>>>> 57d60af63004a0aab83ed78e9dd715aa22b0dfc5
           </ul>
         </description>
       </release>

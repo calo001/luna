@@ -43,15 +43,24 @@ namespace App.Controllers {
             this.app_view = new AppView (header);
             this.window.set_titlebar (header);
 
-            var content = this.window.get_content_area () as Gtk.Box;
-            content.add (this.app_view);
+            //var content = this.window.get_content_area () as Gtk.Box;
+            //content.add (this.app_view);
+            this.window.add (this.app_view);
 
-            var actions = this.window.get_action_area () as Gtk.Box;
-            actions.visible = false;
+            //var actions = this.window.get_action_area () as Gtk.Box;
+            //actions.visible = false;
 
             this.window.set_default_size (350, 350);
             this.window.set_size_request (350, 350);
             this.application.add_window (window);
+        }
+
+        private void toogle_shadow (bool shadow) {
+            if (!shadow) {
+                this.window.get_style_context ().add_class ("csd-transparent");
+            } else {
+                this.window.get_style_context ().remove_class ("csd-transparent");
+            }
         }
 
         public void activate () {

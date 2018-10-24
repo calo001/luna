@@ -16,12 +16,14 @@
 * 
 */
 
+.csd-transparent {
+    /*box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0);*/
+    box-shadow: 0 0 0 1px rgba(0,0,0,0), 0 14px 28px rgba(0,0,0,0), 0 10px 10px rgba(0,0,0,0);
+}
+
 .titlebar, .widget_background {
     background-color: @myColorPrimary; 
     color: @textColorPrimary;
-    -gtk-icon-shadow: 0 1px 1px shade (@textColorPrimaryShadow, 0.82);
-    text-shadow: 0 1px 1px shade (@textColorPrimaryShadow, 0.82);
-    box-shadow: none;
 }
 
 .image-button widget box image,
@@ -29,11 +31,12 @@
 .btn-header label {
     color: @textColorPrimary;
     text-shadow: none;
-    -gtk-icon-shadow: none;
+    icon-shadow: none;
 }
 
 GtkButton GtkAlignment GtkBox GtkImage {
-	-gtk-icon-shadow: none;
+    icon-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 dialog decoration {

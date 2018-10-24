@@ -20,20 +20,35 @@
 @import url("/com/github/calo001/luna/css/colors.css");
 @import url("/com/github/calo001/luna/css/color_buttons.css");
 
-@define-color myColorPrimary #0575e6;
+@define-color myColorPrimary rgba (0,0,0,0);
 @define-color textColorPrimary @white_clear;
 @define-color colorAccent @white_clear;
-@define-color colorAccentTransparent rgba(0,0,0,0.1);
+@define-color colorAccentTransparent rgba(255,255,255,0.1);
 
-/*
- * dialog decoration selector only works on juno version
- */
-
- dialog decoration {
-	box-shadow: 0px 2px 5px 5px rgb(3, 179, 164, 0.1);
-}
-
+@define-color bg_highlight_color shade (@myColorPrimary, 1.4);
 
 .titlebar, .widget_background {
-    background: linear-gradient(to right, #00f260, #0575e6);
+    background: rgba (0,0,0,0.4);
+}
+
+.label-day:hover {
+    color: @textColorPrimary;
+    background: @colorAccentTransparent;
+}
+
+.label-today {
+    background: @colorAccentTransparent;
+    color: @colorAccent;
+}
+
+.button_colors {
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.1);
+}
+
+window decoration {
+	box-shadow: 0 0 0 1px rgba(0,0,0,0.3), 0 14px 28px rgba(0,0,0,0.35), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+window decoration:backdrop {
+	box-shadow: 0 0 0 1px rgba(0,0,0,0.2), 0 3px 6px rgba (0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23), 0 14px 28px rgba(0,0,0,0);
 }

@@ -51,6 +51,8 @@ namespace App.Views {
 
             for (int i = 0; i < max_labels; i++) {
                 var label_day = new Label("");
+                label_day.width_request = 42;
+                label_day.height_request = 42;
                 label_day.get_style_context ().add_class ("label-day");
                 //label_day.expand = false;
                 label_day.halign = Align.CENTER;

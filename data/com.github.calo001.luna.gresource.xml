@@ -20,6 +20,8 @@
         <file alias="style_gradient_pride.css" compressed="true">css/style_gradient_pride.css</file>
         <file alias="style_dark_transparent.css" compressed="true">css/style_dark_transparent.css</file>
         <file alias="style_light_transparent.css" compressed="true">css/style_light_transparent.css</file>
+        <file alias="style_dark_semitrans.css" compressed="true">css/style_dark_semitrans.css</file>
+        <file alias="style_light_semitrans.css" compressed="true">css/style_light_semitrans.css</file>
     </gresource>
 
     <gresource prefix="/com/github/calo001/luna/images">
