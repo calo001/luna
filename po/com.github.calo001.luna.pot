@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.calo001.luna\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-03 13:52-0500\n"
+"POT-Creation-Date: 2018-10-24 19:16-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,75 +17,83 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/views/ColorSelector.vala:58
+#: src/views/ColorSelector.vala:61
 msgid "Select a theme color"
 msgstr ""
 
-#: src/views/ColorSelector.vala:141
+#: src/views/ColorSelector.vala:153
 msgid "White"
 msgstr ""
 
-#: src/views/ColorSelector.vala:142
+#: src/views/ColorSelector.vala:154
 msgid "Black"
 msgstr ""
 
-#: src/views/ColorSelector.vala:143
+#: src/views/ColorSelector.vala:155
 msgid "Pink"
 msgstr ""
 
-#: src/views/ColorSelector.vala:144
+#: src/views/ColorSelector.vala:156
 msgid "Red"
 msgstr ""
 
-#: src/views/ColorSelector.vala:145
+#: src/views/ColorSelector.vala:157
 msgid "Orange"
 msgstr ""
 
-#: src/views/ColorSelector.vala:146
+#: src/views/ColorSelector.vala:158
 msgid "Green"
 msgstr ""
 
-#: src/views/ColorSelector.vala:147
+#: src/views/ColorSelector.vala:159
 msgid "Yellow"
 msgstr ""
 
-#: src/views/ColorSelector.vala:148
+#: src/views/ColorSelector.vala:160
 msgid "Blue"
 msgstr ""
 
-#: src/views/ColorSelector.vala:149
+#: src/views/ColorSelector.vala:161
 msgid "Purple"
 msgstr ""
 
-#: src/views/ColorSelector.vala:150
+#: src/views/ColorSelector.vala:162
 msgid "Coco"
 msgstr ""
 
-#: src/views/ColorSelector.vala:151
+#: src/views/ColorSelector.vala:163
 msgid "Blue to Green"
 msgstr ""
 
-#: src/views/ColorSelector.vala:152
+#: src/views/ColorSelector.vala:164
 msgid "Purple to Red"
 msgstr ""
 
-#: src/views/ColorSelector.vala:153
+#: src/views/ColorSelector.vala:165
 msgid "Pride"
 msgstr ""
 
-#: src/views/ColorSelector.vala:154
+#: src/views/ColorSelector.vala:166
 msgid "Transparent black"
 msgstr ""
 
-#: src/views/ColorSelector.vala:155
+#: src/views/ColorSelector.vala:167
 msgid "Transparent white"
 msgstr ""
 
-#: src/widgets/HeaderBar.vala:59
+#: src/views/ColorSelector.vala:168
+msgid "Semi Transparent black"
+msgstr ""
+
+#: src/views/ColorSelector.vala:169
+msgid "Semi Transparent white"
+msgstr ""
+
+#: src/widgets/HeaderBar.vala:60
 msgid "Colors"
 msgstr ""
 
-#: src/widgets/HeaderBar.vala:84
+#: src/widgets/HeaderBar.vala:85
 msgid "Go today"
 msgstr ""
 
@@ -227,7 +235,9 @@ msgid "Carlos Lopez"
 msgstr ""
 
 #: data/com.github.calo001.luna.appdata.xml.in:31
-msgid "Select a theme color for the calendar and browse through the months and years with an intuitive interface."
+msgid ""
+"Select a theme color for the calendar and browse through the months and "
+"years with an intuitive interface."
 msgstr ""
 
 #: data/com.github.calo001.luna.desktop.in:4
