@@ -31,9 +31,11 @@
 .btn-header label {
     color: @textColorPrimary;
     text-shadow: none;
+    icon-shadow: none;
 }
 
 GtkButton GtkAlignment GtkBox GtkImage {
+    icon-shadow: none;
     -gtk-icon-shadow: none;
 }
 
