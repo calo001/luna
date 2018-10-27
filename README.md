@@ -74,8 +74,8 @@ Options:
 
 ### Translators
 
-[Rafael C. Nunes] (https://github.com/rafaelcn) Brazilian Portuguese
-[Hannes Schulze] (https://github.com/hannesschulze) German translations 
+* [Rafael C. Nunes](https://github.com/rafaelcn) Brazilian Portuguese
+* [Hannes Schulze](https://github.com/hannesschulze) German 
 
 
 ### License
