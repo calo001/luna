@@ -55,7 +55,7 @@ git clone https://github.com/calo001/luna.git com.github.calo001.luna && cd com.
 ./app uninstall
 ```
 
-### Development & Testing
+### Development
 
 Luna includes a script to simplify the development process. This script can be accessed in the main project directory through `./app`.
 
@@ -71,6 +71,12 @@ Options:
   run               Builds and runs the application
   uninstall         Removes the application from the system (requires sudo)
 ```
+
+### Translators
+
+[Rafael C. Nunes] (https://github.com/rafaelcn) Brazilian Portuguese
+[Hannes Schulze] (https://github.com/hannesschulze) German translations 
+
 
 ### License
 
