@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.calo001.luna\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-24 19:16-0500\n"
+"POT-Creation-Date: 2018-11-01 16:01-0600\n"
 "PO-Revision-Date: 2018-10-19 8:54-0300\n"
 "Last-Translator: Rafael Campos Nunes <rafaelnunes@engineer.com>\n"
 "Language-Team: none\n"
@@ -17,77 +17,79 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/views/ColorSelector.vala:61
+#: src/views/ColorSelector.vala:62
 msgid "Select a theme color"
 msgstr "Selecione um tema"
 
-#: src/views/ColorSelector.vala:153
+#: src/views/ColorSelector.vala:158
 msgid "White"
 msgstr "Branco"
 
-#: src/views/ColorSelector.vala:154
+#: src/views/ColorSelector.vala:159
 msgid "Black"
 msgstr "Negro"
 
-#: src/views/ColorSelector.vala:155
+#: src/views/ColorSelector.vala:160
 msgid "Pink"
 msgstr "Rosa"
 
-#: src/views/ColorSelector.vala:156
+#: src/views/ColorSelector.vala:161
 msgid "Red"
 msgstr "Vermelho"
 
-#: src/views/ColorSelector.vala:157
+#: src/views/ColorSelector.vala:162
 msgid "Orange"
 msgstr "Laranja"
 
-#: src/views/ColorSelector.vala:158
+#: src/views/ColorSelector.vala:163
 msgid "Green"
 msgstr "Verde"
 
-#: src/views/ColorSelector.vala:159
+#: src/views/ColorSelector.vala:164
+msgid "Teal"
+msgstr "Turquesa"
+
+#: src/views/ColorSelector.vala:165
 msgid "Yellow"
 msgstr "Amarelo"
 
-#: src/views/ColorSelector.vala:160
+#: src/views/ColorSelector.vala:166
 msgid "Blue"
 msgstr "Azul"
 
-#: src/views/ColorSelector.vala:161
+#: src/views/ColorSelector.vala:167
 msgid "Purple"
 msgstr "Roxo"
 
-#: src/views/ColorSelector.vala:162
+#: src/views/ColorSelector.vala:168
 msgid "Coco"
 msgstr "Café"
 
-#: src/views/ColorSelector.vala:163
+#: src/views/ColorSelector.vala:169
 msgid "Blue to Green"
 msgstr "Azul a Verde"
 
-#: src/views/ColorSelector.vala:164
+#: src/views/ColorSelector.vala:170
 msgid "Purple to Red"
 msgstr "Roxo a Vermelho"
 
-#: src/views/ColorSelector.vala:165
+#: src/views/ColorSelector.vala:171
 msgid "Pride"
 msgstr "Pride"
 
-#: src/views/ColorSelector.vala:166
+#: src/views/ColorSelector.vala:172
 msgid "Transparent black"
 msgstr "Negro transparente"
 
-#: src/views/ColorSelector.vala:167
+#: src/views/ColorSelector.vala:173
 msgid "Transparent white"
 msgstr "Branco transparente"
 
-#: src/views/ColorSelector.vala:168
-#, fuzzy
+#: src/views/ColorSelector.vala:174
 msgid "Semi Transparent black"
 msgstr "Negro transparente"
 
-#: src/views/ColorSelector.vala:169
-#, fuzzy
+#: src/views/ColorSelector.vala:175
 msgid "Semi Transparent white"
 msgstr "Branco transparente"
 
