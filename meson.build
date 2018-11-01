@@ -1,5 +1,5 @@
 project('com.github.calo001.luna', ['vala', 'c'],
-    version : '1.0.1',
+    version : '1.0.2',
     license: 'GPL-3.0'
 )
 

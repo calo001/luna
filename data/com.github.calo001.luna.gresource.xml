@@ -12,6 +12,7 @@
         <file alias="style_orange.css" compressed="true">css/style_orange.css</file>
         <file alias="style_yellow.css" compressed="true">css/style_yellow.css</file>
         <file alias="style_green.css" compressed="true">css/style_green.css</file>
+        <file alias="style_teal.css" compressed="true">css/style_teal.css</file>
         <file alias="style_blue.css" compressed="true">css/style_blue.css</file>
         <file alias="style_purple.css" compressed="true">css/style_purple.css</file>
         <file alias="style_coco.css" compressed="true">css/style_coco.css</file>

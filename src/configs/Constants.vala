@@ -30,18 +30,14 @@ namespace App.Configs {
     public class Constants {
     
         public abstract const string ID = "com.github.calo001.luna";
-        public abstract const string VERSION = "1.0.1";
+        public abstract const string VERSION = "1.0.2";
         public abstract const string PROGRAME_NAME = "Luna";
         public abstract const string APP_YEARS = "2018";
         public abstract const string APP_ICON = "com.github.calo001.luna";
         public abstract const string ABOUT_COMMENTS = "An amazing calendar widget ";
         public abstract const string TRANSLATOR_CREDITS = "Translators";
-        public abstract const string MAIN_URL = "{{ website-url }}";
+        public abstract const string MAIN_URL = "https://github.com/calo001/luna";
         public abstract const string BUG_URL = "https://github.com/calo001/luna/issues";
-        public abstract const string HELP_URL = "https://github.com/calo001/luna/wiki";
-        public abstract const string TRANSLATE_URL = "https://github.com/calo001/luna";
-        public abstract const string TEXT_FOR_ABOUT_DIALOG_WEBSITE = "Website";
-        public abstract const string TEXT_FOR_ABOUT_DIALOG_WEBSITE_URL = "{{ website-url }}";
         public abstract const string [] ABOUT_AUTHORS = { "Carlos Lopez <calo_lrc@hotmail.com>" };
         public abstract const Gtk.License ABOUT_LICENSE_TYPE = Gtk.License.CUSTOM;
 
@@ -61,6 +57,7 @@ namespace App.Configs {
         public abstract const string URL_CSS_ORANGE = "/com/github/calo001/luna/css/style_orange.css";
         public abstract const string URL_CSS_YELLOW = "/com/github/calo001/luna/css/style_yellow.css";
         public abstract const string URL_CSS_GREEN = "/com/github/calo001/luna/css/style_green.css";
+        public abstract const string URL_CSS_TEAL = "/com/github/calo001/luna/css/style_teal.css";
         public abstract const string URL_CSS_BLUE = "/com/github/calo001/luna/css/style_blue.css";
         public abstract const string URL_CSS_PURPLE = "/com/github/calo001/luna/css/style_purple.css";
         public abstract const string URL_CSS_COCO = "/com/github/calo001/luna/css/style_coco.css";

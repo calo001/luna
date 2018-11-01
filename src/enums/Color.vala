@@ -27,6 +27,7 @@ namespace App.Enums {
         ORANGE,
         YELLOW,
         GREEN,
+        TEAL,
         BLUE,
         PURPLE,
         COCO,
@@ -48,6 +49,7 @@ namespace App.Enums {
                 case YELLOW:                return "yellow";
                 case GREEN:                 return "green";
                 case BLUE:                  return "blue";
+                case TEAL:                  return "teal";
                 case PURPLE:                return "purple";
                 case COCO:                  return "coco";
                 case GRADIENT_BLUE_GREEN:   return "gradient_blue_green";
@@ -70,6 +72,7 @@ namespace App.Enums {
                 case "orange":                return Constants.URL_CSS_ORANGE;
                 case "yellow":                return Constants.URL_CSS_YELLOW;
                 case "green":                 return Constants.URL_CSS_GREEN;
+                case "teal":                  return Constants.URL_CSS_TEAL;
                 case "blue":                  return Constants.URL_CSS_BLUE;
                 case "purple":                return Constants.URL_CSS_PURPLE;
                 case "coco":                  return Constants.URL_CSS_COCO;                

@@ -122,7 +122,6 @@ namespace App.Widgets {
             */
             box_buttons = new Box(Orientation.HORIZONTAL, 0);
             box_buttons.margin_bottom = 3;
-            box_buttons.margin_top = 3;
             box_buttons.get_style_context ().add_class (STYLE_CLASS_LINKED);
             
             box_buttons.pack_start (btn_prev);
@@ -156,6 +155,8 @@ namespace App.Widgets {
                 url_css =  Constants.URL_CSS_YELLOW;
             } else if (color == Color.GREEN.to_string ()) {
                 url_css =  Constants.URL_CSS_GREEN;
+            } else if (color == Color.TEAL.to_string ()) {
+                url_css =  Constants.URL_CSS_TEAL;
             } else if (color == Color.BLUE.to_string ()) {
                 url_css =  Constants.URL_CSS_BLUE;
             } else if (color == Color.PURPLE.to_string ()) {

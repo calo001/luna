@@ -35,6 +35,7 @@ namespace App.Views {
         private Button btn_orange;
         private Button btn_yellow;
         private Button btn_green;
+        private Button btn_teal;        
         private Button btn_blue;
         private Button btn_purple;
         private Button btn_coco;
@@ -76,6 +77,8 @@ namespace App.Views {
             btn_yellow.name = Color.YELLOW.to_string ();
             btn_green = new Button();
             btn_green.name = Color.GREEN.to_string ();
+            btn_teal = new Button();
+            btn_teal.name = Color.TEAL.to_string ();
             btn_blue = new Button();
             btn_blue.name = Color.BLUE.to_string ();
             btn_purple  = new Button();
@@ -108,6 +111,7 @@ namespace App.Views {
             buttons.append(btn_orange);
             buttons.append(btn_yellow);
             buttons.append(btn_green);
+            buttons.append(btn_teal);            
             buttons.append(btn_blue);
             buttons.append(btn_purple);
             buttons.append(btn_coco);
@@ -136,8 +140,9 @@ namespace App.Views {
             btn_red.get_style_context ().add_class ("btn_red");
             btn_orange.get_style_context ().add_class ("btn_orange");
             btn_green.get_style_context ().add_class ("btn_green");
-            btn_yellow.get_style_context ().add_class ("btn_yellow");
-            btn_blue.get_style_context ().add_class ("btn_blue");
+            btn_teal.get_style_context ().add_class ("btn_teal");
+            btn_blue.get_style_context ().add_class ("btn_blue");            
+            btn_yellow.get_style_context ().add_class ("btn_yellow");            
             btn_purple.get_style_context ().add_class ("btn_purple");
             btn_coco.get_style_context ().add_class ("btn_coco");
             btn_blue_green.get_style_context ().add_class ("btn_gradient_blue_green");
@@ -156,6 +161,7 @@ namespace App.Views {
             btn_red.set_tooltip_text (_("Red"));
             btn_orange.set_tooltip_text (_("Orange"));
             btn_green.set_tooltip_text (_("Green"));
+            btn_teal.set_tooltip_text (_("Teal"));
             btn_yellow.set_tooltip_text (_("Yellow"));
             btn_blue.set_tooltip_text (_("Blue"));
             btn_purple.set_tooltip_text (_("Purple"));
@@ -179,19 +185,20 @@ namespace App.Views {
             this.attach (btn_orange,     4, 3, 1, 1);
             this.attach (btn_yellow,     5, 3, 1, 1);
             this.attach (btn_green,      0, 4, 1, 1);
-            this.attach (btn_blue,       1, 4, 1, 1);
-            this.attach (btn_purple,     2, 4, 1, 1);
-            this.attach (btn_coco,       3, 4, 1, 1);
+            this.attach (btn_teal,       1, 4, 1, 1);            
+            this.attach (btn_blue,       2, 4, 1, 1);
+            this.attach (btn_purple,     3, 4, 1, 1);
+            this.attach (btn_coco,       4, 4, 1, 1);
 
-            this.attach (btn_blue_green, 4, 4, 1, 1);
-            this.attach (btn_purple_red, 5, 4, 1, 1);
-            this.attach (btn_pride,      0, 5, 1, 1);
+            this.attach (btn_blue_green, 5, 4, 1, 1);
+            this.attach (btn_purple_red, 0, 5, 1, 1);
+            this.attach (btn_pride,      1, 5, 1, 1);
 
-            this.attach (btn_trans_white,1, 5, 1, 1);
-            this.attach (btn_trans_black,2, 5, 1, 1);
+            this.attach (btn_trans_white,2, 5, 1, 1);
+            this.attach (btn_trans_black,3, 5, 1, 1);
 
-            this.attach (btn_semitrans_white, 3, 5, 1, 1);
-            this.attach (btn_semitrans_black, 4, 5, 1, 1);
+            this.attach (btn_semitrans_white, 4, 5, 1, 1);
+            this.attach (btn_semitrans_black, 5, 5, 1, 1);
         }
     }
 }

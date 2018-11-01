@@ -46,6 +46,10 @@
     background: @luna_green;
 }
 
+.btn_teal {
+    background: @luna_teal;
+}
+
 .btn_blue {
     background: @luna_blue;
 }

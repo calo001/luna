@@ -12,6 +12,9 @@
     </provides>
     <screenshots>
         <screenshot type="default">
+            <image>https://raw.githubusercontent.com/calo001/luna/master/data/images/screenshot_5.png</image>
+        </screenshot>
+        <screenshot>
             <image>https://raw.githubusercontent.com/calo001/luna/master/data/images/screenshot_1.png</image>
         </screenshot>
         <screenshot>
@@ -22,9 +25,6 @@
         </screenshot>
         <screenshot>
             <image>https://raw.githubusercontent.com/calo001/luna/master/data/images/screenshot_4.png</image>
-        </screenshot>
-        <screenshot>
-            <image>https://raw.githubusercontent.com/calo001/luna/master/data/images/screenshot_5.png</image>
         </screenshot>
     </screenshots>
     <description>
@@ -42,6 +42,14 @@
           <ul>
             <li>Delete "label-today" class when you are not in the current date</li>
             <li>A new more elemtary native look</li>
+          </ul>
+        </description>
+      </release>
+      <release version="1.0.2" date="2018-11-1">
+        <description>
+          <p>New</p>
+          <ul>
+            <li>New teal color theme!</li>
           </ul>
         </description>
       </release>
@@ -80,8 +88,8 @@
     <url type="help">https://github.com/calo001/luna/issues</url>
     <update_contact>calo_lrc@hotmail.com</update_contact>
     <custom>
-        <value key="x-appcenter-color-primary">#fff394</value>
-        <value key="x-appcenter-color-primary-text">#452981</value>
+        <value key="x-appcenter-color-primary">#1a1a1a</value>
+        <value key="x-appcenter-color-primary-text">#f9c440</value>
         <value key="x-appcenter-suggested-price">0</value>
     </custom>
 </component>
