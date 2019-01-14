@@ -1,0 +1,258 @@
+# French translations for com.github.calo001.luna package.
+# Copyright (C) 2018 THE com.github.calo001.luna'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.calo001.luna package.
+# NathanBnm, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.calo001.luna\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-01 16:01-0600\n"
+"PO-Revision-Date: 2018-10-14 07:34-0500\n"
+"Last-Translator: NathanBnm\n"
+"Language-Team: none\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/views/ColorSelector.vala:62
+msgid "Select a theme color"
+msgstr "Sélectionnez une couleur de thème"
+
+#: src/views/ColorSelector.vala:158
+msgid "White"
+msgstr "Blanc"
+
+#: src/views/ColorSelector.vala:159
+msgid "Black"
+msgstr "Noir"
+
+#: src/views/ColorSelector.vala:160
+msgid "Pink"
+msgstr "Rose"
+
+#: src/views/ColorSelector.vala:161
+msgid "Red"
+msgstr "Rouge"
+
+#: src/views/ColorSelector.vala:162
+msgid "Orange"
+msgstr "Orange"
+
+#: src/views/ColorSelector.vala:163
+msgid "Green"
+msgstr "Vert"
+
+#: src/views/ColorSelector.vala:164
+msgid "Teal"
+msgstr "Bleu Sarcelle"
+
+#: src/views/ColorSelector.vala:165
+msgid "Yellow"
+msgstr "Jaune"
+
+#: src/views/ColorSelector.vala:166
+msgid "Blue"
+msgstr "Bleu"
+
+#: src/views/ColorSelector.vala:167
+msgid "Purple"
+msgstr "Violet"
+
+#: src/views/ColorSelector.vala:168
+msgid "Coco"
+msgstr "Coco"
+
+#: src/views/ColorSelector.vala:169
+msgid "Blue to Green"
+msgstr "Dégradé Bleu-Vert"
+
+#: src/views/ColorSelector.vala:170
+msgid "Purple to Red"
+msgstr "Dégradé Violet-Rouge"
+
+#: src/views/ColorSelector.vala:171
+msgid "Pride"
+msgstr "Multicolore"
+
+#: src/views/ColorSelector.vala:172
+msgid "Transparent black"
+msgstr "Noir transparent"
+
+#: src/views/ColorSelector.vala:173
+msgid "Transparent white"
+msgstr "Blanc transparent"
+
+#: src/views/ColorSelector.vala:174
+msgid "Semi Transparent black"
+msgstr "Noir translucide"
+
+#: src/views/ColorSelector.vala:175
+msgid "Semi Transparent white"
+msgstr "Blanc translucide"
+
+#: src/widgets/HeaderBar.vala:60
+msgid "Colors"
+msgstr "Couleurs"
+
+#: src/widgets/HeaderBar.vala:85
+msgid "Go today"
+msgstr "Aller à aujourd'hui"
+
+#: src/enums/Day.vala:31
+msgid "MON"
+msgstr "MON"
+
+#: src/enums/Day.vala:32
+msgid "TUE"
+msgstr "MAR"
+
+#: src/enums/Day.vala:33
+msgid "WED"
+msgstr "MER"
+
+#: src/enums/Day.vala:34
+msgid "THU"
+msgstr "JEU"
+
+#: src/enums/Day.vala:35
+msgid "FRI"
+msgstr "VEN"
+
+#: src/enums/Day.vala:36
+msgid "SAT"
+msgstr "SAM"
+
+#: src/enums/Day.vala:37
+msgid "SUN"
+msgstr "DIM"
+
+#: src/enums/Month.vala:36
+msgid "JAN"
+msgstr "JAN"
+
+#: src/enums/Month.vala:37
+msgid "FEB"
+msgstr "FEV"
+
+#: src/enums/Month.vala:38
+msgid "MAR"
+msgstr "MARS"
+
+#: src/enums/Month.vala:39
+msgid "APR"
+msgstr "AVR"
+
+#: src/enums/Month.vala:40
+msgid "MAY"
+msgstr "MAI"
+
+#: src/enums/Month.vala:41
+msgid "JUN"
+msgstr "JUIN"
+
+#: src/enums/Month.vala:42
+msgid "JUL"
+msgstr "JUIL"
+
+#: src/enums/Month.vala:43
+msgid "AUG"
+msgstr "AOUT"
+
+#: src/enums/Month.vala:44
+msgid "SEP"
+msgstr "SEPT"
+
+#: src/enums/Month.vala:45
+msgid "OCT"
+msgstr "OCT"
+
+#: src/enums/Month.vala:46
+msgid "NOV"
+msgstr "NOV"
+
+#: src/enums/Month.vala:47
+msgid "DEC"
+msgstr "DEC"
+
+#: src/enums/Month.vala:72
+msgid "January"
+msgstr "Janvier"
+
+#: src/enums/Month.vala:73
+msgid "February"
+msgstr "Février"
+
+#: src/enums/Month.vala:74
+msgid "March"
+msgstr "Mars"
+
+#: src/enums/Month.vala:75
+msgid "April"
+msgstr "Avril"
+
+#: src/enums/Month.vala:76
+msgid "May"
+msgstr "Mai"
+
+#: src/enums/Month.vala:77
+msgid "June"
+msgstr "Juin"
+
+#: src/enums/Month.vala:78
+msgid "July"
+msgstr "Juillet"
+
+#: src/enums/Month.vala:79
+msgid "August"
+msgstr "Août"
+
+#: src/enums/Month.vala:80
+msgid "September"
+msgstr "Septembre"
+
+#: src/enums/Month.vala:81
+msgid "October"
+msgstr "Octobre"
+
+#: src/enums/Month.vala:82
+msgid "November"
+msgstr "Novembre"
+
+#: src/enums/Month.vala:83
+msgid "December"
+msgstr "Décembre"
+
+#: data/com.github.calo001.luna.appdata.xml.in:7
+#: data/com.github.calo001.luna.desktop.in:3
+msgid "Luna"
+msgstr "Luna"
+
+#: data/com.github.calo001.luna.appdata.xml.in:8
+msgid "An amazing calendar widget"
+msgstr "Un widget calendrier fantastique"
+
+#: data/com.github.calo001.luna.appdata.xml.in:9
+msgid "Carlos Lopez"
+msgstr "Carlos Lopez"
+
+#: data/com.github.calo001.luna.appdata.xml.in:31
+msgid ""
+"Select a theme color for the calendar and browse through the months and "
+"years with an intuitive interface."
+msgstr ""
+"Sélectionnez une couleur de thème pour le calendrier et parcourez les mois et les "
+"années avec une interface intuitive."
+
+#: data/com.github.calo001.luna.desktop.in:4
+msgid "An amazing calendar widget "
+msgstr "Un widget calendrier fantastique "
+
+#: data/com.github.calo001.luna.desktop.in:5
+msgid "com.github.calo001.luna"
+msgstr "com.github.calo001.luna"
+
+#: data/com.github.calo001.luna.desktop.in:11
+msgid "calendar;day;month;year;"
+msgstr "calendrier;jour;mois;année;"
