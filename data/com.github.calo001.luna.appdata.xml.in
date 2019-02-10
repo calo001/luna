@@ -12,9 +12,6 @@
     </provides>
     <screenshots>
         <screenshot type="default">
-            <image>https://raw.githubusercontent.com/calo001/luna/master/data/images/screenshot_5.png</image>
-        </screenshot>
-        <screenshot>
             <image>https://raw.githubusercontent.com/calo001/luna/master/data/images/screenshot_1.png</image>
         </screenshot>
         <screenshot>
@@ -25,6 +22,9 @@
         </screenshot>
         <screenshot>
             <image>https://raw.githubusercontent.com/calo001/luna/master/data/images/screenshot_4.png</image>
+        </screenshot>
+        <screenshot>
+            <image>https://raw.githubusercontent.com/calo001/luna/master/data/images/screenshot_5.png</image>
         </screenshot>
     </screenshots>
     <description>
