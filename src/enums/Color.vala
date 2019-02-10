@@ -83,7 +83,7 @@ namespace App.Enums {
                 case "transparent_black":     return Constants.URL_CSS_DARK_TRANS;
                 case "semitransparent_white": return Constants.URL_CSS_LIGHT_SEMITRANS;
                 case "semitransparent_black": return Constants.URL_CSS_DARK_SEMITRANS;
-                default:                      return Constants.URL_CSS_WHITE;
+                default:                      return Constants.URL_CSS_GRADIENT_BLUE_GREEN;
             }
         }
 
