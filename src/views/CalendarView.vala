@@ -51,12 +51,13 @@ namespace App.Views {
 
             for (int i = 0; i < max_labels; i++) {
                 var label_day = new Label("");
-                label_day.width_request = 42;
-                label_day.height_request = 42;
                 label_day.get_style_context ().add_class ("label-day");
-                //label_day.expand = false;
                 label_day.halign = Align.CENTER;
                 label_day.valign = Align.CENTER;
+
+                if (col > 4) {
+                    label_day.get_style_context ().add_class ("weekend");
+                }
 
                 day_grid.attach (label_day, col, row, 1, 1);
                 col++;
@@ -81,14 +82,15 @@ namespace App.Views {
             for (int i = 0; i < 42; i++) {
                 Label label = labels.nth_data (i);
                 label.get_style_context ().remove_class ("day-empty");
-                label.get_style_context ().remove_class ("label-today");
                 label.visible = true;
+                label.margin = 1;
+                label.width_request = 38;
+                label.height_request = 35;
                 /*
                  * max_day + start_day, it is necessary to 
                  * find the correct label in list
                  */
                 if (i < start_day || i >= max_day + start_day) {
-                    print ("\nMe pongo invisible");
                     label.get_style_context ().add_class ("day-empty");
                     label.visible = false;
                 } else {
@@ -97,6 +99,7 @@ namespace App.Views {
                      * find the correct label in list
                      */
                     if ( current_day != -1 && (i+1) == current_day + start_day ) {
+                        label.get_style_context ().remove_class ("weekend");
                         label.get_style_context ().add_class ("label-today");
                     }
                     //label.set_label (day_number.to_string());

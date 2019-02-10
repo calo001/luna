@@ -28,9 +28,13 @@ namespace App.Views {
      *
      * @since 1.0.0
      */
-    public class AppView : Gtk.Stack {
+    public class AppView : Gtk.Box {
+
+        public signal void close_clicked ();
 
         private App.Widgets.HeaderBar header;
+        private Stack stack;
+        private BottomBar bottom_bar;
 
         CalendarView   calendar;
         TwelveGridView months;
@@ -64,14 +68,22 @@ namespace App.Views {
 
         private string current_stack = Constants.STACK_CALENDAR;
 
+        construct {
+            orientation = Gtk.Orientation.VERTICAL;
+        }
+
         /**
          * Constructs a new {@code AppView} object.
          */
         public AppView (App.Widgets.HeaderBar header) {
             this.header = header;
-            this.interpolate_size = true;
-            this.transition_duration = 200;
-            this.transition_type = StackTransitionType.SLIDE_RIGHT;
+            stack = new Stack();
+            stack.interpolate_size = true;
+            stack.transition_duration = 200;
+            stack.transition_type = StackTransitionType.SLIDE_RIGHT;
+
+            // BottomBar
+            bottom_bar = new BottomBar ();
 
             // Current date and navigation date are determinated
             // Current date only change depends the local time
@@ -96,13 +108,18 @@ namespace App.Views {
             // for update the headerbar and setup current date in calendarview
             modify_date_by_month (0);
             
+            /* Signals from buttombar */
+            bottom_bar.today_clicked.connect (() => {
+                goto_today ();
+            });
+
+            bottom_bar.close_clicked.connect (() => {
+                close_clicked ();
+            });
+
             /*
              * Detect all signals from HeaderBar
             */
-
-            header.today_clicked.connect (() => {
-                goto_today ();
-            });
 
             header.prev.connect ( () => {
                 switch (current_stack) {
@@ -136,29 +153,62 @@ namespace App.Views {
                 }
             });
 
-            header.main_btn.connect ( () => {
+            header.month_btn.connect ( () => {
                 switch (current_stack) {
                     case Constants.STACK_CALENDAR:
-                        header.change_main_text ( nav_year.to_string () );
-                        this.set_visible_child_name (Constants.STACK_MONTHS);
+                        header.change_main_text ( nav_year.to_string (), null );
+                        stack.set_visible_child_name (Constants.STACK_MONTHS);
                         current_stack = Constants.STACK_MONTHS;
                         break;
                     case Constants.STACK_MONTHS:
-                        nav_year_interval = nav_year;
-                        header.change_main_text ( generare_yyyy_yyyy (nav_year) );
-                        years.fill_grid ( generare_year_list (nav_year) );
-                        this.set_visible_child_name (Constants.STACK_YEARS);
-                        current_stack = Constants.STACK_YEARS;
+                        header.change_main_text ( nav_year.to_string (), generare_month (nav_month) );
+                        stack.set_visible_child_name (Constants.STACK_CALENDAR);
+                        current_stack = Constants.STACK_CALENDAR;
+                        update_calendar ();
                         break;
                     case Constants.STACK_YEARS:
-                        header.change_main_text ( generare_mm_yyyy (nav_month, nav_year) );
-                        this.set_visible_child_name (Constants.STACK_CALENDAR);
+                        header.change_main_text ( nav_year.to_string (), generare_month (nav_month) );
+                        stack.set_visible_child_name (Constants.STACK_CALENDAR);
                         current_stack = Constants.STACK_CALENDAR;
+                        update_calendar ();
                         break;
                     default:
-                        header.change_main_text ( generare_mm_yyyy (nav_month, nav_year) );
-                        this.set_visible_child_name (Constants.STACK_CALENDAR);
+                        header.change_main_text ( nav_year.to_string (), generare_month (nav_month) );
+                        stack.set_visible_child_name (Constants.STACK_CALENDAR);
                         current_stack = Constants.STACK_CALENDAR;
+                        update_calendar ();
+                        break;
+                }
+            });
+
+            header.year_btn.connect ( () => {
+                switch (current_stack) {
+                    case Constants.STACK_CALENDAR:
+                        nav_year_interval = nav_year;
+                        header.change_main_text ( generare_yyyy_yyyy (nav_year), null );
+                        years.fill_grid ( generare_year_list (nav_year) );
+                        stack.set_visible_child_name (Constants.STACK_YEARS);
+                        current_stack = Constants.STACK_YEARS;
+                        break;
+                    case Constants.STACK_MONTHS:
+                        nav_year_interval = nav_year;
+                        header.change_main_text ( generare_yyyy_yyyy (nav_year), null );
+                        years.fill_grid ( generare_year_list (nav_year) );
+                        stack.set_visible_child_name (Constants.STACK_YEARS);
+                        current_stack = Constants.STACK_YEARS;
+                        update_calendar ();
+                        break;
+                    case Constants.STACK_YEARS:
+                        header.change_main_text ( nav_year.to_string (), generare_month (nav_month) );
+                        stack.set_visible_child_name (Constants.STACK_CALENDAR);
+                        current_stack = Constants.STACK_CALENDAR;
+                        update_calendar ();
+                        break;
+                    default:
+                        header.change_main_text ( nav_year.to_string (), generare_month (nav_month) );
+                        stack.set_visible_child_name (Constants.STACK_CALENDAR);
+                        current_stack = Constants.STACK_CALENDAR;
+                        update_calendar ();
                         break;
                 }
             });
@@ -175,15 +225,10 @@ namespace App.Views {
                            out nav_month,
                            out nav_year);
 
-                if ( compare_actual_month_year () ) {
-                    nav_day = current_day;
-                    calendar.fill_grid_days(start_day_nav, max_months_day_nav, nav_day);
-                } else {
-                    calendar.fill_grid_days(start_day_nav, max_months_day_nav, -1);
-                }
+                update_calendar ();
 
-                header.change_main_text ( generare_mm_yyyy (nav_month, nav_year) );
-                this.set_visible_child_name (Constants.STACK_CALENDAR);
+                header.change_main_text ( nav_year.to_string (), generare_month (nav_month) );
+                stack.set_visible_child_name (Constants.STACK_CALENDAR);
                 current_stack = Constants.STACK_CALENDAR;
             });
 
@@ -199,16 +244,21 @@ namespace App.Views {
                            out nav_month,
                            out nav_year);
 
-                header.change_main_text ( nav_year.to_string () );
-                this.set_visible_child_name (Constants.STACK_MONTHS);
+                update_calendar ();
+
+                header.change_main_text ( nav_year.to_string (), null );
+                stack.set_visible_child_name (Constants.STACK_MONTHS);
                 current_stack = Constants.STACK_MONTHS;
             });
 
             set_timer ();
 
-            this.add_named (calendar, Constants.STACK_CALENDAR);
-            this.add_named (years, Constants.STACK_YEARS);
-            this.add_named (months, Constants.STACK_MONTHS);
+            stack.add_named (calendar, Constants.STACK_CALENDAR);
+            stack.add_named (years, Constants.STACK_YEARS);
+            stack.add_named (months, Constants.STACK_MONTHS);
+
+            this.add (stack);
+            this.add (bottom_bar);
         }
 
         /*
@@ -225,16 +275,10 @@ namespace App.Views {
                            out nav_month,
                            out nav_year);
 
-            if ( compare_actual_month_year () ) {
-                print(@"Current day $nav_day");
-                nav_day = current_day;
-                calendar.fill_grid_days(start_day_nav, max_months_day_nav, nav_day);
-            } else {
-                calendar.fill_grid_days(start_day_nav, max_months_day_nav, -1);
-            }
+            update_calendar ();
 
-            header.change_main_text ( generare_mm_yyyy (nav_month, nav_year) );
-            this.set_visible_child_name (Constants.STACK_CALENDAR);
+            header.change_main_text ( nav_year.to_string (), generare_month (nav_month) );
+            stack.set_visible_child_name (Constants.STACK_CALENDAR);
             current_stack = Constants.STACK_CALENDAR;
         }
 
@@ -258,13 +302,8 @@ namespace App.Views {
                            out nav_month,
                            out nav_year);
 
-            if ( compare_actual_date () ) {
-                calendar.fill_grid_days(start_day_nav, max_months_day_nav, nav_day);
-            } else {
-                calendar.fill_grid_days(start_day_nav, max_months_day_nav, -1);
-            }
-
-            header.change_main_text (generare_mm_yyyy (nav_month, nav_year) );
+            update_calendar ();
+            header.change_main_text ( nav_year.to_string (), generare_month (nav_month) );
         }
 
         /*
@@ -286,13 +325,9 @@ namespace App.Views {
                            out nav_month,
                            out nav_year);
 
-            if ( compare_actual_date () ) {
-                calendar.fill_grid_days(start_day_nav, max_months_day_nav, nav_day);
-            } else {
-                calendar.fill_grid_days(start_day_nav, max_months_day_nav, -1);
-            }
+            update_calendar ();
             
-            header.change_main_text ( nav_year.to_string() );
+            header.change_main_text ( nav_year.to_string(), null );
         }
 
         /*
@@ -307,28 +342,13 @@ namespace App.Views {
             if (next == 1) {
                 nav_year_interval += 12;
                 new_list = generare_year_list (nav_year_interval);
-                header.change_main_text ( generare_yyyy_yyyy (nav_year_interval) );
+                header.change_main_text ( generare_yyyy_yyyy (nav_year_interval), null );
             } else if (next == -1) {
                 nav_year_interval -= 12;
                 new_list = generare_year_list (nav_year_interval);
-                header.change_main_text ( generare_yyyy_yyyy (nav_year_interval) );
+                header.change_main_text ( generare_yyyy_yyyy (nav_year_interval), null );
             }
             years.fill_grid (new_list);
-        }
-
-        /*
-         * Compare if navigation date and current date are the same
-         * This cover day, month and year
-         * Used in methods:
-         * > modify_date_by_month
-         * > modify_date_by_years
-         * Is necessary at the moment to select a new date in next a prev buttons 
-         */
-
-        private bool compare_actual_date () {
-            return nav_day == current_day &&
-                   nav_month == current_month &&
-                   nav_year == current_year;
         }
 
         /*
@@ -350,9 +370,8 @@ namespace App.Views {
          * Build with a month a year parameters
          */
 
-        private string generare_mm_yyyy (int month, int year) {
-            string m = Month.from_number (month);
-            return @"$m  $(year.to_string())";
+        private string generare_month (int month) {
+            return Month.from_number (month);
         }
 
         /*
@@ -442,6 +461,15 @@ namespace App.Views {
                            out current_year);
 
                 goto_today ();
+            }
+        }
+
+        private void update_calendar () {
+            if ( compare_actual_month_year () ) {
+                nav_day = current_day;
+                calendar.fill_grid_days(start_day_nav, max_months_day_nav, nav_day);
+            } else {
+                calendar.fill_grid_days(start_day_nav, max_months_day_nav, -1);
             }
         }
 }}

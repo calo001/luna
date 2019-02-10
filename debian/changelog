@@ -1,6 +1,13 @@
 com.github.calo001.luna (1.0.2) xenial; urgency=low
 
 [NEW]
+  * New look and feel.
+
+ -- Carlos Lopez <calo_lrc@hotmail.com>  Sat, 9 Feb 2019 22:10:00 -0500
+
+com.github.calo001.luna (1.0.2) xenial; urgency=low
+
+[NEW]
   * Teal color theme.
 
  -- Carlos Lopez <calo_lrc@hotmail.com>  Sat, 1 Nov 2018 22:10:00 -0500

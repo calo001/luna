@@ -67,14 +67,16 @@ dialog decoration {
     background: @colorAccent;
     color: @myColorPrimary;
     font-size: 1.4em;
-    padding: 6px 12px;
+    padding: 8px;
     text-shadow: none;
     border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .day-header {
     font-weight: bold;
-    text-shadow: none;
+    font-size: 0.9em;
+    padding-top: 4px;
 }
 
 .day-empty {
@@ -83,15 +85,13 @@ dialog decoration {
 
 .btn-header {
     color: @textColorPrimary;
-    font-size: 2em;
-    text-shadow: none;
     border: none;
     background: none;
     box-shadow: none;
 }
 
 .btn-header:hover {
-    background: @colorAccentTransparent;
+    opacity: 0.8;
 }
 
 .transition {
@@ -107,4 +107,48 @@ dialog decoration {
 
 .button_colors:hover {
     opacity: 0.8;
+}
+
+.transition {
+    transition: 400ms;
+    transition-timing-function: linear;
+}
+
+.gotoday {
+  background: white;
+  color: @myColorPrimary;
+  border-radius: 20px;
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.19), 0 2px 3px rgba(0,0,0,0.23);
+}
+
+.gotoday:hover {
+  box-shadow: 0 7px 12px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.topbar {
+    background: rgba(0,0,0,0.1);
+    border-radius: 0px 0px 25px 25px;
+    padding: 0px;
+}
+
+headerbar {
+    padding: 0px;
+}
+
+.buttombar {
+    background: rgba(0,0,0, 0.1);
+    padding-bottom: 8px;
+    padding-top: 4px;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.flat {
+    background: none;
+}
+
+.weekend {
+    background: rgba(0,0,0, 0.05);
+    border-radius: 8px;
 }

@@ -40,3 +40,8 @@ window decoration {
 window decoration:backdrop {
 	box-shadow: 0 0 0 1px rgba(0,0,0,0.2), 0 3px 6px rgba (0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23), 0 14px 28px rgba(0,0,0,0);
 }
+
+.gotoday {
+	background: @colorAccent;
+    color: @myColorPrimary;
+}

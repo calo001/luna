@@ -30,17 +30,8 @@ namespace App.Configs {
     public class Constants {
     
         public abstract const string ID = "com.github.calo001.luna";
-        public abstract const string VERSION = "1.0.2";
-        public abstract const string PROGRAME_NAME = "Luna";
-        public abstract const string APP_YEARS = "2018";
         public abstract const string APP_ICON = "com.github.calo001.luna";
-        public abstract const string ABOUT_COMMENTS = "An amazing calendar widget ";
-        public abstract const string TRANSLATOR_CREDITS = "Translators";
-        public abstract const string MAIN_URL = "https://github.com/calo001/luna";
-        public abstract const string BUG_URL = "https://github.com/calo001/luna/issues";
-        public abstract const string [] ABOUT_AUTHORS = { "Carlos Lopez <calo_lrc@hotmail.com>" };
-        public abstract const Gtk.License ABOUT_LICENSE_TYPE = Gtk.License.CUSTOM;
-
+        
         public abstract const string STACK_CALENDAR = "calendar";
         public abstract const string STACK_YEARS = "years";
         public abstract const string STACK_MONTHS = "months";

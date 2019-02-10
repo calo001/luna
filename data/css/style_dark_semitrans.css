@@ -23,7 +23,7 @@
 @define-color myColorPrimary rgba (0,0,0,0);
 @define-color textColorPrimary @white_clear;
 @define-color colorAccent @white_clear;
-@define-color colorAccentTransparent rgba(255,255,255,0.1);
+@define-color colorAccentTransparent rgba(0,0,0,0.4);
 
 @define-color bg_highlight_color shade (@myColorPrimary, 1.4);
 
@@ -53,4 +53,9 @@ window decoration {
 /*.csd:backdrop {*/
 window decoration:backdrop {
 	box-shadow: 0 0 0 1px rgba(0,0,0,0.2), 0 3px 6px rgba (0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23), 0 14px 28px rgba(0,0,0,0);
+}
+
+.gotoday {
+    color: @textColorPrimary;
+	background: @colorAccentTransparent;
 }

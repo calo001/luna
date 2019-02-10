@@ -43,9 +43,11 @@ namespace App.Controllers {
             this.app_view = new AppView (header);
             this.window.set_titlebar (header);
             this.window.add (this.app_view);
-            this.window.set_default_size (350, 350);
-            this.window.set_size_request (350, 350);
             this.application.add_window (window);
+
+            this.app_view.close_clicked.connect( ()=> {
+                quit ();
+            });
         }
 
         public void activate () {

@@ -31,9 +31,12 @@
         <p>Select a theme color for the calendar and browse through the months and years with an intuitive interface.</p>
     </description>  
     <releases>
-      <release version="1.0.0" date="2018-10-03">
+      <release version="1.1.0" date="2019-02-9">
         <description>
-          <p>Initial 1.0.0 release!</p>
+          <p>New</p>
+          <ul>
+            <li>A new look and feel!</li>
+          </ul>
         </description>
       </release>
       <release version="1.0.1" date="2018-10-20">
@@ -45,12 +48,9 @@
           </ul>
         </description>
       </release>
-      <release version="1.0.2" date="2018-11-1">
+      <release version="1.0.0" date="2018-10-03">
         <description>
-          <p>New</p>
-          <ul>
-            <li>New teal color theme!</li>
-          </ul>
+          <p>Initial 1.0.0 release!</p>
         </description>
       </release>
     </releases>

@@ -49,6 +49,7 @@ namespace App {
                 resizable: false
             );
             get_style_context ().add_class ("widget_background");
+            get_style_context ().add_class ("transition");
             
             set_keep_below (true);
             stick ();
