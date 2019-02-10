@@ -76,6 +76,7 @@ Options:
 
 * [Rafael C. Nunes](https://github.com/rafaelcn) Brazilian Portuguese
 * [Hannes Schulze](https://github.com/hannesschulze) German 
+* [NathanBnm](https://github.com/NathanBnm) French
 
 
 ### License
