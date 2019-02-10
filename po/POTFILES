@@ -1,8 +1,3 @@
-src/controllers/AppController.vala
-src/views/AppView.vala
-src/views/ColorSelector.vala
-src/widgets/HeaderBar.vala
-src/enums/Day.vala
-src/enums/Month.vala
+src/configs/Strings.vala
 data/com.github.calo001.luna.appdata.xml.in
 data/com.github.calo001.luna.desktop.in

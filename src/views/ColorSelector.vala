@@ -24,6 +24,7 @@
 
 using Gtk;
 using App.Enums;
+using App.Configs;
 
 namespace App.Views {
     public class ColorSelector : Grid {
@@ -59,7 +60,7 @@ namespace App.Views {
             this.column_spacing = 8;
 
             var img = new Image.from_icon_name ("preferences-color" , IconSize.DIALOG);
-            var label = new Label (_("Select a theme color"));
+            var label = new Label (S.SELECT_THEME_COLOR);
             var separator = new Separator (Gtk.Orientation.HORIZONTAL);
             label.get_style_context (). add_class("h3");
 
@@ -155,24 +156,24 @@ namespace App.Views {
             
 
             // Adding individual tooltip text
-            btn_white.set_tooltip_text (_("White"));
-            btn_black.set_tooltip_text (_("Black"));
-            btn_pink.set_tooltip_text (_("Pink"));
-            btn_red.set_tooltip_text (_("Red"));
-            btn_orange.set_tooltip_text (_("Orange"));
-            btn_green.set_tooltip_text (_("Green"));
-            btn_teal.set_tooltip_text (_("Teal"));
-            btn_yellow.set_tooltip_text (_("Yellow"));
-            btn_blue.set_tooltip_text (_("Blue"));
-            btn_purple.set_tooltip_text (_("Purple"));
-            btn_coco.set_tooltip_text (_("Coco"));
-            btn_blue_green.set_tooltip_text (_("Blue to Green"));
-            btn_purple_red.set_tooltip_text (_("Purple to Red"));
-            btn_pride.set_tooltip_text (_("Pride"));
-            btn_trans_black.set_tooltip_text (_("Transparent black"));
-            btn_trans_white.set_tooltip_text (_("Transparent white"));
-            btn_semitrans_black.set_tooltip_text (_("Semi Transparent black"));
-            btn_semitrans_white.set_tooltip_text (_("Semi Transparent white"));
+            btn_white.set_tooltip_text (S.WHITE);
+            btn_black.set_tooltip_text (S.BLACK);
+            btn_pink.set_tooltip_text (S.PINK);
+            btn_red.set_tooltip_text (S.RED);
+            btn_orange.set_tooltip_text (S.ORANGE);
+            btn_green.set_tooltip_text (S.GREEN);
+            btn_teal.set_tooltip_text (S.TEAL);
+            btn_yellow.set_tooltip_text (S.YELLOW);
+            btn_blue.set_tooltip_text (S.BLUE);
+            btn_purple.set_tooltip_text (S.PURPLE);
+            btn_coco.set_tooltip_text (S.COCO);
+            btn_blue_green.set_tooltip_text (S.BLUE_TO_GREEEN);
+            btn_purple_red.set_tooltip_text (S.PURPLE_TO_RED);
+            btn_pride.set_tooltip_text (S.PRIDE);
+            btn_trans_black.set_tooltip_text (S.TRANSPARENT_BLACK);
+            btn_trans_white.set_tooltip_text (S.TRANSPARENT_WHITE);
+            btn_semitrans_black.set_tooltip_text (S.SEMITRANSPARENT_BLACK);
+            btn_semitrans_white.set_tooltip_text (S.SEMITRANSPARENT_WHITE);
 
             this.attach (img,            0, 0, 6, 1);
             this.attach (label,          0, 1, 6, 1);

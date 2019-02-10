@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.calo001.luna\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-01 16:01-0600\n"
+"POT-Creation-Date: 2019-02-09 18:56-0600\n"
 "PO-Revision-Date: 2018-10-19 8:54-0300\n"
 "Last-Translator: Rafael Campos Nunes <rafaelnunes@engineer.com>\n"
 "Language-Team: none\n"
@@ -17,213 +17,161 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/views/ColorSelector.vala:62
-msgid "Select a theme color"
-msgstr "Selecione um tema"
-
-#: src/views/ColorSelector.vala:158
-msgid "White"
-msgstr "Branco"
-
-#: src/views/ColorSelector.vala:159
-msgid "Black"
-msgstr "Negro"
-
-#: src/views/ColorSelector.vala:160
-msgid "Pink"
-msgstr "Rosa"
-
-#: src/views/ColorSelector.vala:161
-msgid "Red"
-msgstr "Vermelho"
-
-#: src/views/ColorSelector.vala:162
-msgid "Orange"
-msgstr "Laranja"
-
-#: src/views/ColorSelector.vala:163
-msgid "Green"
-msgstr "Verde"
-
-#: src/views/ColorSelector.vala:164
-msgid "Teal"
-msgstr "Turquesa"
-
-#: src/views/ColorSelector.vala:165
-msgid "Yellow"
-msgstr "Amarelo"
-
-#: src/views/ColorSelector.vala:166
-msgid "Blue"
-msgstr "Azul"
-
-#: src/views/ColorSelector.vala:167
-msgid "Purple"
-msgstr "Roxo"
-
-#: src/views/ColorSelector.vala:168
-msgid "Coco"
-msgstr "Café"
-
-#: src/views/ColorSelector.vala:169
-msgid "Blue to Green"
-msgstr "Azul a Verde"
-
-#: src/views/ColorSelector.vala:170
-msgid "Purple to Red"
-msgstr "Roxo a Vermelho"
-
-#: src/views/ColorSelector.vala:171
-msgid "Pride"
-msgstr "Pride"
-
-#: src/views/ColorSelector.vala:172
-msgid "Transparent black"
-msgstr "Negro transparente"
-
-#: src/views/ColorSelector.vala:173
-msgid "Transparent white"
-msgstr "Branco transparente"
-
-#: src/views/ColorSelector.vala:174
-msgid "Semi Transparent black"
-msgstr "Negro transparente"
-
-#: src/views/ColorSelector.vala:175
-msgid "Semi Transparent white"
-msgstr "Branco transparente"
-
-#: src/widgets/HeaderBar.vala:60
-msgid "Colors"
-msgstr "Cores"
-
-#: src/widgets/HeaderBar.vala:85
-msgid "Go today"
-msgstr "Ir a hoje"
-
-#: src/enums/Day.vala:31
+#: src/configs/Strings.vala:28
 msgid "MON"
 msgstr "SEG"
 
-#: src/enums/Day.vala:32
+#: src/configs/Strings.vala:29
 msgid "TUE"
 msgstr "TER"
 
-#: src/enums/Day.vala:33
+#: src/configs/Strings.vala:30
 msgid "WED"
 msgstr "QUA"
 
-#: src/enums/Day.vala:34
+#: src/configs/Strings.vala:31
 msgid "THU"
 msgstr "QUI"
 
-#: src/enums/Day.vala:35
+#: src/configs/Strings.vala:32
 msgid "FRI"
 msgstr "SEX"
 
-#: src/enums/Day.vala:36
+#: src/configs/Strings.vala:33
 msgid "SAT"
 msgstr "SÁB"
 
-#: src/enums/Day.vala:37
+#: src/configs/Strings.vala:34
 msgid "SUN"
 msgstr "DOM"
 
-#: src/enums/Month.vala:36
-msgid "JAN"
-msgstr "JAN"
-
-#: src/enums/Month.vala:37
-msgid "FEB"
-msgstr "FEV"
-
-#: src/enums/Month.vala:38
-msgid "MAR"
-msgstr "MAR"
-
-#: src/enums/Month.vala:39
-msgid "APR"
-msgstr "ABR"
-
-#: src/enums/Month.vala:40
-msgid "MAY"
-msgstr "MAI"
-
-#: src/enums/Month.vala:41
-msgid "JUN"
-msgstr "JUN"
-
-#: src/enums/Month.vala:42
-msgid "JUL"
-msgstr "JUL"
-
-#: src/enums/Month.vala:43
-msgid "AUG"
-msgstr "AGO"
-
-#: src/enums/Month.vala:44
-msgid "SEP"
-msgstr "SEP"
-
-#: src/enums/Month.vala:45
-msgid "OCT"
-msgstr "OUT"
-
-#: src/enums/Month.vala:46
-msgid "NOV"
-msgstr "NOV"
-
-#: src/enums/Month.vala:47
-msgid "DEC"
-msgstr "DEZ"
-
-#: src/enums/Month.vala:72
+#: src/configs/Strings.vala:35
 msgid "January"
 msgstr "Janeiro"
 
-#: src/enums/Month.vala:73
+#: src/configs/Strings.vala:36
 msgid "February"
 msgstr "Fevereiro"
 
-#: src/enums/Month.vala:74
+#: src/configs/Strings.vala:37
 msgid "March"
 msgstr "Março"
 
-#: src/enums/Month.vala:75
+#: src/configs/Strings.vala:38
 msgid "April"
 msgstr "Abril"
 
-#: src/enums/Month.vala:76
+#: src/configs/Strings.vala:39
 msgid "May"
 msgstr "Maio"
 
-#: src/enums/Month.vala:77
+#: src/configs/Strings.vala:40
 msgid "June"
 msgstr "Junho"
 
-#: src/enums/Month.vala:78
+#: src/configs/Strings.vala:41
 msgid "July"
 msgstr "Julho"
 
-#: src/enums/Month.vala:79
+#: src/configs/Strings.vala:42
 msgid "August"
 msgstr "Agosto"
 
-#: src/enums/Month.vala:80
+#: src/configs/Strings.vala:43
 msgid "September"
 msgstr "Setembro"
 
-#: src/enums/Month.vala:81
+#: src/configs/Strings.vala:44
 msgid "October"
 msgstr "Outubro"
 
-#: src/enums/Month.vala:82
+#: src/configs/Strings.vala:45
 msgid "November"
 msgstr "Novembro"
 
-#: src/enums/Month.vala:83
+#: src/configs/Strings.vala:46
 msgid "December"
 msgstr "Dezembro"
+
+#: src/configs/Strings.vala:47
+msgid "GO TODAY"
+msgstr "IR A HOJE"
+
+#: src/configs/Strings.vala:48
+msgid "Select a theme color"
+msgstr "Selecione um tema"
+
+#: src/configs/Strings.vala:49
+msgid "White"
+msgstr "Branco"
+
+#: src/configs/Strings.vala:50
+msgid "Black"
+msgstr "Negro"
+
+#: src/configs/Strings.vala:51
+msgid "Pink"
+msgstr "Rosa"
+
+#: src/configs/Strings.vala:52
+msgid "Red"
+msgstr "Vermelho"
+
+#: src/configs/Strings.vala:53
+msgid "Orange"
+msgstr "Laranja"
+
+#: src/configs/Strings.vala:54
+msgid "Green"
+msgstr "Verde"
+
+#: src/configs/Strings.vala:55
+msgid "Teal"
+msgstr "Turquesa"
+
+#: src/configs/Strings.vala:56
+msgid "Yellow"
+msgstr "Amarelo"
+
+#: src/configs/Strings.vala:57
+msgid "Blue"
+msgstr "Azul"
+
+#: src/configs/Strings.vala:58
+msgid "Purple"
+msgstr "Roxo"
+
+#: src/configs/Strings.vala:59
+msgid "Coco"
+msgstr "Café"
+
+#: src/configs/Strings.vala:60
+msgid "Blue to Green"
+msgstr "Azul a Verde"
+
+#: src/configs/Strings.vala:61
+msgid "Purple to Red"
+msgstr "Roxo a Vermelho"
+
+#: src/configs/Strings.vala:62
+msgid "Pride"
+msgstr "Pride"
+
+#: src/configs/Strings.vala:63
+msgid "Transparent black"
+msgstr "Negro transparente"
+
+#: src/configs/Strings.vala:64
+msgid "Transparent white"
+msgstr "Branco transparente"
+
+#: src/configs/Strings.vala:65
+msgid "Semi Transparent black"
+msgstr "Negro transparente"
+
+#: src/configs/Strings.vala:66
+msgid "Semi Transparent white"
+msgstr "Branco transparente"
 
 #: data/com.github.calo001.luna.appdata.xml.in:7
 #: data/com.github.calo001.luna.desktop.in:3
@@ -245,6 +193,30 @@ msgid ""
 msgstr ""
 "Selecciona un color de tema para el calendario y navega a través de los "
 "meses y años con una interfaz intuitiva"
+
+#: data/com.github.calo001.luna.appdata.xml.in:36
+msgid "New"
+msgstr ""
+
+#: data/com.github.calo001.luna.appdata.xml.in:38
+msgid "A new look and feel!"
+msgstr ""
+
+#: data/com.github.calo001.luna.appdata.xml.in:44
+msgid "Fixes"
+msgstr ""
+
+#: data/com.github.calo001.luna.appdata.xml.in:46
+msgid "Delete \"label-today\" class when you are not in the current date"
+msgstr ""
+
+#: data/com.github.calo001.luna.appdata.xml.in:47
+msgid "A new more elemtary native look"
+msgstr ""
+
+#: data/com.github.calo001.luna.appdata.xml.in:53
+msgid "Initial 1.0.0 release!"
+msgstr ""
 
 #: data/com.github.calo001.luna.desktop.in:4
 msgid "An amazing calendar widget "

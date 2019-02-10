@@ -88,8 +88,8 @@
     <url type="help">https://github.com/calo001/luna/issues</url>
     <update_contact>calo_lrc@hotmail.com</update_contact>
     <custom>
-        <value key="x-appcenter-color-primary">#1a1a1a</value>
-        <value key="x-appcenter-color-primary-text">#f9c440</value>
+        <value key="x-appcenter-color-primary">#fafafa</value>
+        <value key="x-appcenter-color-primary-text">#0e141f</value>
         <value key="x-appcenter-suggested-price">0</value>
     </custom>
 </component>

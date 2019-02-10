@@ -36,9 +36,6 @@ namespace App.Views {
         public BottomBar () {
             get_style_context ().add_class ("buttombar");
             
-            /*
-            * Menu colors
-            */
             menu_button = new Button.from_icon_name ("view-more-horizontal-symbolic", LARGE_TOOLBAR );
             menu_button.tooltip_text = _("Colors");
             menu_button.get_style_context ().add_class ("flat");
@@ -75,7 +72,7 @@ namespace App.Views {
                 return true;
             });
 
-            today_button = new Button.with_label (_("Go today"));
+            today_button = new Button.with_label (S.GO_TODAY);
             today_button.margin = 8;
             today_button.get_style_context ().add_class ("gotoday");
             today_button.clicked.connect (() => {

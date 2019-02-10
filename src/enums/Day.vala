@@ -16,6 +16,7 @@
 * 
 */
 
+using App.Configs;
 namespace App.Enums {
     public enum Day {
         MONDAY,
@@ -28,13 +29,13 @@ namespace App.Enums {
 
         public string to_string () {
             switch (this) {
-                case MONDAY:    return _("MON");
-                case TUESDAY:   return _("TUE");
-                case WEDNESDAY: return _("WED");
-                case THURSDAY:  return _("THU");
-                case FRIDAY:    return _("FRI");
-                case SATURDAY:  return _("SAT");
-                case SUNDAY:    return _("SUN");
+                case MONDAY:    return S.MONDAY;
+                case TUESDAY:   return S.TUESDAY;
+                case WEDNESDAY: return S.WEDNESDAY;
+                case THURSDAY:  return S.THURSDAY;
+                case FRIDAY:    return S.FRIDAY;
+                case SATURDAY:  return S.SATURDAT;
+                case SUNDAY:    return S.SUNDAY;
                 default:        assert_not_reached ();
             }
         }

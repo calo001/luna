@@ -16,6 +16,8 @@
 * 
 */
 
+using App.Configs;
+
 namespace App.Enums {
     enum Month {
         JANUARY,
@@ -33,54 +35,54 @@ namespace App.Enums {
 
         public string to_string() {
             switch (this) {
-                case JANUARY:   return _("JAN");
-                case FEBRUARY:  return _("FEB");
-                case MARCH:     return _("MAR");
-                case APRIL:     return _("APR");
-                case MAY:       return _("MAY");
-                case JUNE:      return _("JUN");
-                case JULY:      return _("JUL");
-                case AUGUST:    return _("AUG");
-                case SEPTEMBER: return _("SEP");
-                case OCTOBER:   return _("OCT");
-                case NOVEMBER:  return _("NOV");
-                case DECEMBER:  return _("DEC");
+                case JANUARY:   return S.JANUARY;
+                case FEBRUARY:  return S.FEBRUARY;
+                case MARCH:     return S.MARCH;
+                case APRIL:     return S.APRIL;
+                case MAY:       return S.MAY;
+                case JUNE:      return S.JUNE;
+                case JULY:      return S.JULY;
+                case AUGUST:    return S.AUGUST;
+                case SEPTEMBER: return S.SEPTEMBER;
+                case OCTOBER:   return S.OCTOBER;
+                case NOVEMBER:  return S.NOVEMBER;
+                case DECEMBER:  return S.DECEMBER;
                 default:        assert_not_reached ();
             }
         }
 
         public static List<string> all () {
             List<string> MONTHS = new List<string>();
-            MONTHS.append(JANUARY.to_string());
-            MONTHS.append(FEBRUARY.to_string());
-            MONTHS.append(MARCH.to_string());
-            MONTHS.append(APRIL.to_string());
-            MONTHS.append(MAY.to_string());
-            MONTHS.append(JUNE.to_string());
-            MONTHS.append(JULY.to_string());
-            MONTHS.append(AUGUST.to_string());
-            MONTHS.append(SEPTEMBER.to_string());
-            MONTHS.append(OCTOBER.to_string());
-            MONTHS.append(NOVEMBER.to_string());
-            MONTHS.append(DECEMBER.to_string());
+            MONTHS.append(JANUARY.to_string().slice (0, 3).up());
+            MONTHS.append(FEBRUARY.to_string().slice (0, 3).up());
+            MONTHS.append(MARCH.to_string().slice (0, 3).up());
+            MONTHS.append(APRIL.to_string().slice (0, 3).up());
+            MONTHS.append(MAY.to_string().slice (0, 3).up());
+            MONTHS.append(JUNE.to_string().slice (0, 3).up());
+            MONTHS.append(JULY.to_string().slice (0, 3).up());
+            MONTHS.append(AUGUST.to_string().slice (0, 3).up());
+            MONTHS.append(SEPTEMBER.to_string().slice (0, 3).up());
+            MONTHS.append(OCTOBER.to_string().slice (0, 3).up());
+            MONTHS.append(NOVEMBER.to_string().slice (0, 3).up());
+            MONTHS.append(DECEMBER.to_string().slice (0, 3).up());
 
             return MONTHS;
         }
 
         public static string from_number(int month) {
             switch (month) {
-                case 1:  return _("January");
-                case 2:  return _("February");
-                case 3:  return _("March");
-                case 4:  return _("April");
-                case 5:  return _("May");
-                case 6:  return _("June");
-                case 7:  return _("July");
-                case 8:  return _("August");
-                case 9:  return _("September");
-                case 10: return _("October");
-                case 11: return _("November");
-                case 12: return _("December");
+                case 1:  return S.JANUARY;
+                case 2:  return S.FEBRUARY;
+                case 3:  return S.MARCH;
+                case 4:  return S.APRIL;
+                case 5:  return S.MAY;
+                case 6:  return S.JUNE;
+                case 7:  return S.JULY;
+                case 8:  return S.AUGUST;
+                case 9:  return S.SEPTEMBER;
+                case 10: return S.OCTOBER;
+                case 11: return S.NOVEMBER;
+                case 12: return S.DECEMBER;
                 default: assert_not_reached ();
             }
         }
