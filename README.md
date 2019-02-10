@@ -14,7 +14,7 @@
 
 <p align="center">
   <a href="https://github.com/calo001/luna">
-    <img src="https://img.shields.io/badge/Version-1.0.2-orange.svg">
+    <img src="https://img.shields.io/badge/Version-1.1.0-orange.svg">
   </a>
   <a href="https://github.com/calo001/luna/blob/master/LICENSE.md">
     <img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg">
@@ -25,7 +25,7 @@
 </p>
 
 <p align="center">
-    <img  src="https://github.com/calo001/luna/blob/master/data/images/screenshot_5.png" alt="Screenshot"> <br>
+    <img  src="https://github.com/calo001/luna/blob/master/data/images/screenshot_1.png" alt="Screenshot"> <br>
   <a href="https://github.com/calo001/luna/issues/new"> Report a problem! </a>
 </p>
 
