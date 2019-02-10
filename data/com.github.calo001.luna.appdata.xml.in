@@ -33,7 +33,7 @@
     <releases>
       <release version="1.1.0" date="2019-02-9">
         <description>
-          <p>New</p>
+          New
           <ul>
             <li>A new look and feel!</li>
           </ul>
@@ -41,7 +41,7 @@
       </release>
       <release version="1.0.1" date="2018-10-20">
         <description>
-          <p>Fixes</p>
+          Fixes
           <ul>
             <li>Delete "label-today" class when you are not in the current date</li>
             <li>A new more elemtary native look</li>
@@ -50,7 +50,7 @@
       </release>
       <release version="1.0.0" date="2018-10-03">
         <description>
-          <p>Initial 1.0.0 release!</p>
+          Initial 1.0.0 release!
         </description>
       </release>
     </releases>

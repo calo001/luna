@@ -1,18 +1,16 @@
 {
     "app-id" : "com.github.calo001.luna",
+    "base" : "io.elementary.BaseApp",
+    "base-version" : "juno",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "3.28",
+    "runtime-version" : "3.30",
     "sdk" : "org.gnome.Sdk",
-    "command" : "builder-test",
+    "command" : "com.github.calo001.luna",
     "finish-args" : [
-        "--share=network",
-        "--share=ipc",
-        "--socket=x11",
+        "--share=ipc", "--socket=x11",
         "--socket=wayland",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--talk-name=ca.desrt.dconf",
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+        "--filesystem=xdg-run/dconf", "--filesystem=~/.config/dconf:ro",
+        "--talk-name=ca.desrt.dconf", "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
     ],
     "build-options" : {
         "cflags" : "-O2 -g",
@@ -43,7 +41,7 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "file:///home/carlos/elemetaryProjects/com.github.calo001.luna"
+                    "url" : "/home/carlos/elemenetary-projects/luna/"
                 }
             ]
         }
