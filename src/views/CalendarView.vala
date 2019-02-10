@@ -81,7 +81,8 @@ namespace App.Views {
 
             for (int i = 0; i < 42; i++) {
                 Label label = labels.nth_data (i);
-                label.get_style_context ().remove_class ("day-empty");
+                label.get_style_context ().remove_class ("label-today");
+
                 label.visible = true;
                 label.margin = 1;
                 label.width_request = 38;
@@ -91,7 +92,6 @@ namespace App.Views {
                  * find the correct label in list
                  */
                 if (i < start_day || i >= max_day + start_day) {
-                    label.get_style_context ().add_class ("day-empty");
                     label.visible = false;
                 } else {
                     /*
@@ -99,10 +99,8 @@ namespace App.Views {
                      * find the correct label in list
                      */
                     if ( current_day != -1 && (i+1) == current_day + start_day ) {
-                        label.get_style_context ().remove_class ("weekend");
                         label.get_style_context ().add_class ("label-today");
                     }
-                    //label.set_label (day_number.to_string());
                     label.label = day_number.to_string();
                     day_number++;
                 }

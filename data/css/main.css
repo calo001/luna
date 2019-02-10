@@ -64,8 +64,6 @@ dialog decoration {
 }
 
 .label-today {
-    background: @colorAccent;
-    color: @myColorPrimary;
     font-size: 1.4em;
     padding: 8px;
     text-shadow: none;
@@ -73,14 +71,17 @@ dialog decoration {
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
+.weekend {
+    background: rgba(0,0,0, 0.05);
+    border-radius: 8px;
+    color: @textColorPrimary;
+    font-size: 1.2em;
+}
+
 .day-header {
     font-weight: bold;
     font-size: 0.9em;
     padding-top: 4px;
-}
-
-.day-empty {
-    padding: 0px;
 }
 
 .btn-header {
@@ -146,9 +147,4 @@ headerbar {
 
 .flat {
     background: none;
-}
-
-.weekend {
-    background: rgba(0,0,0, 0.05);
-    border-radius: 8px;
 }

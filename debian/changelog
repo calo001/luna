@@ -1,4 +1,11 @@
-com.github.calo001.luna (1.0.2) xenial; urgency=low
+com.github.calo001.luna (1.1.1) xenial; urgency=low
+
+[FIX]
+  * Add and remove label-today class in css.
+
+ -- Carlos Lopez <calo_lrc@hotmail.com>  Sat, 9 Feb 2019 23:10:00 -0500
+
+com.github.calo001.luna (1.1.0) xenial; urgency=low
 
 [NEW]
   * New look and feel.

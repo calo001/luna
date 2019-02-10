@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+
+    <schema id="com.github.calo001.luna" path="/com/github/calo001/luna/">
+        <key name="window-x" type="i">
+            <default>-1</default>
+            <summary>Most recent x position of Luna</summary>
+            <description>Most recent x position of Luna</description>
+        </key>
+    
+        <key name="window-y" type="i">
+            <default>-1</default>
+            <summary>Most recent y position of Luna</summary>
+            <description>Most recent y position of Luna</description>
+        </key>
+
+        <key name="color" type="s">
+            <default>"white"</default>
+            <summary>Most recent color theme of Luna</summary>
+            <description>Most recent color theme of Luna</description>
+        </key>
+    </schema>
+
+</schemalist>

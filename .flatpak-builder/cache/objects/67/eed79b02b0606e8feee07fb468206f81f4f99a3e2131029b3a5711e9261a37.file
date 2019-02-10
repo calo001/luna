@@ -1,0 +1,5 @@
+[Runtime]
+name=com.github.calo001.luna.Locale
+
+[ExtensionOf]
+ref=app/com.github.calo001.luna/x86_64/master
