@@ -1,3 +1,10 @@
+com.github.calo001.luna (1.1.2) xenial; urgency=low
+
+[FIX]
+  * Dark theme with gray accent color.
+
+ -- Carlos Lopez <calo_lrc@hotmail.com>  Tue, 13 Feb 2019 23:10:00 -0500
+
 com.github.calo001.luna (1.1.1) xenial; urgency=low
 
 [FIX]

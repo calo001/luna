@@ -31,6 +31,22 @@
         <p>Select a theme color for the calendar and browse through the months and years with an intuitive interface.</p>
     </description>  
     <releases>
+      <release version="1.1.2" date="2019-02-9">
+        <description>
+          Fix
+          <ul>
+            <li>Dark theme with gray accent color.</li>
+          </ul>
+        </description>
+      </release>
+      <release version="1.1.1" date="2019-02-9">
+        <description>
+          Fix
+          <ul>
+            <li>Add and remove correctly label-today class in css.</li>
+          </ul>
+        </description>
+      </release>
       <release version="1.1.0" date="2019-02-9">
         <description>
           New
@@ -89,7 +105,7 @@
     <update_contact>calo_lrc@hotmail.com</update_contact>
     <custom>
         <value key="x-appcenter-color-primary">#fafafa</value>
-        <value key="x-appcenter-color-primary-text">#0e141f</value>
+        <value key="x-appcenter-color-primary-text">#485a6c</value>
         <value key="x-appcenter-suggested-price">0</value>
     </custom>
 </component>

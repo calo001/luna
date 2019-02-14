@@ -44,3 +44,11 @@ window decoration:backdrop {
 	color: @myColorPrimary;
 	border-radius: 50%;
 }
+
+.topbar {
+    background: rgba(255,255,255,0.05);
+}
+
+.buttombar {
+    background: rgba(255,255,255, 0.05);
+}
