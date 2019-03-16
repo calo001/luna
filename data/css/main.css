@@ -148,3 +148,15 @@ headerbar {
 .flat {
     background: none;
 }
+
+.h1 {
+  font-size: 3em;
+}
+
+.h2 {
+  font-size: 2em;
+}
+
+.titlebar {
+  border: none;
+}
