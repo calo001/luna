@@ -72,6 +72,16 @@ Options:
   uninstall         Removes the application from the system (requires sudo)
 ```
 
+## Support me
+
+If you like the project and would like to fund and contribute to my work, you can do it via Paypal.Me:
+
+<p align="center">
+  <a href="https://www.paypal.me/calo001" target="_blank">
+    <img src="resources/paypalme.png" alt="Screenshot">
+  </a>
+</p>
+
 ### Translators
 
 * [Rafael C. Nunes](https://github.com/rafaelcn) Brazilian Portuguese
