@@ -82,7 +82,7 @@ Luna is and will always be free for the world 🌎️. If you like the project a
   </a>
 </p>
 <p align="center">
-  <a href="https://www.paypal.me/calo001" target="_blank">
+  <a href="https://www.patreon.com/carloslr" target="_blank">
     <img src="resources/become_a_patron_button.png" alt="Screenshot">
   </a>
 </p>
