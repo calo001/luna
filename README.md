@@ -92,6 +92,7 @@ Luna is and will always be free for the world 🌎️. If you like the project a
 * [Rafael C. Nunes](https://github.com/rafaelcn) Brazilian Portuguese
 * [Hannes Schulze](https://github.com/hannesschulze) German 
 * [NathanBnm](https://github.com/NathanBnm) French
+* [Milo Ivir](https://github.com/milotype) Croatian
 
 
 ### License
