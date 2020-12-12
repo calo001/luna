@@ -191,7 +191,7 @@ msgid ""
 "years with an intuitive interface."
 msgstr ""
 "Seleziona un colore del tema per il calendario, sfoglia mesi e"
-"anni con un'interfaccia intuitiva".
+"anni con un'interfaccia intuitiva."
 
 #: data/com.github.calo001.luna.appdata.xml.in:36
 msgid "New"

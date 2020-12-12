@@ -1,5 +1,5 @@
 project('com.github.calo001.luna', ['vala', 'c'],
-    version : '1.1.3',
+    version : '1.1.4',
     license: 'GPL-3.0'
 )
 
@@ -47,7 +47,5 @@ e = executable('com.github.calo001.luna',
     dependencies: dependencies,
     install : true
 )
-
-#test('tests', e, args : ['--run-tests'])
 
 meson.add_install_script('meson/post_install.py')

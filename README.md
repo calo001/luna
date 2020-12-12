@@ -14,7 +14,7 @@
 
 <p align="center">
   <a href="https://github.com/calo001/luna">
-    <img src="https://img.shields.io/badge/Version-1.1.3-orange.svg">
+    <img src="https://img.shields.io/badge/Version-1.1.4-orange.svg">
   </a>
   <a href="https://github.com/calo001/luna/blob/master/LICENSE.md">
     <img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg">
@@ -93,6 +93,8 @@ Luna is and will always be free for the world 🌎️. If you like the project a
 * [Hannes Schulze](https://github.com/hannesschulze) German 
 * [NathanBnm](https://github.com/NathanBnm) French
 * [Milo Ivir](https://github.com/milotype) Croatian
+* [rottenpants466](https://github.com/rottenpants466) Portuguese-Portugal
+* [Heimen Stoffels](https://github.com/Vistaus) Dutch (Netherlands)
 
 
 ### License
