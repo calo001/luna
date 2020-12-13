@@ -2,14 +2,15 @@
 # Copyright (C) 2018 THE com.github.calo001.luna'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.calo001.luna package.
 # Mirko Brombin <send@mirko.pm>, 2019.
+# Albano Battistella <albano_battistella@hotmail.com>, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.calo001.luna\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-12 15:56-0600\n"
-"PO-Revision-Date: 2018-11-28 21:38-0500\n"
-"Last-Translator: Mirko Brombin <send@mirko.pm>\n"
+"PO-Revision-Date: 2020-12-13 13:38-0100\n"
+"Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -195,27 +196,27 @@ msgstr ""
 
 #: data/com.github.calo001.luna.appdata.xml.in:38
 msgid "Portuguese-Portugal translation"
-msgstr ""
+msgstr "Traduzione portoghese"
 
 #: data/com.github.calo001.luna.appdata.xml.in:39
 msgid "Croatian translation"
-msgstr ""
+msgstr "Traduzione croata"
 
 #: data/com.github.calo001.luna.appdata.xml.in:47
 msgid "Added Dutch (Netherlands) translation"
-msgstr ""
+msgstr "Aggiunta traduzione in olandese (Paesi Bassi)"
 
 #: data/com.github.calo001.luna.appdata.xml.in:55
 msgid "Dark theme with gray accent color."
-msgstr ""
+msgstr "Tema scuro con accento di colore grigio."
 
 #: data/com.github.calo001.luna.appdata.xml.in:63
 msgid "Add and remove correctly label-today class in css."
-msgstr ""
+msgstr "Aggiungi e rimuovi correttamente l'etichetta-oggi class in css."
 
 #: data/com.github.calo001.luna.appdata.xml.in:71
 msgid "A new look and feel!"
-msgstr "Un nuovo aspetto"
+msgstr "Un nuovo aspetto!"
 
 #: data/com.github.calo001.luna.appdata.xml.in:79
 msgid "Delete \"label-today\" class when you are not in the current date"
