@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.calo001.luna\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-12 15:56-0600\n"
+"POT-Creation-Date: 2021-08-18 13:02-0500\n"
 "PO-Revision-Date: 2019-03-14 13:50+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <vistausss@outlook.com>\n"
@@ -195,39 +195,43 @@ msgstr ""
 "Kies een themakleur voor de kalender en blader door de maanden en jaren met "
 "een intuïtieve navigatie."
 
-#: data/com.github.calo001.luna.appdata.xml.in:38
+#: data/com.github.calo001.luna.appdata.xml.in:35
+msgid "Update to Odin"
+msgstr ""
+
+#: data/com.github.calo001.luna.appdata.xml.in:43
 msgid "Portuguese-Portugal translation"
 msgstr ""
 
-#: data/com.github.calo001.luna.appdata.xml.in:39
+#: data/com.github.calo001.luna.appdata.xml.in:44
 msgid "Croatian translation"
 msgstr ""
 
-#: data/com.github.calo001.luna.appdata.xml.in:47
+#: data/com.github.calo001.luna.appdata.xml.in:52
 msgid "Added Dutch (Netherlands) translation"
 msgstr ""
 
-#: data/com.github.calo001.luna.appdata.xml.in:55
+#: data/com.github.calo001.luna.appdata.xml.in:60
 msgid "Dark theme with gray accent color."
 msgstr ""
 
-#: data/com.github.calo001.luna.appdata.xml.in:63
+#: data/com.github.calo001.luna.appdata.xml.in:68
 msgid "Add and remove correctly label-today class in css."
 msgstr ""
 
-#: data/com.github.calo001.luna.appdata.xml.in:71
+#: data/com.github.calo001.luna.appdata.xml.in:76
 msgid "A new look and feel!"
 msgstr "Een nieuw uiterlijk!"
 
-#: data/com.github.calo001.luna.appdata.xml.in:79
+#: data/com.github.calo001.luna.appdata.xml.in:84
 msgid "Delete \"label-today\" class when you are not in the current date"
 msgstr "\"Vandaag\" wordt niet getoond als je op de huidige datum staat"
 
-#: data/com.github.calo001.luna.appdata.xml.in:80
+#: data/com.github.calo001.luna.appdata.xml.in:85
 msgid "A new more elemtary native look"
 msgstr "Een nieuw, meer elementary-achtig uiterlijk"
 
-#: data/com.github.calo001.luna.appdata.xml.in:85
+#: data/com.github.calo001.luna.appdata.xml.in:90
 msgid "Initial 1.0.0 release!"
 msgstr "Initiële 1.0.0-uitgave!"
 

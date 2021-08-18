@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.calo001.luna\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-12 15:56-0600\n"
+"POT-Creation-Date: 2021-08-18 13:02-0500\n"
 "PO-Revision-Date: 2020-09-18 16:15+0200\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: \n"
@@ -196,39 +196,43 @@ msgstr ""
 "Odaberi boju teme za kalendar i pregledaj mjesece i godine pomoću "
 "intuitivnog sučelja."
 
-#: data/com.github.calo001.luna.appdata.xml.in:38
+#: data/com.github.calo001.luna.appdata.xml.in:35
+msgid "Update to Odin"
+msgstr ""
+
+#: data/com.github.calo001.luna.appdata.xml.in:43
 msgid "Portuguese-Portugal translation"
 msgstr ""
 
-#: data/com.github.calo001.luna.appdata.xml.in:39
+#: data/com.github.calo001.luna.appdata.xml.in:44
 msgid "Croatian translation"
 msgstr ""
 
-#: data/com.github.calo001.luna.appdata.xml.in:47
+#: data/com.github.calo001.luna.appdata.xml.in:52
 msgid "Added Dutch (Netherlands) translation"
 msgstr ""
 
-#: data/com.github.calo001.luna.appdata.xml.in:55
+#: data/com.github.calo001.luna.appdata.xml.in:60
 msgid "Dark theme with gray accent color."
 msgstr ""
 
-#: data/com.github.calo001.luna.appdata.xml.in:63
+#: data/com.github.calo001.luna.appdata.xml.in:68
 msgid "Add and remove correctly label-today class in css."
 msgstr ""
 
-#: data/com.github.calo001.luna.appdata.xml.in:71
+#: data/com.github.calo001.luna.appdata.xml.in:76
 msgid "A new look and feel!"
 msgstr "Novi izgled i način rada!"
 
-#: data/com.github.calo001.luna.appdata.xml.in:79
+#: data/com.github.calo001.luna.appdata.xml.in:84
 msgid "Delete \"label-today\" class when you are not in the current date"
 msgstr "Izbriši klasu oznake „danas” kad se ne nalaziš na trenutačnom datumu"
 
-#: data/com.github.calo001.luna.appdata.xml.in:80
+#: data/com.github.calo001.luna.appdata.xml.in:85
 msgid "A new more elemtary native look"
 msgstr "Novi, izvorniji elemtary-izgled"
 
-#: data/com.github.calo001.luna.appdata.xml.in:85
+#: data/com.github.calo001.luna.appdata.xml.in:90
 msgid "Initial 1.0.0 release!"
 msgstr "Izvorno izdanje 1.0.0!"
 
