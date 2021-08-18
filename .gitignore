@@ -5,3 +5,4 @@ debian/com.github.calo001.luna.substvars
 debian/com.github.calo001.luna/
 debian/debhelper-build-stamp
 debian/files
+.flatpak-builder/

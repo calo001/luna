@@ -1,10 +1,8 @@
 {
     "app-id" : "com.github.calo001.luna",
-    "base": "io.elementary.BaseApp",
-    "base-version": "juno",
-    "runtime": "org.freedesktop.Platform",
-    "sdk": "org.freedesktop.Sdk",
-    "runtime-version": "18.08",
+    "runtime": "io.elementary.Platform",
+    "runtime-version": "6",
+    "sdk": "io.elementary.Sdk",
     "command" : "com.github.calo001.luna",
     "finish-args" : [
         "--share=ipc", "--socket=x11",
@@ -34,9 +32,8 @@
             "buildsystem" : "meson",
             "sources" : [
                 {
-                    "type" : "git",
-                    "url" : "https://github.com/calo001/luna.git",
-                    "commit" : "f973efd6acf523fe194925096c3ef570e42781b0"
+                    "type": "dir",
+                    "path": "."
                 }
             ]
         }
