@@ -72,18 +72,28 @@ Options:
   uninstall         Removes the application from the system (requires sudo)
 ```
 
+#### Using Flatpak
+If you prefer to use Flatpak to try or compile Luna from source code, you can do it by using the command line:
+
+```
+flatpak-builder build  com.github.calo001.luna.json --user --install --force-clean
+```
+
+Then, execute Luna by using:
+
+```
+flatpak run com.github.calo001.luna
+```
+
+>To run these commands, you need to have Flatpak installed, Check the [Quick Setup](https://flatpak.org/setup/), and follow the instructions to install it depending on your OS.
+
 ## Support me
 
 Luna is and will always be free for the world 🌎️. If you like the project and would like to fund and contribute to my work, you can do it via Paypal.Me:
 
 <p align="center">
   <a href="https://www.paypal.me/calo001" target="_blank">
-    <img src="resources/paypalme.png" alt="Screenshot">
-  </a>
-</p>
-<p align="center">
-  <a href="https://www.patreon.com/carloslr" target="_blank">
-    <img src="resources/become_a_patron_button.png" alt="Screenshot">
+    <img src="resources/paypalme.png" alt="Screenshot" width="300px">
   </a>
 </p>
 
