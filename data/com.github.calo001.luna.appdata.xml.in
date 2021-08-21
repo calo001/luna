@@ -31,6 +31,11 @@
         <p>Select a theme color for the calendar and browse through the months and years with an intuitive interface.</p>
     </description>  
     <releases>
+      <release version="1.1.6" date="2021-08-20">
+        <description>
+          Screenshots updated  
+        </description>
+      </release>
       <release version="1.1.5" date="2021-08-18">
         <description>
           Update to Odin

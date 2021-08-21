@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.calo001.luna\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-18 13:02-0500\n"
+"POT-Creation-Date: 2021-08-20 22:06-0500\n"
 "PO-Revision-Date: 2018-10-14 07:34-0500\n"
 "Last-Translator: Hannes Schulze <haschu0103@gmail.com>\n"
 "Language-Team: none\n"
@@ -194,42 +194,46 @@ msgstr ""
 "mit einer intuitiven Oberfläche."
 
 #: data/com.github.calo001.luna.appdata.xml.in:35
+msgid "Screenshots updated"
+msgstr ""
+
+#: data/com.github.calo001.luna.appdata.xml.in:40
 msgid "Update to Odin"
 msgstr ""
 
-#: data/com.github.calo001.luna.appdata.xml.in:43
+#: data/com.github.calo001.luna.appdata.xml.in:48
 msgid "Portuguese-Portugal translation"
 msgstr ""
 
-#: data/com.github.calo001.luna.appdata.xml.in:44
+#: data/com.github.calo001.luna.appdata.xml.in:49
 msgid "Croatian translation"
 msgstr ""
 
-#: data/com.github.calo001.luna.appdata.xml.in:52
+#: data/com.github.calo001.luna.appdata.xml.in:57
 msgid "Added Dutch (Netherlands) translation"
 msgstr ""
 
-#: data/com.github.calo001.luna.appdata.xml.in:60
+#: data/com.github.calo001.luna.appdata.xml.in:65
 msgid "Dark theme with gray accent color."
 msgstr ""
 
-#: data/com.github.calo001.luna.appdata.xml.in:68
+#: data/com.github.calo001.luna.appdata.xml.in:73
 msgid "Add and remove correctly label-today class in css."
 msgstr ""
 
-#: data/com.github.calo001.luna.appdata.xml.in:76
+#: data/com.github.calo001.luna.appdata.xml.in:81
 msgid "A new look and feel!"
 msgstr ""
 
-#: data/com.github.calo001.luna.appdata.xml.in:84
+#: data/com.github.calo001.luna.appdata.xml.in:89
 msgid "Delete \"label-today\" class when you are not in the current date"
 msgstr ""
 
-#: data/com.github.calo001.luna.appdata.xml.in:85
+#: data/com.github.calo001.luna.appdata.xml.in:90
 msgid "A new more elemtary native look"
 msgstr ""
 
-#: data/com.github.calo001.luna.appdata.xml.in:90
+#: data/com.github.calo001.luna.appdata.xml.in:95
 msgid "Initial 1.0.0 release!"
 msgstr ""
 
