@@ -6,5 +6,5 @@ Exec=com.github.calo001.luna
 Terminal=false
 Type=Application
 StartupNotify=true
-Categories=Utility;
+Categories=Utility;Calendar;Office;
 Keywords=calendar;day;month;year;
