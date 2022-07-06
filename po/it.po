@@ -2,14 +2,14 @@
 # Copyright (C) 2018 THE com.github.calo001.luna'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.calo001.luna package.
 # Mirko Brombin <send@mirko.pm>, 2019.
-# Albano Battistella <albano_battistella@hotmail.com>, 2020.
+# Albano Battistella <albano_battistella@hotmail.com>, 2020,2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.calo001.luna\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-20 22:06-0500\n"
-"PO-Revision-Date: 2020-12-13 13:38-0100\n"
+"PO-Revision-Date: 2022-07-06 07:38+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -196,11 +196,11 @@ msgstr ""
 
 #: data/com.github.calo001.luna.appdata.xml.in:35
 msgid "Screenshots updated"
-msgstr ""
+msgstr "Screenshot aggiornati"
 
 #: data/com.github.calo001.luna.appdata.xml.in:40
 msgid "Update to Odin"
-msgstr ""
+msgstr "Aggiornato a Odin"
 
 #: data/com.github.calo001.luna.appdata.xml.in:48
 msgid "Portuguese-Portugal translation"
